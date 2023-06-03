@@ -12,7 +12,7 @@ X
 
 ### **Ismael Rojas**
 
-Hello there, soy Ismael Rojas, colombiano cde 30 anios viviendo en Miami. Soy Lider de suscripcion seguros Digitales para Chubb (empezando asi que no me presionen). Aficionado al futbol, me gusta ir al gym y me encantan los videojuegos (actualmeente perdido en Zelda TOTK). Espero conocer mucho del mundo de la programacion para aportar a mi equipo. :video_game: :soccer: 
+Hello there, soy Ismael Rojas, colombiano de 30 anios viviendo en Miami. Soy Lider de suscripcion seguros Digitales para Chubb (empezando asi que no me presionen). Aficionado al futbol, me gusta ir al gym y me encantan los videojuegos (actualmeente perdido en Zelda TOTK). Espero conocer mucho del mundo de la programacion para aportar a mi equipo. :video_game: :soccer: 
 
 ### **Victoria Soto**
 
