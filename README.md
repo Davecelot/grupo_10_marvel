@@ -24,7 +24,7 @@ Hi there! Tengo 20 años y soy diseñador UX/UI, actualmente incursionando en el
 
 ### **Edilberto Espinosa**
 
-Hola, me encuentro feliz de tu visita. Soy egresado de la carrera de Ingeniero Administradoir de Sistemas. Tengo 25 años... de experiencia en el desarrollo de software. Manejo tecnologías legacy pero mi objetivo es convertirme en <font color="navy">Desarrollador Web Full Stack</font> y para ello estoy trabajando arduamente.
+Hola, me encuentro feliz :smile: de tu visita. Soy egresado de la carrera de Ingeniero Administrador de Sistemas. Tengo 25 años... de experiencia en el desarrollo de software. :computer: Manejo tecnologías legacy pero mi objetivo es convertirme en Desarrollador Web Full Stack con JS :thumbsup: y para ello estoy trabajando arduamente. :muscle:
 
 ### **Xiomara Rodríguez**
 
