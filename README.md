@@ -20,7 +20,7 @@ Hola, soy Ingeniera en Sistemas Computacionales, actualmente trabajo como suppor
 
 ### **Diego Villarroel**
 
-Hi there! Tengo 20 años y soy diseñador UX/UI, actualmente incursionando en el mundo la programación Full Stack Node, en busca de convertirme en el super unicorno de los productos digitales. Cinéfilo apasionado, nerd hasta el fin de los tiempos.
+Hi there! Tengo 20 años y soy diseñador UX/UI, actualmente incursionando en el mundo la programación Full Stack Node, en busca de convertirme en el super unicorno de los productos digitales. Cinéfilo apasionado, nerd hasta el fin de los tiempos. :rocket:
 
 ### **Edilberto Espinosa**
 
