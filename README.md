@@ -2,7 +2,7 @@
 
 ## ¿De qué trata el producto?
 
-X
+Nuestros productos y servicios están dirigidas a cualquier persona que tenga interés por la compra, venta o alquiler de series y/o películas.🎞
 
 ## ¿A quién va dirigido?
 
