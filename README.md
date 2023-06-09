@@ -6,7 +6,7 @@ Nuestros productos y servicios están dirigidas a cualquier persona que tenga in
 
 ## ¿A quién va dirigido?
 
-X
+Personas que regularmente consumen contenido audivisual, específicamente películas y series, bien sea por servicios de streaming, CDs u otros medios.
 
 ## ¿Quiénes somos?
 
