@@ -28,4 +28,4 @@ Hola, me encuentro feliz 😁 de tu visita. Soy mexicano egresado de la carrera 
 
 ### **Xiomara Rodríguez**
 
-X
+Hola, tengo 23 años, estoy empezando en este mundo del desarrollo web y mi idea es aprender todo lo que sea posible. Actualmente estoy trabajando pero gracias a este aprendizaje podré tener un mejor empleo. Tengo momentos de creatividad y por esto me ha llamado la atención el desarrollo front-end.
