@@ -8,6 +8,12 @@ Nuestros productos y servicios están dirigidas a cualquier persona que tenga in
 
 Personas que regularmente consumen contenido audiovisual, específicamente películas y series, bien sea por servicios de streaming, CDs u otros medios.
 
+## Benchmark y referencias
+
+* Prime Video (https://www.primevideo.com/): Prime Video es una plataforma de streaming con una interfaz moderna, que funciona por suscripción y, dependiendo del nivel de tu suscripción, la posibilidad de comprar contenido que no esté dentro de tu plan.
+
+* Netflix (https://www.netflix.com/): Netflix es una plataforma de streaming que funciona por suscripción. Al igual que Prime Video, también tiene una interfaz moderna y es una de las plataformas más utilizadas para consumir contenido audiovisual. Es no solo una referencia gráfica, sino también como modelo de negocios.
+
 ## ¿Quiénes somos?
 
 ### **Ismael Rojas**
