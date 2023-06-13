@@ -14,6 +14,8 @@ Personas que regularmente consumen contenido audiovisual, específicamente pelí
 
 * Netflix (https://www.netflix.com/): Netflix es una plataforma de streaming que funciona por suscripción. Al igual que Prime Video, también tiene una interfaz moderna y es una de las plataformas más utilizadas para consumir contenido audiovisual. Es no solo una referencia gráfica, sino también como modelo de negocios.
 
+* DirecTV GO (https://www.directvgo.com/ar/home): DirecTV GO es la plataforma online de DirecTV, con planes de suscripción y la posibilidad de ver contenido de "pay per view". De DirecTV GO referenciamos el modelo de negocios y las funcionalidades que ofrece como producto digital.
+
 ## ¿Quiénes somos?
 
 ### **Ismael Rojas**
