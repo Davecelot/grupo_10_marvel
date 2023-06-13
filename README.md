@@ -16,6 +16,10 @@ Personas que regularmente consumen contenido audiovisual, específicamente pelí
 
 * DirecTV GO (https://www.directvgo.com/ar/home): DirecTV GO es la plataforma online de DirecTV, con planes de suscripción y la posibilidad de ver contenido de "pay per view". De DirecTV GO referenciamos el modelo de negocios y las funcionalidades que ofrece como producto digital.
 
+* Vix (https://vix.com/es-es/ondemand): VIX es un servicio de streaming gratis con más de 100 canales, noticiero y hasta deportes con más de 40,000 horas de contenido. Además de contar con una sección de video bajo demanda con algunas películas y novelas que ofrece la plataforma
+
+* Star Plus (https://www.starplus.com/es-mx): Star+ es un servicio de streaming en Latinoamérica que ofrece un amplio catálogo de series y películas, además de deportes en vivo y eventos de ESPN
+
 ## ¿Quiénes somos?
 
 ### **Ismael Rojas**
