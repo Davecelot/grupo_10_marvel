@@ -16,11 +16,21 @@ Personas que regularmente consumen contenido audiovisual, específicamente pelí
 
 * DirecTV GO (https://www.directvgo.com/ar/home): DirecTV GO es la plataforma online de DirecTV, con planes de suscripción y la posibilidad de ver contenido de "pay per view". De DirecTV GO referenciamos el modelo de negocios y las funcionalidades que ofrece como producto digital.
 
+* Vix (https://vix.com/es-es/ondemand): VIX es un servicio de streaming gratis con más de 100 canales, noticiero y hasta deportes con más de 40,000 horas de contenido. Además de contar con una sección de video bajo demanda con algunas películas y novelas que ofrece la plataforma
+
+* Star Plus (https://www.starplus.com/es-mx): Star+ es un servicio de streaming en Latinoamérica que ofrece un amplio catálogo de series y películas, además de deportes en vivo y eventos de ESPN
+
+* Warner Bros (https://www.warnerbros.com/): Servicio de contenidos on demand de WB en USA.
+
+* Red Box (https://www.redbox.com/) Uniso sitio para renta de peliculas en Kioskos en USA.
+
+* Max (https://www.max.com/) Streaming de servicios de HBO (Max recientemente rebrandeado).
+
 ## ¿Quiénes somos?
 
 ### **Ismael Rojas**
 
-Hello there, soy Ismael Rojas, colombiano de 30 anios viviendo en Miami. Soy Lider de suscripcion seguros Digitales para Chubb (empezando asi que no me presionen). Aficionado al futbol, me gusta ir al gym y me encantan los videojuegos (actualmeente perdido en Zelda TOTK). Espero conocer mucho del mundo de la programacion para aportar a mi equipo. :video_game: :soccer:
+Hello there, soy Ismael Rojas, colombiano de 30 anios viviendo en Miami. Soy Lider de suscripcion de seguros Digitales para Chubb. Aficionado al futbol, me gusta ir al gym para relajarme y me encantan los videojuegos (actualmente perdido en Zelda TOTK). Espero conocer mucho del mundo de la programacion para aportar a mi equipo. :video_game: :soccer:
 
 ### **Victoria Soto**
 
