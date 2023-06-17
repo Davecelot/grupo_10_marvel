@@ -26,6 +26,10 @@ Personas que regularmente consumen contenido audiovisual, específicamente pelí
 
 * Max (https://www.max.com/) Streaming de servicios de HBO (Max recientemente rebrandeado).
 
+## Trello
+
+https://trello.com/b/CLSg8DLH/marvels-sprints
+
 ## ¿Quiénes somos?
 
 ### **Ismael Rojas**
