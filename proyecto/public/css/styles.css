@@ -257,6 +257,10 @@ conteiner {
     width: 5%;
     justify-content: flex-start;
   }
+
+  /* Aqui inicia CSS de Banner/Contenedor para media entre 361 y 767*/
+
+  /* Aqui termina CSS de Banner/Contenedor para media entre 361 y 767*/
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -312,6 +316,10 @@ conteiner {
     width: 5%;
     justify-content: flex-start;
   }
+
+  /* Aqui inicia CSS de Banner/Contenedor para media de 768 a 1199*/
+
+  /* Aqui termina CSS de Banner/Contenedor para media de 768 a 1199*/
 }
 
 @media (min-width: 1200px) {
@@ -322,4 +330,8 @@ conteiner {
   .hamburger-button {
     display: none;
   }
+
+  /* Aqui inicia CSS de Banner/Contenedor para media de 1200 en adelante*/
+
+  /* Aqui termina CSS de Banner/Contenedor para media de 1200 en adelante*/
 }
