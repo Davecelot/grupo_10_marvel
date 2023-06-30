@@ -21,22 +21,42 @@
      <!-- Escribir aqui el codigo de  la seccion Menu Navbar -->
      <header class="main-header">
           <conteiner>
-               <div>
-                    <img src="images/logo-brandcolor.svg" class="logo">
+               <div class="top-bar">
+                    <a href="/home"><img src="images/logo-brandcolor.svg" class="logo"></a>
+                    <a href="/home"><img src="images/icon.svg" class="logo-movil"></a>
+                    <div class="search-sec"> 
+                         <input type="search" class="search" placeholder="Encuentra tus peliculas Favoritas"><i
+                              class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="botones-top-bar">
+                         <button type="submit" class="boton-header"><a href="/register">Registrate</a></button>
+                         <button type="submit" class="boton-header"><a href="/login">Iniciar Sesión</a></button>
+                    </div>
                </div>
 
+               <a href="#" class="hamburger-button">
+                    <i class="fa-solid fa-bars"></i></a>
+
                <nav class="main-navar">
-                    <ul class="left-navbar">
-                         <li><a href="/home">seccion1</a></li>
-                         <li><a href="/home">seccion2</a></li>
-                         <li><a href="/home">seccion3</a></li>
-                         <li><a href="/home">seccion4</a></li>
-                         <li><a href="/home">seccion5</a></li>
+                    <ul class="menu-navbar">
+                         <li><a href="/home">Estrenos </a><i class="fa-solid fa-clapperboard"></i></li>
+                         <li><a href="/home">Top 10 </a><i class="fa-solid fa-fire"></i></li>
+                         <li><a href="/home">Categorias </a><i class="fa-solid fa-video"></i>
+                              <ul class="submenu-navbar">
+                                   <li><a href="/home"></a>Accion</li>
+                                   <li><a href="/home"></a>Aventura</li>
+                                   <li><a href="/home"></a>Comedia</li>
+                                   <li><a href="/home"></a>Drama</li>
+                                   <li><a href="/home"></a>Infantil</li>
+                                   <li><a href="/home"></a>Musical</li>
+                                   <li><a href="/home"></a>Romantica</li>
+                                   <li><a href="/home"></a>Terror</li>
+                              </ul>
+                         </li>
+                         <li><a href="/home">Proximamente </a><i class="fa-solid fa-film"></i></li>
+                         <li><a href="/home">Tus Favoritos </a><i class="fa-solid fa-heart"></i></li>
                     </ul>
                </nav>
-
-               <button type="submit" class="boton-header">Boton1</button>
-               <button type="submit" class="boton-header">Boton2</button>
           </conteiner>
      </header>
      <!-- Aqui termina la seccion Menu Navbar -->
@@ -50,6 +70,23 @@
      <!-- Aqui inicia la seccion Banner Contenedor -->
 
      <!-- Escribir aqui el codigo de  la seccion Banner Contenedor -->
+     <div class="banner-container">
+          <div class="image">
+               <img class="image-hero" src="/images/imagen-hero.jpg" alt="Tiempo Para Mi">
+               <div class="marbete">
+                    <div class="logo-hero">
+                         <img src="images/logo-brandcolor.svg" class="logo">
+                    </div>
+                    <div class="title-hero">
+                         <label class="title">Tiempo Para Mi</label>
+                    </div>
+                    <section class="button-bar">
+                         <input type="button" id="btnComprar" value="Comprar">
+                         <input type="button" id="btnAlquilar" value="Alquilar">
+                    </section>
+               </div>
+          </div>
+     </div>
 
      <!-- Aqui termina la seccion Banner Contenedor -->
 
