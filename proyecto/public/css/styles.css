@@ -157,7 +157,7 @@ conteiner {
   height: 46.11vw;
   display: flex;
   justify-content: center;
-  border: 2px dotted snow;
+  padding-top: 5vw;
 }
 .banner-container .image {
   height: 100%;
@@ -178,7 +178,6 @@ conteiner {
   width: 75vw;
   height: 40vw;
   transform: translate(-50%, -20%);
-  border: 2px dotted black;
 }
 
 .banner-container .marbete .logo-hero {
@@ -186,7 +185,7 @@ conteiner {
   height: 50%;
 }
 
-.banner-container .marbete .logo-hero img {
+.banner-container .marbete .logo-hero .img-logo-banner {
   width: 100%;
 }
 
@@ -361,6 +360,10 @@ conteiner {
     width: 100%;
   }
 
+  .banner-container .marbete .title-hero {
+    font-size: 1.5rem;
+  }
+
   /* Aqui termina CSS de Banner/Contenedor para media entre 361 y 767*/
 }
 
@@ -433,6 +436,10 @@ conteiner {
   }
 
   /* Aqui inicia CSS de Banner/Contenedor para media de 768 a 1199*/
+
+  .banner-container .marbete .title-hero {
+    font-size: 2.75rem;
+  }
 
   /* Aqui termina CSS de Banner/Contenedor para media de 768 a 1199*/
 }
