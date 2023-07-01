@@ -357,6 +357,10 @@ conteiner {
 
   /* Aqui inicia CSS de Banner/Contenedor para media entre 361 y 767*/
 
+  .banner-container .marbete .logo-hero .img-logo-banner {
+    width: 100%;
+  }
+
   /* Aqui termina CSS de Banner/Contenedor para media entre 361 y 767*/
 }
 
