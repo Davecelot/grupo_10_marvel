@@ -282,6 +282,10 @@ conteiner {
 }
 /* Aqui termina CSS footer */
 
+/* Aqui inicia CSS de Main de Login */
+/*CSS de Main de Login */
+/* Aqui inicia CSS de Main de Login */
+
 @media only screen and (min-width: 361px) and (max-width: 767px) {
   .logo {
     display: none;
@@ -362,6 +366,10 @@ conteiner {
   }
 
   /* Aqui trermina CSS de Footer entre 361 y 767 */
+
+  /* Aqui inicia CSS de Main de Login entre 361 y 767*/
+  /*CSS de Main de Login */
+  /* Aqui inicia CSS de Main de Login entre 361 y 767*/
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -440,6 +448,10 @@ conteiner {
   }
 
   /* Aqui termina CSS de Banner/Contenedor para media de 768 a 1199*/
+
+  /* Aqui inicia CSS de Main de Login entre 768 y 1199*/
+  /*CSS de Main de Login */
+  /* Aqui inicia CSS de Main de Login entre 768 y 1199*/
 }
 
 @media (min-width: 1200px) {
@@ -538,4 +550,8 @@ conteiner {
   }
 
   /* Aqui termina CSS de Banner/Contenedor para media de 1200 en adelante*/
+
+  /* Aqui inicia CSS de Main de Login de 1200 en adelante */
+  /*CSS de Main de Login */
+  /* Aqui inicia CSS de Main de Login de 1200 en adelante */
 }
