@@ -473,8 +473,10 @@ conteiner {
   /* Aqui inicia CSS de Banner/Contenedor para media de 1200 en adelante*/
 
   .banner-container {
-    width: 1440px;
-    height: 664px;
+    /* width: 1440px; */
+    width: 100vw;
+    /* height: 664px; */
+    height: 46.11vw;
     display: flex;
     justify-content: center;
   }
@@ -491,25 +493,42 @@ conteiner {
 
   .banner-container .marbete {
     z-index: 10;
-    left: 25px;
+    /* left: 25px; */
+    left: 1.74vw;
     position: absolute;
-    top: 227px;
-    left: 254px;
-    width: 448px;
-    height: 210px;
+    /* top: 227px; */
+    top: 15.76vw;
+    /* left: 254px; */
+    left: 25%;
+    /* width: 448px; */
+    width: 50%;
+    /* height: 210px; */
+    height: 50%;
     transform: translate(-50%, -20%);
   }
 
   .banner-container .image input {
-    transform: translate(0, -40px);
-    height: 52px;
-    width: 216px;
+    /* transform: translate(0, -40px); */
+    transform: translate(0, -2.78vw);
+    /* height: 52px; */
+    height: 3.61vw;
+    /* width: 216px; */
+    width: 15vw;
     margin: 0;
     font-size: 1.5rem;
   }
 
+  #btnComprar {
+    margin-left: 5%;
+  }
+
   #btnAlquilar {
-    margin-left: 8px;
+    /* margin-left: 8px; */
+    margin-left: 0.56vw;
+  }
+
+  .logo-hero {
+    margin-left: 1%;
   }
 
   .banner-container .marbete .title-hero {
@@ -517,6 +536,7 @@ conteiner {
     font-size: 3.5rem;
     transform: translate(0, -50%);
     top: 20%;
+    margin-left: 4%;
   }
 
   /* Aqui termina CSS de Banner/Contenedor para media de 1200 en adelante*/
