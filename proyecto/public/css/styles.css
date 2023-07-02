@@ -338,20 +338,6 @@ conteiner {
     width: 5%;
     justify-content: flex-start;
   }
-  .social-nav ul {
-    justify-content: flex-end;
-  }
-  .social-nav ul li {
-    margin-right: 0.5rem;
-  }
-  .site-links ul,
-  .policy-links ul {
-    display: flex;
-  }
-  .site-links li,
-  .policy-links li {
-    margin-right: 0.5rem;
-  }
 
   /* Aqui inicia CSS de Banner/Contenedor para media entre 361 y 767*/
 
@@ -364,6 +350,18 @@ conteiner {
   }
 
   /* Aqui termina CSS de Banner/Contenedor para media entre 361 y 767*/
+
+  /* Aqui inicia CSS de Footer entre 361 y 767 */
+
+  .site-links {
+    margin-left: 5%;
+  }
+
+  .policy-links {
+    margin-right: 5%;
+  }
+
+  /* Aqui trermina CSS de Footer entre 361 y 767 */
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -419,6 +417,7 @@ conteiner {
     width: 5%;
     justify-content: flex-start;
   }
+
   .social-nav ul {
     justify-content: flex-end;
   }
