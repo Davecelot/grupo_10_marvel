@@ -377,6 +377,14 @@ conteiner {
 
   /* Aqui termina CSS de Banner/Contenedor para media entre 361 y 767*/
 
+  /* SECTION: COMMON CATEGORY - media query 361*/
+
+  .product-common-card {
+    height: 124px;
+  }
+
+  /* END OF SECTION: COMMON CATEGORY */
+
   /* Aqui inicia CSS de Footer entre 361 y 767 */
 
   .site-links {
@@ -471,6 +479,19 @@ conteiner {
 
   /* Aqui termina CSS de Banner/Contenedor para media de 768 a 1199*/
 
+    /* SECTION: COMMON CATEGORY - media query 768*/
+
+    .common-category h2 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .product-common-card {
+      height: 224px;
+    }
+  
+    /* END OF SECTION: COMMON CATEGORY */
+    
   /* Aqui inicia CSS de Main de Login entre 768 y 1199*/
   /*CSS de Main de Login */
   /* Aqui inicia CSS de Main de Login entre 768 y 1199*/
@@ -573,6 +594,19 @@ conteiner {
 
   /* Aqui termina CSS de Banner/Contenedor para media de 1200 en adelante*/
 
+  /* SECTION: COMMON CATEGORY - media query 768*/
+
+  .common-category h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .product-common-card {
+    height: 224px;
+  }
+
+  /* END OF SECTION: COMMON CATEGORY */
+  
   /* Aqui inicia CSS de Main de Login de 1200 en adelante */
   /*CSS de Main de Login */
   /* Aqui inicia CSS de Main de Login de 1200 en adelante */
