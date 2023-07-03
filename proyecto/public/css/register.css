@@ -1,0 +1,51 @@
+.titulo-form{
+    color: #FBFBFB;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    font-size: 40px;
+}
+form{
+    align-items: center;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+}
+
+.control-formulario{
+    color: #FBFBFB;
+    text-align: justify;
+    padding: 5px;
+}
+
+.boton-formulario{
+    padding: 12px 0px;
+    height: 52px;
+    width: 216px;
+    border-radius: 4px;
+    margin: 10px;
+    font-size: 20px;
+    color: #fbfbfb;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    border: none;
+}
+  
+  #reset {
+    color: #FBFBFB;
+    background: #280F50;
+  }
+  
+  #reset:hover{
+     background-color: #bb38f9;
+  }
+  
+  #submit {
+    color: #101820;
+    background: rgba(251, 251, 251, 0.40);
+  }
+  
+  #submit:hover{
+    color: #bb38f9;
+  }

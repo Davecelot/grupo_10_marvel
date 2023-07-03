@@ -12,11 +12,156 @@
           rel="stylesheet">
      <link rel="stylesheet" href="/css/normalize.css">
      <link rel="stylesheet" href="/css/styles.css">
+     <link rel="stylesheet" href="/css/register.css">
      <script src="https://kit.fontawesome.com/1b0fac21a6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-     <h1>register.html</h1>
+     <!-- Aqui inicia la seccion Menu Navbar -->
+     <!-- Escribir aqui el codigo de  la seccion Menu Navbar -->
+     <header class="main-header">
+          <conteiner>
+               <div class="top-bar">
+                    <a href="/home"><img src="images/logo-brandcolor.svg" class="logo"></a>
+                    <a href="/home"><img src="images/icon.svg" class="logo-movil"></a>
+                    <div class="search-sec">
+                         <input type="search" class="search" placeholder="Encuentra tus peliculas Favoritas"><i
+                              class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="botones-top-bar">
+                         <button type="submit" class="boton-header" id="register"><a href="/register">Registrate</a></button>
+                         <button type="submit" class="boton-header" id="login"><a href="/login">Iniciar Sesión</a></button>
+                    </div>
+               </div>
+
+               <a href="#" class="hamburger-button">
+                    <i class="fa-solid fa-bars"></i></a>
+
+               <nav class="main-navbar">
+                    <ul class="menu-navbar">
+                         <li><a href="/home">Estrenos </a><i class="fa-solid fa-clapperboard"></i></li>
+                         <li><a href="/home">Top 10 </a><i class="fa-solid fa-fire"></i></li>
+                         <li><a href="/home">Categorias </a><i class="fa-solid fa-video"></i>
+                              <ul class="submenu-navbar">
+                                   <li><a href="/home"></a>Accion</li>
+                                   <li><a href="/home"></a>Aventura</li>
+                                   <li><a href="/home"></a>Comedia</li>
+                                   <li><a href="/home"></a>Drama</li>
+                                   <li><a href="/home"></a>Infantil</li>
+                                   <li><a href="/home"></a>Musical</li>
+                                   <li><a href="/home"></a>Romantica</li>
+                                   <li><a href="/home"></a>Terror</li>
+                              </ul>
+                         </li>
+                         <li><a href="/home">Proximamente </a><i class="fa-solid fa-film"></i></li>
+                         <li><a href="/home">Tus Favoritos </a><i class="fa-solid fa-heart"></i></li>
+                    </ul>
+               </nav>
+          </conteiner>
+     </header>
+     <!-- Aqui termina la seccion Menu Navbar -->
+     <!-- Formulario Registro -->
+     <h3 class="titulo-form">Registro</h3>
+     <div class="formulario">
+          <form action="/crear-cuenta" method="POST" class="create-form">
+               <div class="control-formulario">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" class="control">
+               </div>
+               <div class="control-formulario">
+                    <label>Apellido:</label>
+                    <input type="text" name="apellido" class="control">
+               </div>
+               <div class="control-formulario">
+                    <label>Usuario:</label>
+                    <input type="text" name="usuario" class="control">
+               </div>
+               <div class="control-formulario">
+                    <label>Fecha Nacimiento:</label>
+                    <input type="date" name="fecha-nac" class="control">
+               </div>
+               <div class="control-formulario">
+                    <label>Domicilio:</label>
+                    <input type="text" name="domicilio" class="control">
+               </div>
+               <div class="control-formulario">
+                    <label>Intereses:</label>
+                    <br><input type="checkbox" name="intereses" class="control" value="Accion"> Accion
+                    <input type="checkbox" name="intereses" class="control" value="Aventura"> Aventura
+                    <br><input type="checkbox" name="intereses" class="control" value="Comedia"> Comedia
+                    <input type="checkbox" name="intereses" class="control" value="Drama"> Drama
+                    <br><input type="checkbox" name="intereses" class="control" value="Infantil"> Infantil
+                    <input type="checkbox" name="intereses" class="control" value="Musical"> Musical
+                    <br><input type="checkbox" name="intereses" class="control" value="Romantica"> Romantica
+                    <input type="checkbox" name="intereses" class="control" value="Romantica"> Terror
+               </div>
+               <div class="control-formulario">
+                    <label>Foto Usuario:</label>
+                    <input type="file" name="foto" class="control">
+               </div>
+               <div class="control-formulario">
+                    <label>Contraseña:</label>
+                    <input type="password" name="contraseña" class="control">
+               </div>
+               <div class="control-formulario">
+                    <label>Confirmar contraseña:</label>
+                    <input type="password" name="con-contraseña" class="control">
+               </div>
+               <div class="control-formulario">
+                    <conteiner class="botones">
+                    <button type="reset" class="boton-formulario" id="reset">Borrar</button>
+                    <button type="submit" class="boton-formulario" id="submit">Enviar</button>
+               </conteiner>
+               </div>
+          </form>
+     </div>
+     <!-- Aqui inicia la seccion Footer -->
+     <!-- Escribir aqui el codigo de  la seccion Footer -->
+     <footer>
+          <section class="main-footer">
+               <div class="footer-social">
+                    <div class="follow">Siguenos</div>
+                    <nav class="social-nav">
+                         <ul>
+                              <li><a href="#"></a><i class="fa-brands fa-youtube"></i></li>
+                              <li><a href="#"></a><i class="fa-brands fa-twitter"></i></li>
+                              <li><a href="#"></a><i class="fa-brands fa-facebook"></i></li>
+                              <li><a href="#"></a><i class="fa-brands fa-instagram"></i></li>
+                              <li><a href="#"></a><i class="fa-brands fa-linkedin-in"></i></li>
+                              <li><a href="#"></a><i class="fa-brands fa-tiktok"></i></li>
+                              <li><a href="#"></a><i class="fa-solid fa-envelope"></i></li>
+                         </ul>
+                    </nav>
+               </div>
+               <div class="policy">
+                    <nav class="site-links">
+                         <ul>
+                              <li><a href="#"></a>Compania</li>
+                              <li><a href="#"></a>Prensa</li>
+                              <li><a href="#"></a>Carreras</li>
+                              <li><a href="#"></a>Ayuda</li>
+                         </ul>
+                    </nav>
+                    <nav class="policy-links">
+                         <ul>
+                              <li><a href="#"></a>Terminos de Uso</li>
+                              <li><a href="#"></a>Politica de Privacidad</li>
+                              <li><a href="#"></a>Accesibilidad</li>
+                              <li><a href="#"></a>Seleccion de Ads</li>
+                         </ul>
+                    </nav>
+               </div>
+               <div class="disclaimer">
+                    <div class="logo-disclaimer">
+                         <a href="/home"><img src="images/icon.svg" class="logo-movil"></a>
+                    </div>
+                    <div class="copyright">
+                         TM &amp; © 2023 Marvel Inc. Todos los derechos reservados
+                    </div>
+               </div>
+          </section>
+     </footer>
+     <!-- Aqui termina la seccion Footer -->
 </body>
 
 </html>
