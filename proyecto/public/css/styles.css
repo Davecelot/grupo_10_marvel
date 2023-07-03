@@ -404,8 +404,29 @@ conteiner {
     display: none;
   }
 
-  .formulario-login-amplio {
+  .area-data-login {
+    background-color: white;
     display: block;
+    width: 288px;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+
+  .data-login-name,
+  .data-login-password {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .area-data-login input {
+    width: 70%;
+  }
+
+  .submit-login-basico {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20%;
   }
 
   /* Aqui termina CSS de Main de Login entre 361 y 767*/
@@ -502,7 +523,36 @@ conteiner {
   /* END OF SECTION: COMMON CATEGORY */
 
   /* Aqui inicia CSS de Main de Login entre 768 y 1199*/
-  /*CSS de Main de Login */
+
+  .formulario-login-minimo {
+    display: none;
+  }
+
+  .area-data-login {
+    background-color: white;
+    display: block;
+    width: 288px;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+
+  .data-login-name,
+  .data-login-password {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .area-data-login input {
+    width: 70%;
+  }
+
+  .submit-login-basico {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20%;
+  }
+
   /* Aqui termina CSS de Main de Login entre 768 y 1199*/
 }
 
@@ -617,6 +667,35 @@ conteiner {
   /* END OF SECTION: COMMON CATEGORY */
 
   /* Aqui inicia CSS de Main de Login de 1200 en adelante */
-  /*CSS de Main de Login */
+
+  .formulario-login-minimo {
+    display: none;
+  }
+
+  .area-data-login {
+    background-color: white;
+    display: block;
+    width: 288px;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+
+  .data-login-name,
+  .data-login-password {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .area-data-login input {
+    width: 70%;
+  }
+
+  .submit-login-basico {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20%;
+  }
+
   /* Aqui termina CSS de Main de Login de 1200 en adelante */
 }
