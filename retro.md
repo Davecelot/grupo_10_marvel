@@ -1,5 +1,38 @@
 # **Equipo Marvel** :sunglasses::sparkles:
 
+### Sprint 3
+
+## Comenzar a hacer: 
+
+-Cada archivo compartido dejar marcas de referencia para facilitar integraciones
+-Definir o marcar las secciones para evitar conflictos
+-Estar mucho más presentes en el manejo del Trello y el sprint en general.
+
+## Hacer más:
+
+-Reunion minimo una vez por semana para revisar avances
+-Reunirnos periodicamente para revisar o definir actividades
+-Cumplir con las tareas de los sprints dentro del tiempo estimado para no acumular tareas.
+
+## Continuar haciendo: 
+
+-Conversación con el grupo por los diferentes canales
+-Mantener la comunicacion como equipo en discord/whatsapp y la organizacion de commits
+-Mantener la comunicación para todo lo que vayamos a desarrollar.
+
+## Hacer menos: 
+
+-No tener repartidas las actividades
+-Dejar tareas para último momento.
+
+## Dejar de hacer: 
+
+-Terminar entregables del sprint hasta las fechas limites y no tener cards sin asignar
+-Trabajar tickets sobre el último día del sprint.
+
+-------------------------------------------------------------------------------------------------------
+### Sprint 2
+
 ## Comenzar a hacer: 
 
 -Tener reuniones mas periodicas para revisar los resultados de los ejercicios
