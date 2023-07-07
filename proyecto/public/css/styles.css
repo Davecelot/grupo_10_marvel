@@ -81,8 +81,8 @@ conteiner {
   background: #280F50;
 }
 
-#register:hover{
-   background-color: #bb38f9;
+#register:hover {
+  background-color: #bb38f9;
 }
 
 #login {
@@ -90,23 +90,41 @@ conteiner {
   background: rgba(251, 251, 251, 0.40);
 }
 
-#login a:hover{
+#login a:hover {
   color: #bb38f9;
 }
 
-.search {
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 10px 0px;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 900;
-  color: #FBFBFB;
+.search-sec {
+  display: flex;
 }
 
-.search-sec i{
-  color: #FBFBFB;
+.search {
+  background: #FBFBFB;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  line-height: 24px;
+  color: #101820;
+  min-width: 307px;
+  max-width: 307px;
+  border-radius: 0px 16px 16px 0px;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.search-sec i {
+  color: #101820;
+  width: fit-content;
+  flex-shrink: 0;
+  background-color: #FBFBFB;
+  border-radius: 16px 0px 0px 16px;
+  text-align: center;
+  padding: 12px 0px 0px 10px;
 }
 
 .main-navbar ul {
@@ -127,8 +145,13 @@ conteiner {
   text-decoration: none;
   color: #FBFBFB;
   padding: 5px 0;
-  font-size: 20px;
   font: "Ubuntu";
+  gap: 4px;
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
 }
 
 .main-navbar i {
@@ -145,27 +168,32 @@ conteiner {
 }
 
 .main-navbar ul ul li {
-  float: none;
-  display: inline;
-  padding: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .main-navbar ul ul a {
   padding: 0px;
-  font-size: 18px;
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
 }
 
-.main-navbar ul li:hover > ul {
+.main-navbar ul li:hover>ul {
   display: block;
   color: #FBFBFB;
 }
 
 .main-navbar li:hover {
-  color: #bb38f9;
+  color: #BB38F9;
 }
 
 .main-navbar a:hover {
-  color: #bb38f9;
+  color: #BB38F9;
 }
 
 .hamburger-button {
@@ -185,6 +213,7 @@ conteiner {
   justify-content: center;
   padding-top: 5vw;
 }
+
 .banner-container .image {
   height: 100%;
   position: relative;
@@ -285,16 +314,19 @@ conteiner {
   justify-content: space-between;
   align-items: center;
 }
+
 .follow {
   text-align: center;
   color: #641aad;
 }
+
 .social-nav ul {
   display: flex;
   list-style: none;
   color: #641aad;
   justify-content: space-between;
 }
+
 .policy {
   display: flex;
   justify-content: space-between;
@@ -304,9 +336,11 @@ conteiner {
 .policy-links ul {
   list-style: none;
 }
+
 .disclaimer {
   display: flex;
 }
+
 /* Aqui termina CSS footer */
 
 /* Aqui inicia CSS de Main de Login */
@@ -342,7 +376,7 @@ conteiner {
     display: flex;
     width: 100px;
   }
- 
+
   .hamburger-button {
     background-color: #03264c;
     color: #ffffff;
@@ -507,13 +541,16 @@ conteiner {
   .social-nav ul {
     justify-content: flex-end;
   }
+
   .social-nav ul li {
     margin-right: 0.5rem;
   }
+
   .site-links ul,
   .policy-links ul {
     display: flex;
   }
+
   .site-links li,
   .policy-links li {
     margin-right: 0.5rem;
@@ -579,19 +616,24 @@ conteiner {
   .hamburger-button {
     display: none;
   }
+
   .follow {
     font-size: 1.5rem;
   }
+
   .social-nav ul {
     justify-content: flex-end;
   }
+
   .social-nav ul li {
     margin-right: 1rem;
   }
+
   .site-links ul,
   .policy-links ul {
     display: flex;
   }
+
   .site-links li,
   .policy-links li {
     margin-right: 1rem;
