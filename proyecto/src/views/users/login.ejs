@@ -1,63 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Login</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Ubuntu:wght@500&display=swap"
-          rel="stylesheet">
-     <link rel="stylesheet" href="/css/normalize.css">
-     <link rel="stylesheet" href="/css/styles.css">
-     <script src="https://kit.fontawesome.com/1b0fac21a6.js" crossorigin="anonymous"></script>
-</head>
+<%- include("../partials/head.ejs")%>
 
 <body>
      <!-- Inicia la zona de header -->
-     <header class="main-header">
-          <conteiner>
-               <div class="top-bar">
-                    <a href="/home"><img src="images/logo-brandcolor.svg" class="logo"></a>
-                    <a href="/home"><img src="images/icon.svg" class="logo-movil"></a>
-                    <div class="search-sec">
-                         <input type="search" class="search" placeholder="Encuentra tus peliculas Favoritas"><i
-                              class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <div class="botones-top-bar">
-                         <button type="submit" class="boton-header" id="register"><a href="/register">Registrate</a></button>
-                         <button type="submit" class="boton-header" id="login"><a href="/login">Iniciar Sesión</a></button>
-                    </div>
-               </div>
-
-               <a href="#" class="hamburger-button">
-                    <i class="fa-solid fa-bars"></i></a>
-
-               <nav class="main-navbar">
-                    <ul class="menu-navbar">
-                         <li><a href="/home">Estrenos </a><i class="fa-solid fa-clapperboard"></i></li>
-                         <li><a href="/home">Top 10 </a><i class="fa-solid fa-fire"></i></li>
-                         <li><a href="/home">Categorias </a><i class="fa-solid fa-video"></i>
-                              <ul class="submenu-navbar">
-                                   <li><a href="/home"></a>Accion</li>
-                                   <li><a href="/home"></a>Aventura</li>
-                                   <li><a href="/home"></a>Comedia</li>
-                                   <li><a href="/home"></a>Drama</li>
-                                   <li><a href="/home"></a>Infantil</li>
-                                   <li><a href="/home"></a>Musical</li>
-                                   <li><a href="/home"></a>Romantica</li>
-                                   <li><a href="/home"></a>Terror</li>
-                              </ul>
-                         </li>
-                         <li><a href="/home">Proximamente </a><i class="fa-solid fa-film"></i></li>
-                         <li><a href="/home">Tus Favoritos </a><i class="fa-solid fa-heart"></i></li>
-                    </ul>
-               </nav>
-          </conteiner>
-     </header>
-     <!-- Termina la zona de header -->
+     <%- include("../partials/header.ejs")%>
+     
      <main>
           <div class="formulario-login-minimo">
                <form action="#" method="get" class="form-login-minimo">

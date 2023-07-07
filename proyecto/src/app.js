@@ -9,20 +9,12 @@ app.set("views", __dirname + "/views");
 app.use(express.static(publicPath));
 app.use('/', rutaMain);
 
-app.get("/login", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/users/login.html"));
-});
-
 app.get("/productCart", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"));
 });
 
 app.get("/productDetail", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"));
-});
-
-app.get("/register", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/users/register.html"));
 });
 
 app.listen(3000, console.log("Aplicacion levantada http://localhost:3000"));

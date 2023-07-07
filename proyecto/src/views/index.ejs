@@ -1,187 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Marvel</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Ubuntu:wght@500&display=swap"
-          rel="stylesheet">
-     <link rel="stylesheet" href="/css/normalize.css">
-     <link rel="stylesheet" href="/css/styles.css">
-     <script src="https://kit.fontawesome.com/1b0fac21a6.js" crossorigin="anonymous"></script>
-</head>
+<%- include("./partials/head.ejs")%>
 
 <body>
-     <!-- Aqui inicia la seccion Menu Navbar -->
-     <!-- Escribir aqui el codigo de  la seccion Menu Navbar -->
-     <header class="main-header">
-          <conteiner>
-               <a href="#" class="hamburger-button">
-                    <i class="fa-solid fa-bars"></i></a>
-                    
-               <div class="top-bar">
-                    <a href="/home"><img src="images/logo-brandcolor.svg" class="logo"></a>
-                    <a href="/home"><img src="images/icon.svg" class="logo-movil"></a>
-                    <div class="search-sec">
-                         <input type="search" class="search" placeholder="Encuentra tus peliculas Favoritas"><i
-                              class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <div class="botones-top-bar">
-                         <button type="submit" class="boton-header" id="register"><a href="/register">Registrate</a></button>
-                         <button type="submit" class="boton-header" id="login"><a href="/login">Iniciar Sesión</a></button>
-                    </div>
-               </div>
+     <!-- Inicia la zona de header -->
+     <%- include("./partials/header.ejs")%>
 
-               <nav class="main-navbar">
-                    <ul class="menu-navbar">
-                         <li><a href="/home">Estrenos </a><i class="fa-solid fa-clapperboard"></i></li>
-                         <li><a href="/home">Top 10 </a><i class="fa-solid fa-fire"></i></li>
-                         <li><a href="/home">Categorias </a><i class="fa-solid fa-video"></i>
-                              <ul class="submenu-navbar">
-                                   <li><a href="/home"></a>Accion</li>
-                                   <li><a href="/home"></a>Aventura</li>
-                                   <li><a href="/home"></a>Comedia</li>
-                                   <li><a href="/home"></a>Drama</li>
-                                   <li><a href="/home"></a>Infantil</li>
-                                   <li><a href="/home"></a>Musical</li>
-                                   <li><a href="/home"></a>Romantica</li>
-                                   <li><a href="/home"></a>Terror</li>
-                              </ul>
-                         </li>
-                         <li><a href="/home">Proximamente </a><i class="fa-solid fa-film"></i></li>
-                         <li><a href="/home">Tus Favoritos </a><i class="fa-solid fa-heart"></i></li>
-                    </ul>
-               </nav>
-          </conteiner>
-     </header>
-     <!-- Aqui termina la seccion Menu Navbar -->
+          <!-- Aqui inicia la seccion Banner Contenedor -->
 
-     <!-- Aqui inicia la seccion Banner Contenedor -->
-
-     <!-- Escribir aqui el codigo de  la seccion Banner Contenedor -->
-     <main>
-          <div class="banner-container">
-               <div class="image">
-                    <img class="image-hero" src="/images/spiderman.jpg" alt="Spider Man">
-                    <div class="marbete">
-                         <div class="logo-hero">
-                              <img src="images/logo-brandcolor.svg" class="img-logo-banner">
+          <!-- Escribir aqui el codigo de  la seccion Banner Contenedor -->
+          <main>
+               <div class="banner-container">
+                    <div class="image">
+                         <img class="image-hero" src="/images/spiderman.jpg" alt="Spider Man">
+                         <div class="marbete">
+                              <div class="logo-hero">
+                                   <img src="images/logo-brandcolor.svg" class="img-logo-banner">
+                              </div>
+                              <div class="title-hero">
+                                   <label class="title">Spider Man</label>
+                              </div>
+                              <section class="button-bar-hero">
+                                   <input type="button" id="btnComprar" value="Comprar">
+                                   <input type="button" id="btnAlquilar" value="Alquilar">
+                              </section>
                          </div>
-                         <div class="title-hero">
-                              <label class="title">Spider Man</label>
-                         </div>
-                         <section class="button-bar-hero">
-                              <input type="button" id="btnComprar" value="Comprar">
-                              <input type="button" id="btnAlquilar" value="Alquilar">
-                         </section>
                     </div>
                </div>
-          </div>
-     </main>
-     <!-- Aqui termina la seccion Banner Contenedor -->
+          </main>
+          <!-- Aqui termina la seccion Banner Contenedor -->
 
-     <!-- Aqui inicia la seccion Secciones Comunes -->
+          <!-- Aqui inicia la seccion Secciones Comunes -->
 
-     <!-- Escribir aqui el codigo de  la seccion Secciones Comunes -->
-     <section class="common-category">
-          <h2>Películas más rentadas</h2>
-          <div class="carousel-common-category-cards">
-               <div class="product-common-card">
-                    <img src="images/movie-images/1917-landscape-poster.png" alt="A landscape poster of the movie 1917"
-                         class="image-common-card">
-               </div>
-
-               <div class="product-common-card">
-                    <img src="images/movie-images/brooklyn-landscape-poster.jpg"
-                         alt="A landscape poster of the movie Brooklyn" class="image-common-card">
-               </div>
-
-               <div class="product-common-card">
-                    <img src="images/movie-images/suite-francaise-landscape-poster.jpg"
-                         alt="A landscape poster of the movie Suite Francaise" class="image-common-card">
-               </div>
-          </div>
-     </section>
-
-     <section class="common-category">
-          <h2>Top 10 de películas de la semana</h2>
-          <div class="carousel-common-category-cards">
-               <div class="product-common-card">
-                    <img src="images/movie-images/the-railway-man-landscape-poster.jpg"
-                         alt="A landscape poster of the movie The Railway Man" class="image-common-card">
-               </div>
-
-               <div class="product-common-card">
-                    <img src="images/movie-images/the-impossible-landscape-poster.jpg"
-                         alt="A landscape poster of the movie The Impossible" class="image-common-card">
-               </div>
-
-               <div class="product-common-card">
-                    <img src="images/movie-images/drive-landscape-poster.jpg"
-                         alt="A landscape poster of the movie Drive" class="image-common-card">
-               </div>
-          </div>
-     </section>
-
-     <!-- Aqui termina la seccion Secciones Comunes -->
-
-     <!-- Aqui inicia la seccion Footer -->
-     <!-- Escribir aqui el codigo de  la seccion Footer -->
-     <footer>
-          <section class="main-footer">
-               <div class="footer-social">
-                    <div class="follow">Siguenos</div>
-                    <nav class="social-nav">
-                         <ul>
-                              <li><a href="#"></a><i class="fa-brands fa-youtube"></i></li>
-                              <li><a href="#"></a><i class="fa-brands fa-twitter"></i></li>
-                              <li><a href="#"></a><i class="fa-brands fa-facebook"></i></li>
-                              <li><a href="#"></a><i class="fa-brands fa-instagram"></i></li>
-                              <li><a href="#"></a><i class="fa-brands fa-linkedin-in"></i></li>
-                              <li><a href="#"></a><i class="fa-brands fa-tiktok"></i></li>
-                              <li><a href="#"></a><i class="fa-solid fa-envelope"></i></li>
-                         </ul>
-                    </nav>
-               </div>
-               <div class="policy">
-                    <nav class="site-links">
-                         <ul>
-                              <li><a href="#"></a>Compania</li>
-                              <li><a href="#"></a>Prensa</li>
-                              <li><a href="#"></a>Carreras</li>
-                              <li><a href="#"></a>Ayuda</li>
-                         </ul>
-                    </nav>
-                    <nav class="policy-links">
-                         <ul>
-                              <li><a href="#"></a>Terminos de Uso</li>
-                              <li><a href="#"></a>Politica de Privacidad</li>
-                              <li><a href="#"></a>Accesibilidad</li>
-                              <li><a href="#"></a>Seleccion de Ads</li>
-                         </ul>
-                    </nav>
-               </div>
-               <div class="disclaimer">
-                    <div class="logo-disclaimer">
-                         <a href="/home"><img src="images/icon.svg" class="logo-movil"></a>
+          <!-- Escribir aqui el codigo de  la seccion Secciones Comunes -->
+          <section class="common-category">
+               <h2>Películas más rentadas</h2>
+               <div class="carousel-common-category-cards">
+                    <div class="product-common-card">
+                         <img src="images/movie-images/1917-landscape-poster.png"
+                              alt="A landscape poster of the movie 1917" class="image-common-card">
                     </div>
-                    <div class="copyright">
-                         TM &amp; © 2023 Marvel Inc. Todos los derechos reservados
+
+                    <div class="product-common-card">
+                         <img src="images/movie-images/brooklyn-landscape-poster.jpg"
+                              alt="A landscape poster of the movie Brooklyn" class="image-common-card">
+                    </div>
+
+                    <div class="product-common-card">
+                         <img src="images/movie-images/suite-francaise-landscape-poster.jpg"
+                              alt="A landscape poster of the movie Suite Francaise" class="image-common-card">
                     </div>
                </div>
           </section>
-     </footer>
-     <!-- Aqui termina la seccion Footer -->
 
-     <!-- Aqui inicia la seccion Secciones Diferentes -->
+          <section class="common-category">
+               <h2>Top 10 de películas de la semana</h2>
+               <div class="carousel-common-category-cards">
+                    <div class="product-common-card">
+                         <img src="images/movie-images/the-railway-man-landscape-poster.jpg"
+                              alt="A landscape poster of the movie The Railway Man" class="image-common-card">
+                    </div>
 
-     <!-- Escribir aqui el codigo de  la seccion Secciones Diferentes -->
+                    <div class="product-common-card">
+                         <img src="images/movie-images/the-impossible-landscape-poster.jpg"
+                              alt="A landscape poster of the movie The Impossible" class="image-common-card">
+                    </div>
 
-     <!-- Aqui termina la seccion Secciones Diferentes -->
+                    <div class="product-common-card">
+                         <img src="images/movie-images/drive-landscape-poster.jpg"
+                              alt="A landscape poster of the movie Drive" class="image-common-card">
+                    </div>
+               </div>
+          </section>
+
+          <!-- Aqui termina la seccion Secciones Comunes -->
+
+          <!-- Aqui inicia la seccion Footer -->
+          <!-- Escribir aqui el codigo de  la seccion Footer -->
+          <footer>
+               <section class="main-footer">
+                    <div class="footer-social">
+                         <div class="follow">Siguenos</div>
+                         <nav class="social-nav">
+                              <ul>
+                                   <li><a href="#"></a><i class="fa-brands fa-youtube"></i></li>
+                                   <li><a href="#"></a><i class="fa-brands fa-twitter"></i></li>
+                                   <li><a href="#"></a><i class="fa-brands fa-facebook"></i></li>
+                                   <li><a href="#"></a><i class="fa-brands fa-instagram"></i></li>
+                                   <li><a href="#"></a><i class="fa-brands fa-linkedin-in"></i></li>
+                                   <li><a href="#"></a><i class="fa-brands fa-tiktok"></i></li>
+                                   <li><a href="#"></a><i class="fa-solid fa-envelope"></i></li>
+                              </ul>
+                         </nav>
+                    </div>
+                    <div class="policy">
+                         <nav class="site-links">
+                              <ul>
+                                   <li><a href="#"></a>Compania</li>
+                                   <li><a href="#"></a>Prensa</li>
+                                   <li><a href="#"></a>Carreras</li>
+                                   <li><a href="#"></a>Ayuda</li>
+                              </ul>
+                         </nav>
+                         <nav class="policy-links">
+                              <ul>
+                                   <li><a href="#"></a>Terminos de Uso</li>
+                                   <li><a href="#"></a>Politica de Privacidad</li>
+                                   <li><a href="#"></a>Accesibilidad</li>
+                                   <li><a href="#"></a>Seleccion de Ads</li>
+                              </ul>
+                         </nav>
+                    </div>
+                    <div class="disclaimer">
+                         <div class="logo-disclaimer">
+                              <a href="/home"><img src="images/icon.svg" class="logo-movil"></a>
+                         </div>
+                         <div class="copyright">
+                              TM &amp; © 2023 Marvel Inc. Todos los derechos reservados
+                         </div>
+                    </div>
+               </section>
+          </footer>
+          <!-- Aqui termina la seccion Footer -->
+
+          <!-- Aqui inicia la seccion Secciones Diferentes -->
+
+          <!-- Escribir aqui el codigo de  la seccion Secciones Diferentes -->
+
+          <!-- Aqui termina la seccion Secciones Diferentes -->
 
 </body>
 
