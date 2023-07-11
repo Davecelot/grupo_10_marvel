@@ -1,68 +1,55 @@
 <%- include("../partials/head.ejs")%>
 
-<body>
-     <!-- Inicia la zona de header -->
-     <%- include("../partials/header.ejs")%>
-     
-     <!-- Formulario Registro -->
-     <h3 class="titulo-form">Registro</h3>
-     <div class="formulario">
-          <form action="/crear-cuenta" method="POST" class="create-form">
-               <div class="control-formulario">
-                    <label>Nombre:</label>
-                    <input type="text" name="nombre" class="control">
-               </div>
-               <div class="control-formulario">
-                    <label>Apellido:</label>
-                    <input type="text" name="apellido" class="control">
-               </div>
-               <div class="control-formulario">
-                    <label>Usuario:</label>
-                    <input type="text" name="usuario" class="control">
-               </div>
-               <div class="control-formulario">
-                    <label>Fecha Nacimiento:</label>
-                    <input type="date" name="fecha-nac" class="control">
-               </div>
-               <div class="control-formulario">
-                    <label>Domicilio:</label>
-                    <input type="text" name="domicilio" class="control">
-               </div>
-               <div class="control-formulario">
-                    <label>Intereses:</label>
-                    <br><input type="checkbox" name="intereses" class="control" value="Accion"> Accion
-                    <input type="checkbox" name="intereses" class="control" value="Aventura"> Aventura
-                    <br><input type="checkbox" name="intereses" class="control" value="Comedia"> Comedia
-                    <input type="checkbox" name="intereses" class="control" value="Drama"> Drama
-                    <br><input type="checkbox" name="intereses" class="control" value="Infantil"> Infantil
-                    <input type="checkbox" name="intereses" class="control" value="Musical"> Musical
-                    <br><input type="checkbox" name="intereses" class="control" value="Romantica"> Romantica
-                    <input type="checkbox" name="intereses" class="control" value="Romantica"> Terror
-               </div>
-               <div class="control-formulario">
-                    <label>Foto Usuario:</label>
-                    <input type="file" name="foto" class="control">
-               </div>
-               <div class="control-formulario">
-                    <label>Contraseña:</label>
-                    <input type="password" name="contraseña" class="control">
-               </div>
-               <div class="control-formulario">
-                    <label>Confirmar contraseña:</label>
-                    <input type="password" name="con-contraseña" class="control">
-               </div>
-               <div class="control-formulario">
-                    <conteiner class="botones">
-                    <button type="reset" class="boton-formulario" id="reset">Borrar</button>
-                    <button type="submit" class="boton-formulario" id="submit">Enviar</button>
-               </conteiner>
-               </div>
-          </form>
-     </div>
-     <!-- Aqui inicia la seccion Footer -->
-     <!-- Escribir aqui el codigo de  la seccion Footer -->
-     <%- include("../partials/footer.ejs")%>
-     <!-- Aqui termina la seccion Footer -->
-</body>
+     <body background="/images/fondo.jpg">
+          <!-- Inicia la zona de header -->
+          <%- include("../partials/header.ejs")%>
 
-</html>
+               <!-- Formulario Registro -->
+               <conteiner class="registro-cont">
+                    <div class="registro">
+                         <div class="form">
+                              <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
+                              <h3 class="titulo-form">Registrate</h3>
+                              <div class="formulario">
+                                   <form action="/crear-cuenta" method="POST" class="create-form">
+                                        <div class="control-formulario">
+                                             <label>Nombre:</label>
+                                             <input type="text" name="nombre" class="control"
+                                                  placeholder="Escribe aquí tu nombre" required autofocus
+                                                  pattern="[a-zA-Z\s]+" title="Ingresa un nombre válido">
+                                        </div>
+                                        <div class="control-formulario">
+                                             <label>Correo:</label>
+                                             <input type="email" name="correo" class="control"
+                                                  placeholder="Escribe aquí tu correo" required>
+                                        </div>
+                                        <div class="control-formulario">
+                                             <label>Contraseña:</label>
+                                             <input type="password" name="contraseña" class="control"
+                                                  placeholder="Escribe aquí tu contraseña" required minlength="8"
+                                                  title="Ingresa una contraseña válida">
+                                        </div>
+                                        <div class="control-formulario">
+                                             <label>Confirmar contraseña:</label>
+                                             <input type="password" name="con-contraseña" class="control"
+                                                  placeholder="Escribe nuevamente tu contraseña" required minlength="8">
+                                        </div>
+                              </div>
+                              <div class="control-formulario">
+                                   <conteiner class="botones">
+                                        <button type="reset" class="boton-formulario" id="reset">Borrar</button>
+                                        <button type="submit" class="boton-formulario" id="submit">Enviar</button>
+                                   </conteiner>
+                              </div>
+                              </form>
+
+                         </div>
+                    </div>
+               </conteiner>
+               <!-- Aqui inicia la seccion Footer -->
+               <!-- Escribir aqui el codigo de  la seccion Footer -->
+               <%- include("../partials/footer.ejs")%>
+                    <!-- Aqui termina la seccion Footer -->
+     </body>
+
+     </html>
