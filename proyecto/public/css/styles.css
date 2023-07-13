@@ -27,7 +27,7 @@ body {
   z-index: 100;
   width: 100%;
   padding: 0px 32px;
-  background: var(--colors-surface-surface-black, #0D051B);
+  background: var(--colors-surface-surface-black, #0d051b);
   justify-content: space-between;
   align-items: center;
 }
@@ -77,8 +77,8 @@ conteiner {
 }
 
 #register {
-  color: #FBFBFB;
-  background: #280F50;
+  color: #fbfbfb;
+  background: #280f50;
 }
 
 #register:hover {
@@ -87,7 +87,7 @@ conteiner {
 
 #login {
   color: #101820;
-  background: rgba(251, 251, 251, 0.40);
+  background: rgba(251, 251, 251, 0.4);
 }
 
 #login a:hover {
@@ -99,7 +99,7 @@ conteiner {
 }
 
 .search {
-  background: #FBFBFB;
+  background: #fbfbfb;
   border: none;
   outline: none;
   padding: 8px 16px;
@@ -121,7 +121,7 @@ conteiner {
   color: #101820;
   width: fit-content;
   flex-shrink: 0;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   border-radius: 16px 0px 0px 16px;
   text-align: center;
   padding: 12px 0px 0px 10px;
@@ -143,7 +143,7 @@ conteiner {
 
 .main-navbar ul a {
   text-decoration: none;
-  color: #FBFBFB;
+  color: #fbfbfb;
   padding: 5px 0;
   font: "Ubuntu";
   gap: 4px;
@@ -155,7 +155,7 @@ conteiner {
 }
 
 .main-navbar i {
-  color: #FBFBFB;
+  color: #fbfbfb;
 }
 
 .main-navbar ul ul {
@@ -183,17 +183,17 @@ conteiner {
   line-height: 32px;
 }
 
-.main-navbar ul li:hover>ul {
+.main-navbar ul li:hover > ul {
   display: block;
-  color: #FBFBFB;
+  color: #fbfbfb;
 }
 
 .main-navbar li:hover {
-  color: #BB38F9;
+  color: #bb38f9;
 }
 
 .main-navbar a:hover {
-  color: #BB38F9;
+  color: #bb38f9;
 }
 
 .hamburger-button {
@@ -371,7 +371,6 @@ conteiner {
 /* Aqui termina CSS de Main de Login */
 
 @media only screen and (min-width: 361px) and (max-width: 767px) {
-
   .logo {
     display: flex;
     width: 100px;
@@ -488,7 +487,6 @@ conteiner {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-
   .logo {
     display: flex;
     width: 300px;
@@ -612,7 +610,6 @@ conteiner {
 }
 
 @media (min-width: 1200px) {
-
   .hamburger-button {
     display: none;
   }
@@ -725,33 +722,79 @@ conteiner {
 
   /* Aqui inicia CSS de Main de Login de 1200 en adelante */
 
+  .main-login {
+    background-image: url("../images/peliculas-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vw;
+  }
+
   .formulario-login-minimo {
     display: none;
   }
 
+  .formulario-login-amplio {
+    width: 50vw;
+    margin: auto;
+    padding-top: 10%;
+  }
+
   .area-data-login {
-    background-color: white;
+    background-color: rgba(40, 15, 80, 0.5);
     display: block;
     width: 288px;
     margin: auto;
     margin-bottom: 10%;
   }
 
+  .form-title {
+    opacity: 1;
+  }
+
+  .area-data-login h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .area-data-login h3 {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .area-data-login label {
+    color: white;
+    font-weight: bolder;
+  }
+
   .data-login-name,
   .data-login-password {
     padding: 5%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
-  .area-data-login input {
-    width: 70%;
+  .area-data-login input.data-login-info {
+    width: 100%;
+    border: white 1px solid;
+    border-radius: 4px;
   }
 
   .submit-login-basico {
     width: 90%;
     margin-left: 5%;
     margin-bottom: 20%;
+    border: none;
+  }
+
+  .registro {
+    font-size: 0.8em;
+  }
+
+  .registro a {
+    color: white;
   }
 
   /* Aqui termina CSS de Main de Login de 1200 en adelante */
