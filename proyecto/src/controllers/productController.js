@@ -19,7 +19,7 @@ const controller = {
     },
 
     createProduct: function(req,res){
-        res.render('product/createProducts')
+        res.render('products/createProducts')
     }
 }
 
