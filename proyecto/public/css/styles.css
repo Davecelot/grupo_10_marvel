@@ -293,7 +293,7 @@ conteiner {
 }
 
 .product-common-card {
-  flex-basis: 33.33%;
+  flex-basis: 24%;
   height: 88px;
 }
 
@@ -572,7 +572,7 @@ conteiner {
   }
 
   .product-common-card {
-    height: 224px;
+    height: 200px;
   }
 
   /* END OF SECTION: COMMON CATEGORY */

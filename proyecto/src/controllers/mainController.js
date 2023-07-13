@@ -15,6 +15,10 @@ const controller = {
     register: function(req,res){
         res.render('users/register')
     },
+
+    productDetail: function(req, res) {
+        res.render('products/productDetail')
+    },
 }
 
 module.exports = controller;
