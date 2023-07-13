@@ -723,7 +723,7 @@ conteiner {
   /* Aqui inicia CSS de Main de Login de 1200 en adelante */
 
   .main-login {
-    background-image: url("../images/peliculas-desktop.svg");
+    background-image: url("../images/peliculas-desktop.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     height: 100vw;
