@@ -1,0 +1,177 @@
+/* Aqui inicia CSS de Main de Login */
+
+.tituloIniciaSesion {
+    color: lavender;
+    margin: 4px;
+  }
+  
+  .formulario-login-minimo input {
+    width: 100%;
+    margin: 4px;
+  }
+  
+  .submit-login-basico {
+    display: block;
+    background-color: #641aad;
+    color: lavender;
+    padding: 4px;
+    width: 100%;
+    margin: 4px;
+  }
+  
+  .area-data-login {
+    display: none;
+  }
+  
+  /* Aqui termina CSS de Main de Login */
+
+  @media only screen and (min-width: 361px) and (max-width: 767px) {
+    /* Aqui inicia CSS de Main de Login entre 361 y 767*/
+
+  .formulario-login-minimo {
+    display: none;
+  }
+
+  .area-data-login {
+    background-color: white;
+    display: block;
+    width: 288px;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+
+  .data-login-name,
+  .data-login-password {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .area-data-login input {
+    width: 70%;
+  }
+
+  .submit-login-basico {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20%;
+  }
+
+  /* Aqui termina CSS de Main de Login entre 361 y 767*/
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+     /* Aqui inicia CSS de Main de Login entre 768 y 1199*/
+
+  .formulario-login-minimo {
+    display: none;
+  }
+
+  .area-data-login {
+    background-color: white;
+    display: block;
+    width: 288px;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+
+  .data-login-name,
+  .data-login-password {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .area-data-login input {
+    width: 70%;
+  }
+
+  .submit-login-basico {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20%;
+  }
+
+  /* Aqui termina CSS de Main de Login entre 768 y 1199*/
+  }
+
+  @media (min-width: 1200px) {
+    /* Aqui inicia CSS de Main de Login de 1200 en adelante */
+
+  .main-login {
+    background-image: url("../images/peliculas-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vw;
+  }
+
+  .formulario-login-minimo {
+    display: none;
+  }
+
+  .formulario-login-amplio {
+    width: 50vw;
+    margin: auto;
+    padding-top: 10%;
+  }
+
+  .area-data-login {
+    background-color: rgba(40, 15, 80, 0.5);
+    display: block;
+    width: 288px;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+
+  .form-title {
+    opacity: 1;
+  }
+
+  .area-data-login h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .area-data-login h3 {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .area-data-login label {
+    color: white;
+    font-weight: bolder;
+  }
+
+  .data-login-name,
+  .data-login-password {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .area-data-login input.data-login-info {
+    width: 100%;
+    border: white 1px solid;
+    border-radius: 4px;
+  }
+
+  .submit-login-basico {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20%;
+    border: none;
+  }
+
+  .registro {
+    font-size: 0.8em;
+  }
+
+  .registro a {
+    color: white;
+  }
+
+  /* Aqui termina CSS de Main de Login de 1200 en adelante */
+  }

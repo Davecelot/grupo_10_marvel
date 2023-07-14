@@ -1,0 +1,196 @@
+.registro-cont {
+    display: flex;
+    /*width: 1440px;
+    height: 1024px;*/
+    width: 100%;
+    padding: 156px 264px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .registro {
+    display: flex;
+    width: 912px;
+    height: 712px;
+    padding: 56px 232px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--colors-surface-translucent-black, rgba(13, 5, 27, 0.60));
+    box-shadow: 0px 0px 20px 0px rgba(16, 24, 32, 0.50);
+    border-radius: 8px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .logo-w {
+    display: flex;
+    width: 280px;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .titulo-form {
+    color: var(--colors-text-text-white, #FBFBFB);
+    font-family: Ubuntu;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+  }
+  
+  label {
+    color: var(--colors-text-text-white, #FBFBFB);
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  
+  input, textarea, select {
+    display: flex;
+    min-width: 332px;
+    max-width: 448px;
+    padding: 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
+  
+  .control-formulario {
+    display: flex;
+    width: 448px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .botones {
+    gap: 5px;
+  }
+  
+  .boton-formulario {
+    display: flex;
+    width: 448px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    background: var(--colors-brand-purple-700, #280F50);
+    border: none;
+  }
+  
+  #submit {
+    color: #FBFBFB;
+    background: #280F50;
+  }
+  
+  #submit:hover {
+    background-color: #bb38f9;
+  }
+  
+  #reset {
+    color: #101820;
+    background: rgba(251, 251, 251, 0.40);
+  }
+  
+  #reset:hover {
+    color: #bb38f9;
+  }
+  
+  @media (min-width: 350px) and (max-width: 507px){
+  
+    .registro-cont {
+      display: flex;
+      width: 360px;
+      padding-top: 128px;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    .registro {
+      display: flex;
+      width: 360px;
+      padding: 118px 16px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: baseline;
+    }
+  
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+  
+    .logo-w {
+      width: 176px;
+      height: 40px;
+    }
+  
+    .titulo-form {
+      color: var(--colors-text-text-white, #FBFBFB);
+      font-family: Ubuntu;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+    }
+  
+    label {
+      color: var(--colors-text-text-white, #FBFBFB);
+      font-family: Ubuntu;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  
+    input {
+      display: flex;
+      min-width: 160px;
+      max-width: 328px;
+      padding: 8px 16px;
+      align-items: center;
+      gap: 8px;
+      align-self: stretch;
+      border-radius: 8px;
+      background: var(--colors-surface-surface-white, #FBFBFB);
+    }
+  
+    .boton-formulario {
+      display: flex;
+      width: 328px;
+      height: 40px;
+      padding: 4px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 4px;
+      background: var(--colors-brand-purple-700, #280F50);
+    }
+  
+    .control-formulario {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+  
+    .botones {
+      display: flex;
+      flex-direction: column;
+    }
+  }
