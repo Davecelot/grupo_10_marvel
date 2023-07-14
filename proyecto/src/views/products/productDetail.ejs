@@ -4,7 +4,47 @@
      <%- include("../partials/header.ejs")%>
 
      <main class="main-productDetail">
-          Aquí va el contenido
+               <img src="/images/productDetail-images/Argentina_1985.jpg" alt="A full-width image of the movie Argentina 1985" class="movie-image">
+
+               <div class="product-description">
+                    <div class="brief-description">
+                         <span>2 H 6 MIN</span><span>16+</span><span>2022</span><span>HD</span>
+                    </div>
+                    <div class="container-btns">
+                         <button type="submit" name="rent" class="primary-btn"><i class="fa-solid fa-cart-shopping"></i><span>Alquilar</span></button>
+                         <button type="submit" name="rent" class="translucent-btn"><i class="fa-solid fa-plus"></i><span>Mi lista</span></button>
+                    </div>
+                    <p>Inspirada en la historia real del fiscal Julio Strassera, Luis Moreno Ocampo y su joven equipo jurídico que se atrevieron a acusar, contra viento y marea, a contrarreloj y bajo constante amenaza, a los altos mandos de la sangrienta dictadura militar argentina (1976-1983) en el llamado Juicio a las Juntas de mediados de los años 80. Una batalla de David contra Goliat, con los héroes menos esperados.</p>
+               </div>
+
+               <div class="related-movies">
+                    <h2>Más contenido como este</h2>
+                    <div class="movies-carrousel">
+                         <img src="/images/productDetail-images/operation-mincemeat.jpg" alt="A movie poster for the movie Operation Mincemeat" class="movie-card">
+                         <img src="/images/productDetail-images/trial-ch7.jpg" alt="A movie poster for the movie The Trial of the Chicago 7" class="movie-card">
+                    </div>
+               </div>
+
+               <div class="additional-info">
+                    <div class="dropdown-list">
+                         <div class="dropdown-label">
+                              <span>Advertencia de contenido</span><i class="fa-solid fa-angle-down"></i>
+                         </div>
+                         <div class="dropdown-label">
+                              <span>Reparto</span><i class="fa-solid fa-angle-down"></i>
+                         </div>
+                         <div class="dropdown-label">
+                              <span>Dirección</span><i class="fa-solid fa-angle-down"></i>
+                         </div>
+                         <div class="dropdown-label">
+                              <span>Estudio</span><i class="fa-solid fa-angle-down"></i>
+                         </div>
+                         <div class="dropdown-label">
+                              <span>Subtítulos</span><i class="fa-solid fa-angle-down"></i>
+                         </div>
+                    </div>
+               </div>
+
      </main>
 
      <%- include("../partials/footer.ejs")%>
