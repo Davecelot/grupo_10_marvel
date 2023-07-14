@@ -1,52 +1,44 @@
 <%- include("../partials/head.ejs")%>
 
-     <body>
+     <body background="/images/fondo.jpg">
           <!-- Inicia la zona de header -->
           <%- include("../partials/header.ejs")%>
 
-               <main class="main-login">
-                    <div class="formulario-login-minimo">
-                         <form action="#" method="get" class="form-login-minimo">
-                              <img src="images/logo-brandcolor.svg" class="img-logo-banner">
-                              <section class="section-data-login">
-                                   <h2 class="tituloIniciaSesion">Inicia Sesión</h2>
-                                   <input type="text" name="dataName" id="dataName" class="dataName"
-                                        placeholder="Ingresa tu usuario">
-                                   <input type="password" name="dataPassword" id="dataPassword" class="dataPassword"
-                                        placeholder="Ingresa tu contraseña">
-                                   <button type="submit" class="submit-login-basico">Iniciar Sesion</button>
-                              </section>
-                         </form>
+               <!-- Formulario Registro -->
+               <conteiner class="registro-cont">
+                    <div class="registro">
+                         <div class="form">
+                              <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
+                              <h3 class="titulo-form">Ingresa</h3>
+                              <div class="formulario">
+                                   <form action="#" method="POST" class="create-form">
+                                        <div class="control-formulario">
+                                             <label>Correo:</label>
+                                             <input type="email" name="correo" class="control"
+                                                  placeholder="Escribe aquí tu correo" required>
+                                        </div>
+                                        <div class="control-formulario">
+                                             <label>Contraseña:</label>
+                                             <input type="password" name="contraseña" class="control"
+                                                  placeholder="Escribe aquí tu contraseña" required minlength="8"
+                                                  title="Ingresa una contraseña válida">
+                                        </div>
+                              </div>
+                              <div class="control-formulario">
+                                   <conteiner class="botones">
+                                        <button type="reset" class="boton-formulario" id="reset">Borrar</button>
+                                        <button type="submit" class="boton-formulario" id="submit">Enviar</button>
+                                   </conteiner>
+                              </div>
+                              </form>
+
+                         </div>
                     </div>
-                    <div class="formulario-login-amplio">
-                         <form action="#" method="get" class="form-login-amplio">
-                              <!-- <img src="images/logo-brandcolor.svg" class="img-logo-banner"> -->
-                              <section class="area-data-login">
-                                   <h2>Marvel</h2>
-                                   <h3>Iniciar Sesion</h3>
-                                   <div class="data-login-name">
-                                        <label for="dataLoginName">Correo electrónico : </label>
-                                        <input type="text" class="data-login-info" name="dataLoginName"
-                                             id="dataLoginName">
-                                   </div>
-                                   <div class="data-login-password">
-                                        <label for="dataLoginPassword">Contraseña : </label>
-                                        <input type="password" class="data-login-info" name="dataLoginPassword"
-                                             id="dataLoginPassword">
-                                   </div>
-                                   <button type="submit" class="submit-login-basico">Iniciar Sesion</button>
-                                   <spam class="registro">
-                                        <label>¿Aún no tienes una cuenta?</label><a href="./register.ejs">Registrate
-                                             aqui</a>
-                                   </spam>
-                              </section>
-                         </form>
-                    </div>
-               </main>
-               <!-- Termina la zona de formulario -->
-               <!-- Inicia la zona de footer -->
+               </conteiner>
+               <!-- Aqui inicia la seccion Footer -->
+               <!-- Escribir aqui el codigo de  la seccion Footer -->
                <%- include("../partials/footer.ejs")%>
-                    <!-- Termina la zona de footer -->
+                    <!-- Aqui termina la seccion Footer -->
      </body>
 
      </html>
