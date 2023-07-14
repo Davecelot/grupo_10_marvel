@@ -34,11 +34,35 @@
 
                          </div>
                     </div>
-               </conteiner>
-               <!-- Aqui inicia la seccion Footer -->
-               <!-- Escribir aqui el codigo de  la seccion Footer -->
-               <%- include("../partials/footer.ejs")%>
-                    <!-- Aqui termina la seccion Footer -->
+                    <div class="formulario-login-amplio">
+                         <form action="#" method="get" class="form-login-amplio">
+                              <!-- <img src="images/logo-brandcolor.svg" class="img-logo-banner"> -->
+                              <section class="area-data-login">
+                                   <h2>Marvel</h2>
+                                   <h3>Iniciar Sesion</h3>
+                                   <div class="data-login-name">
+                                        <label for="dataLoginName">Correo electrónico : </label>
+                                        <input type="text" class="data-login-info" name="dataLoginName"
+                                             id="dataLoginName">
+                                   </div>
+                                   <div class="data-login-password">
+                                        <label for="dataLoginPassword">Contraseña : </label>
+                                        <input type="password" class="data-login-info" name="dataLoginPassword"
+                                             id="dataLoginPassword">
+                                   </div>
+                                   <button type="submit" class="submit-login-basico">Iniciar Sesion</button>
+                                   <spam class="registro">
+                                        <label>¿Aún no tienes una cuenta?</label><a href="/users/register">Registrate
+                                             aqui</a>
+                                   </spam>
+                              </section>
+                         </form>
+                    </div>
+                    </main>
+                    <!-- Termina la zona de formulario -->
+                    <!-- Inicia la zona de footer -->
+                    <%- include("../partials/footer.ejs")%>
+                         <!-- Aqui termina la seccion Footer -->
      </body>
 
      </html>
