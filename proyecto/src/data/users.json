@@ -1,0 +1,30 @@
+[
+ {
+  "id": 1,
+  "nombre": "Diego Villarroel",
+  "correo": "diego.villarroel@dh.com",
+  "contraseña": "password1",
+  "image": null
+ },
+ {
+    "id": 2,
+    "nombre": "Victoria Soto",
+    "correo": "victoria.soto@dh.com",
+    "contraseña": "password2",
+    "image": null
+ },
+ {
+    "id": 3,
+    "nombre": "Edilberto Espinosa",
+    "correo": "edilberto.espinosa@dh.com",
+    "contraseña": "password3",
+    "image": null
+ },
+ {
+    "id": 4,
+    "nombre": "Ismael Rojas",
+    "correo": "ismael.rojas@dh.com",
+    "contraseña": "password4",
+    "image": null
+ }
+]
