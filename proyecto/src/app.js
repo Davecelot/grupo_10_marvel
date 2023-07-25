@@ -6,6 +6,7 @@ const rutaMain = require("./routes/main");
 const rutaUsers = require("./routes/users");
 const rutaProducts = require("./routes/products");
 
+app.use(express.urlencoded({extended:false}));
 app.set("view engine","ejs");
 app.set("views", __dirname + "/views");
 app.use(express.static(publicPath));
