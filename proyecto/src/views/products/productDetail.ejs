@@ -7,12 +7,11 @@
 
                <main class="main-productDetail">
                     <div class="img-container">
-                         <h1>Argentina 1985</h1>
                          <h1>
                               <%= dato.nombre %>
                          </h1>
-                         <img src="/images/productDetail-images/argentina-1985.jpg"
-                              alt="A full-width image of the movie Argentina 1985" class="movie-image">
+                         <img src=<%=dato.imagen %>
+                         alt="A full-width image of the movie <%= dato.nombre %>" class="movie-image">
                     </div>
 
                     <div class="product-description">

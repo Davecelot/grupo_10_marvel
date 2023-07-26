@@ -12,10 +12,8 @@ const controller = {
   productDetail: function (req, res) {
     const id = parseInt(req.params.id);
     const datos = archivoJSON.leerJson("products.json");
-    const dato = datos.filter((dato) => dato.id === id);
-    res.send(dato);
-    //res.send(dato.nombre);
-    //res.render("products/productDetail", { dato });
+    const dato = datos.find((dato) => dato.id === id);
+    res.render("products/productDetail", { dato });
   },
 
   productCart: function (req, res) {
