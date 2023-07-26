@@ -1,91 +1,111 @@
 <%- include("../partials/head.ejs")%>
-<link rel="stylesheet" href="/css/productDetail.css"> 
-</head>
+     <link rel="stylesheet" href="/css/productDetail.css">
+     </head>
 
-<body>
-     <%- include("../partials/header.ejs")%>
+     <body>
+          <%- include("../partials/header.ejs")%>
 
-     <main class="main-productDetail">
-          <div class="img-container">
-               <h1>Argentina 1985</h1>
-               <img src="/images/productDetail-images/argentina-1985.jpg" alt="A full-width image of the movie Argentina 1985" class="movie-image">
-          </div>
-
-          <div class="product-description">
-               <div class="brief-description">
-                    <span>2 H 6 MIN</span><span>16+</span><span>2022</span><span>HD</span>
-               </div>
-               <div class="container-btns">
-                    <button type="submit" name="rent" class="primary-btn"><i class="fa-solid fa-cart-shopping"></i><span>Alquilar</span></button>
-                    <button type="submit" name="rent" class="translucent-btn"><i class="fa-solid fa-plus"></i><span>Mi lista</span></button>
-               </div>
-               <p>Inspirada en la historia real del fiscal Julio Strassera, Luis Moreno Ocampo y su joven equipo jurídico que se atrevieron a acusar, contra viento y marea, a contrarreloj y bajo constante amenaza, a los altos mandos de la sangrienta dictadura militar argentina (1976-1983) en el llamado Juicio a las Juntas de mediados de los años 80. Una batalla de David contra Goliat, con los héroes menos esperados.</p>
-          </div>
-
-          <div class="related-movies">
-               <h2>Más contenido como este</h2>
-               <div class="movies-carousel">
-                    <img src="/images/productDetail-images/operation-mincemeat.jpg" alt="A movie poster for the movie Operation Mincemeat" class="movie-card">
-                    <img src="/images/productDetail-images/trial-ch7.jpg" alt="A movie poster for the movie The Trial of the Chicago 7" class="movie-card">
-                    <img src="/images/productDetail-images/finale-operation.jpg" alt="A movie poster for the movie Operation Finale" class="movie-card">
-                    <img src="/images/productDetail-images/kings-speech.jpg" alt="A movie poster for the movie The Kings Speech" class="movie-card">
-                    <img src="/images/productDetail-images/schindlers-list.jpg" alt="A movie poster for the movie The Schindlers List from 1993" class="movie-card">
-                    <img src="/images/productDetail-images/richard-jewell.jpg" alt="A movie poster for the movie Richard Jewell" class="movie-card">
-                    <img src="/images/productDetail-images/selma-movie-poster.jpg" alt="A movie poster for the movie Selma" class="movie-card">
-               </div>
-          </div>
-
-          <div class="additional-info">
-
-               <div class="additional-info-list">
-                    <div class="info-section">
-                         <h3>Advertencia de contenido</h3>
-                         <p class="section-description">Violencia, consumo de alcohol, consumo de tabaco, lenguaje malsonante, contenido sexual</p>
+               <main class="main-productDetail">
+                    <div class="img-container">
+                         <h1>Argentina 1985</h1>
+                         <h1>
+                              <%= dato.nombre %>
+                         </h1>
+                         <img src="/images/productDetail-images/argentina-1985.jpg"
+                              alt="A full-width image of the movie Argentina 1985" class="movie-image">
                     </div>
 
-                    <div class="info-section">
-                         <h3>Reparto</h3>
-                         <p class="section-description">Ricardo Darín, Peter Lanzani, Alejandro Flechner</p>
+                    <div class="product-description">
+                         <div class="brief-description">
+                              <span>2 H 6 MIN</span><span>16+</span><span>2022</span><span>HD</span>
+                         </div>
+                         <div class="container-btns">
+                              <button type="submit" name="rent" class="primary-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i><span>Alquilar</span></button>
+                              <button type="submit" name="rent" class="translucent-btn"><i
+                                        class="fa-solid fa-plus"></i><span>Mi lista</span></button>
+                         </div>
+                         <p>Inspirada en la historia real del fiscal Julio Strassera, Luis Moreno Ocampo y su joven
+                              equipo jurídico que se atrevieron a acusar, contra viento y marea, a contrarreloj y bajo
+                              constante amenaza, a los altos mandos de la sangrienta dictadura militar argentina
+                              (1976-1983) en el llamado Juicio a las Juntas de mediados de los años 80. Una batalla de
+                              David contra Goliat, con los héroes menos esperados.</p>
                     </div>
 
-                    <div class="info-section">
-                         <h3>Dirección</h3>
-                         <p class="section-description">Santiago Mitre</p>
+                    <div class="related-movies">
+                         <h2>Más contenido como este</h2>
+                         <div class="movies-carousel">
+                              <img src="/images/productDetail-images/operation-mincemeat.jpg"
+                                   alt="A movie poster for the movie Operation Mincemeat" class="movie-card">
+                              <img src="/images/productDetail-images/trial-ch7.jpg"
+                                   alt="A movie poster for the movie The Trial of the Chicago 7" class="movie-card">
+                              <img src="/images/productDetail-images/finale-operation.jpg"
+                                   alt="A movie poster for the movie Operation Finale" class="movie-card">
+                              <img src="/images/productDetail-images/kings-speech.jpg"
+                                   alt="A movie poster for the movie The Kings Speech" class="movie-card">
+                              <img src="/images/productDetail-images/schindlers-list.jpg"
+                                   alt="A movie poster for the movie The Schindlers List from 1993" class="movie-card">
+                              <img src="/images/productDetail-images/richard-jewell.jpg"
+                                   alt="A movie poster for the movie Richard Jewell" class="movie-card">
+                              <img src="/images/productDetail-images/selma-movie-poster.jpg"
+                                   alt="A movie poster for the movie Selma" class="movie-card">
+                         </div>
                     </div>
 
-                    <div class="info-section">
-                         <h3>Estudio</h3>
-                         <p class="section-description">Amazon Studios</p>
+                    <div class="additional-info">
+
+                         <div class="additional-info-list">
+                              <div class="info-section">
+                                   <h3>Advertencia de contenido</h3>
+                                   <p class="section-description">Violencia, consumo de alcohol, consumo de tabaco,
+                                        lenguaje malsonante, contenido sexual</p>
+                              </div>
+
+                              <div class="info-section">
+                                   <h3>Reparto</h3>
+                                   <p class="section-description">Ricardo Darín, Peter Lanzani, Alejandro Flechner</p>
+                              </div>
+
+                              <div class="info-section">
+                                   <h3>Dirección</h3>
+                                   <p class="section-description">Santiago Mitre</p>
+                              </div>
+
+                              <div class="info-section">
+                                   <h3>Estudio</h3>
+                                   <p class="section-description">Amazon Studios</p>
+                              </div>
+
+                              <div class="info-section">
+                                   <h3>Subtítulos</h3>
+                                   <p class="section-description">Español, Inglés, Danés, Alemán, Francés, Italiano,
+                                        Filipino, Holandés, Polaco, Portugués (BR), Portugués (Portugal), Turco, Sueco,
+                                        Mandarín Simplificado</p>
+                              </div>
+                         </div>
+
+                         <div class="dropdown-list">
+                              <div class="dropdown-label">
+                                   <span>Advertencia de contenido</span><i class="fa-solid fa-angle-down"></i>
+                              </div>
+                              <div class="dropdown-label">
+                                   <span>Reparto</span><i class="fa-solid fa-angle-down"></i>
+                              </div>
+                              <div class="dropdown-label">
+                                   <span>Dirección</span><i class="fa-solid fa-angle-down"></i>
+                              </div>
+                              <div class="dropdown-label">
+                                   <span>Estudio</span><i class="fa-solid fa-angle-down"></i>
+                              </div>
+                              <div class="dropdown-label">
+                                   <span>Subtítulos</span><i class="fa-solid fa-angle-down"></i>
+                              </div>
+                         </div>
                     </div>
 
-                    <div class="info-section">
-                         <h3>Subtítulos</h3>
-                         <p class="section-description">Español, Inglés, Danés, Alemán, Francés, Italiano, Filipino, Holandés, Polaco, Portugués (BR), Portugués (Portugal), Turco, Sueco, Mandarín Simplificado</p>
-                    </div>
-               </div>
+               </main>
 
-               <div class="dropdown-list">
-                    <div class="dropdown-label">
-                         <span>Advertencia de contenido</span><i class="fa-solid fa-angle-down"></i>
-                    </div>
-                    <div class="dropdown-label">
-                         <span>Reparto</span><i class="fa-solid fa-angle-down"></i>
-                    </div>
-                    <div class="dropdown-label">
-                         <span>Dirección</span><i class="fa-solid fa-angle-down"></i>
-                    </div>
-                    <div class="dropdown-label">
-                         <span>Estudio</span><i class="fa-solid fa-angle-down"></i>
-                    </div>
-                    <div class="dropdown-label">
-                         <span>Subtítulos</span><i class="fa-solid fa-angle-down"></i>
-                    </div>
-               </div>
-          </div>
+               <%- include("../partials/footer.ejs")%>
+     </body>
 
-     </main>
-
-     <%- include("../partials/footer.ejs")%>
-</body>
-
-</html>
+     </html>
