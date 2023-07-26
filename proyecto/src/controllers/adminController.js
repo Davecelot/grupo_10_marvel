@@ -9,6 +9,10 @@ app.use(express.static(path.resolve(__dirname, "./public")));
 app.set("view engine", "ejs");
 
 const controller = {
+  index: function (req, res) {
+    res.render("admin/index");
+  },
+
   productList: function (req, res) {
     res.render("products/productList");
   },

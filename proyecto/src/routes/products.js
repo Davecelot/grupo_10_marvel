@@ -20,10 +20,6 @@ router.get("/productDetail/:id", productsController.productDetail);
 router.get("/productCart", productsController.productCart);
 router.get("/productList", productsController.productList);
 router.get("/createProducts", productsController.createProduct);
-router.post(
-  "/createProducts",
-  upload.single("imagen"),
-  productsController.save
-);
+router.post("/createProducts", upload.single("imagen"), productsController.save);
 
 module.exports = router;

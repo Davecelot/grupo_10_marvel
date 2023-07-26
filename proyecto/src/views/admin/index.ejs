@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/51007c3285.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Panel de Administrador</title>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <a href="/admin/index"><img src="/images/logo-white.svg" class="logo"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="panel">
+            <h1>Panel de Administrador</h1>
+            <div class="categories">
+                <a href="#"><div class="category-item users">
+                    <i class="fa-solid fa-user"></i><p>Usuarios</p><i class="fa-solid fa-chevron-right"></i>
+                </div></a>
+
+                <a href="#"><div class="category-item movies">
+                    <i class="fa-solid fa-video"></i><p>Películas</p><i class="fa-solid fa-chevron-right"></i>
+                </div></a>
+            </div>
+        </div>
+    </main>
+
+    <%- include("../partials/footer.ejs")%>
+</body>
+</html>
