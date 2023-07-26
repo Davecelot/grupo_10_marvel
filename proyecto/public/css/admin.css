@@ -27,21 +27,20 @@
 
 /* >>>>>>>>>> MAIN <<<<<<<<<< */
 
-main {
+.main-index {
     width: 100%;
     height: 80vh;
+    padding: 56px 16px 0px 16px;
 }
 
 /* >>>>> PANEL <<<<< */
 
 .panel {
     display: flex;
-    padding: 56px 16px 0px 16px;
+    width: 100%;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
     gap: 16px;
-    align-self: stretch;
+    /* align-self: stretch; */
 }
 
 .panel h1 {
@@ -61,32 +60,33 @@ a {
     text-decoration: none;
 }
 
-.categories {
+.list-panel {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    align-items: center;
     gap: 16px;
+    justify-content: space-between;
 }
 
-.category-item {
+.item-panel {
     position: relative;
     background-color: #fbfbfb;
     border-radius: 8px;
     display: flex;
-    width: 328px;
+    width: 100%;
     padding: 8px 16px;
     align-items: center;
     gap: 8px;
 }
 
-.category-item i {
+.item-panel i {
     color: #101820;
     font-size: 16px;
     width: 16px;
     flex-shrink: 0;
 }
 
-.category-item p {
+.item-panel p {
     /* mobile/body/large-text-mobile */
     color: #101820;
     font-family: 'Ubuntu';
@@ -100,4 +100,31 @@ i.fa-chevron-right {
     position: absolute;
     right: 17px;
     top: 12px;
+}
+
+/* >>>>>>>>>> MEDIA QUERIES <<<<<<<<<< */
+
+/* >>>>> TABLET <<<<< */
+
+@media (min-width: 481px) {
+
+    /* >>>>>>>>>> MAIN <<<<<<<<<< */
+
+    /* >>>>> PANEL <<<<< */
+
+    .panel {
+        align-items: center;
+    }
+
+    /* >>>>> LIST PANEL <<<<< */
+
+    .list-panel {
+        flex-direction: row;
+    }
+}
+
+/* >>>>> DESKTOP <<<<< */
+
+@media (min-width: 769px) {
+
 }
