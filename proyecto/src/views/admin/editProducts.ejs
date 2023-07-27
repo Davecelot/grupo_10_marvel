@@ -1,0 +1,125 @@
+<%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/createProducts.css">
+    </head>
+
+    <body>
+        <!-- Inicia la zona de header -->
+        <%- include("../partials/header.ejs")%>
+
+            <!-- Inicia la zona de main -->
+
+            <!-- Formulario Creacion -->
+            <conteiner class="registro-cont">
+                <div class="registro">
+                    <div class="form">
+                        <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
+                        <h3 class="titulo-form">Nueva Pelicula</h3>
+                        <div class="formulario">
+                            <form action="/admin/editProducts/<%= peliculaEditar.id%>?_method=PUT" method="POST"
+                                class="create-form" enctype="multipart/form-data">
+                                <div class="control-formulario">
+                                    <label>Titulo:</label>
+                                    <input type="text" name="nombre" class="control"
+                                        placeholder="Escribe aquí el titulo" required autofocus pattern="[a-zA-Z\s]+"
+                                        title="Ingresa un titulo válido" value="<%= peliculaEditar.nombre%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Duracion:</label>
+                                    <input type="text" name="duracion" class="control"
+                                        placeholder="Escribe aquí la duracion" value="<%= peliculaEditar.duracion%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Año:</label>
+                                    <input type="number" name="año" class="control" placeholder="Escribe aquí el año"
+                                        value="<%= peliculaEditar.año%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Clasificacion Edad:</label>
+                                    <input type="text" name="clasificacionEdad" class="control"
+                                        placeholder="Escribe aquí la clasificacion"
+                                        value="<%= peliculaEditar.clasificacionEdad%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Descripcion:</label>
+                                    <textarea name="descripcion" class="control"
+                                        placeholder="Escribe aquí la descripcion"
+                                        required><%= peliculaEditar.descripcion%></textarea>
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Advertencia Contenido:</label>
+                                    <input type="text" name="advertenciaContenido" class="control"
+                                        placeholder="Escribe aquí la advertencia de contenido"
+                                        value="<%= peliculaEditar.advertenciaContenido%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Director:</label>
+                                    <input type="text" name="director" class="control"
+                                        placeholder="Escribe aquí el director" value="<%= peliculaEditar.director%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Reparto:</label>
+                                    <input type="text" name="reparto" class="control"
+                                        placeholder="Escribe aquí el reparto" value="<%= peliculaEditar.reparto%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Estudio:</label>
+                                    <input type="text" name="estudio" class="control"
+                                        placeholder="Escribe aquí el estudio" value="<%= peliculaEditar.estudio%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Subtitulos:</label>
+                                    <input type="text" name="subtitulos" class="control"
+                                        placeholder="Escribe aquí los subtitulos"
+                                        value="<%= peliculaEditar.subtitulos%>">
+                                </div>
+                                <div class="control-formulario">
+                                    <label>Precio:</label>
+                                    <input type="number" name="precio" class="control"
+                                        placeholder="Escribe aquí el precio" required title="Ingresa un precio válido"
+                                        value="<%= peliculaEditar.precio%>">
+                                </div>
+                                <!--Aquí solicito la imagen-->
+                                <div class="control-formulario">
+                                    <figure class="form-group">
+                                        <img class="poster" src="/images/peliculas/<%=peliculaEditar.imagen%>"
+                                            alt="pelicula <%=peliculaEditar.nombre%>">
+                                    </figure>
+                                    <input type="hidden" name="oldImagen" value="<%=peliculaEditar.imagen%>">
+                                    <label>Imagen:</label>
+                                    <input type="file" name="imagen" class="control" required
+                                        title="Ingresa una imagen válida">
+                                </div>
+                                <div class="control-formulario">
+                                    <label for="genero">Genero:</label>
+                                    <select id="genero">
+                                        <option value="accion">Accion</option>
+                                        <option value="aventura">Aventura</option>
+                                        <option value="comedia">Comedia</option>
+                                        <option value="drama">Drama</option>
+                                        <option value="infantil">Infantil</option>
+                                        <option value="musical">Musical</option>
+                                        <option value="romantica">Romantica</option>
+                                        <option value="terror">Terror</option>
+                                        <option selected="selected">
+                                            <%=peliculaEditar.genero%>
+                                        </option>
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="control-formulario">
+                            <conteiner class="botones">
+                                <button type="reset" class="boton-formulario" id="reset">Borrar</button>
+                                <button type="submit" class="boton-formulario" id="submit">Enviar</button>
+                            </conteiner>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </conteiner>
+
+            <!-- termina  la zona de main -->
+            <!-- Inicia la zona de footer -->
+            <%- include("../partials/footer.ejs")%>
+    </body>
+
+    </html>

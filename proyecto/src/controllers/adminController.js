@@ -13,12 +13,19 @@ const controller = {
     res.render("admin/index");
   },
 
-  productList: function (req, res) {
-    res.render("products/productList");
+  listProducts: function (req, res) {
+    res.render("admin/listProducts");
   },
 
   createProduct: function (req, res) {
-    res.render("products/createProducts");
+    res.render("admin/createProducts");
+  },
+
+  editProduct: function (req, res) {
+    let peliculas = mainController.leerJson("products.json")
+    const peliculaId = req.params.id;
+    let peliculaEditar = peliculas.find(pelicula => pelicula.id == peliculaId)
+    res.render("admin/editProducts", { peliculaEditar });
   },
 
   save: (req, res) => {
@@ -43,7 +50,7 @@ const controller = {
     peliculas.push(nuevaPelicula);
     let nuevaPelciulaGuardar = JSON.stringify(peliculas, null, 2);
     fs.writeFileSync(path.resolve(__dirname, "../data/products.json"), nuevaPelciulaGuardar);
-    res.redirect("/products/productList");
+    res.redirect("/admin/listProducts");
   },
 
   delete: (req, res) => {
@@ -57,7 +64,7 @@ const controller = {
       path.resolve(__dirname, "/data/products.json"),
       peliculasGuardar
     );
-    //res.redirect("/administrar");
+    res.redirect("/admin/listProducts");
   },
 
   put: (req, res) => {
@@ -76,7 +83,7 @@ const controller = {
       path.resolve(__dirname, "../data/products.json"),
       peliculaActualizada
     );
-    //res.redirect("/administrar");
+    res.redirect("/admin/listProducts");
   },
 };
 

@@ -141,5 +141,19 @@
     "reparto": "Aaron Paul, Dominic Cooper, Imogen Poots",
     "estudio": "Disney",
     "subtitulos": "Español, Ingles, Frances"
+  },
+  {
+    "id": 11,
+    "nombre": "Spider Man",
+    "duracion": "2h 1m",
+    "clasificacionEdad": "PG13",
+    "descripcion": "Average teenager Peter Parker is transformed into an extraordinary super hero after he is accidentally bitten by a radioactive spider. When his beloved uncle is savagely murdered during a robbery, young Peter vows to use his powers to avenge his death. Deeming himself \"Spider-Man ,\" he sets about ridding the streets of crime, bringing him into conflict with malevolent super-villain \"Green Goblin.",
+    "advertenciaContenido": "",
+    "director": "Sam Raimi",
+    "reparto": "Tobey Maguire, Willem Dafoe, Kirsten Dunst, James Franco, Cliff Robertson, Rosemary Harris",
+    "estudio": "Marvel Entertainment",
+    "subtitulos": "Ingles, Español",
+    "precio": "200",
+    "imagen": "pelicula-1690482356544.jpg"
   }
 ]

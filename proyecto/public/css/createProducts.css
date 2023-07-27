@@ -89,6 +89,11 @@
     background: var(--colors-brand-purple-700, #280F50);
     border: none;
   }
+
+  .poster{
+    width: 20%;
+    padding: 15px 0px 0px 0px;
+  }
   
   #submit {
     color: #FBFBFB;
