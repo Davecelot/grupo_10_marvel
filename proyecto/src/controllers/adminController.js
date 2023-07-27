@@ -48,6 +48,7 @@ const controller = {
     );
     res.redirect("/products/productList");
   },
+
   delete: (req, res) => {
     let peliculas = mainController.leerJson("products.json");
     let peliculaDeleteId = parseInt(req.params.id);
@@ -61,6 +62,7 @@ const controller = {
     );
     //res.redirect("/administrar");
   },
+
   put: (req, res) => {
     let peliculas = mainController.leerJson("products.json");
     req.body.id = req.params.id;
