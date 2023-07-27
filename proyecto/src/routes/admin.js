@@ -20,8 +20,8 @@ router.get("/index", adminController.index);
 router.get("/listProducts", adminController.listProducts);
 router.get("/createProducts", adminController.createProduct);
 router.post("/createProducts", upload.single("imagen"), adminController.save);
-router.delete("/listProducts/:id", adminController.delete);
+router.get("/editProducts/delete/:id", adminController.delete);
 router.get("/editProducts/:id", adminController.editProduct)
-router.put("/listProducts/:id", adminController.put);
+router.put("/editProducts/:id", upload.single('imagen'), adminController.put);
 
 module.exports = router;

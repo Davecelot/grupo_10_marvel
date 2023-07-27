@@ -60,10 +60,7 @@ const controller = {
       (pelicula) => pelicula.id != peliculaDeleteId
     );
     let peliculaGuardar = JSON.stringify(peliculasFinal, null, 2);
-    fs.writeFileSync(
-      path.resolve(__dirname, "/data/products.json"),
-      peliculasGuardar
-    );
+    fs.writeFileSync(path.resolve(__dirname, "../data/products.json"), peliculaGuardar);
     res.redirect("/admin/listProducts");
   },
 
@@ -71,18 +68,14 @@ const controller = {
     let peliculas = mainController.leerJson("products.json");
     req.body.id = req.params.id;
     req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-    let peliculaUpdate = peliculas.map((moto) => {
+    let peliculaUpdate = peliculas.map((pelicula) => {
       if (pelicula.id == req.body.id) {
         return (pelicula = req.body);
       }
       return pelicula;
     });
-
     let peliculaActualizada = JSON.stringify(peliculaUpdate, null, 2);
-    fs.writeFileSync(
-      path.resolve(__dirname, "../data/products.json"),
-      peliculaActualizada
-    );
+    fs.writeFileSync(path.resolve(__dirname, "../data/products.json"), peliculaActualizada);
     res.redirect("/admin/listProducts");
   },
 };
