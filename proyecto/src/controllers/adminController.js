@@ -42,10 +42,7 @@ const controller = {
 
     peliculas.push(nuevaPelicula);
     let nuevaPelciulaGuardar = JSON.stringify(peliculas, null, 2);
-    fs.writeFileSync(
-      path.resolve(__dirname, "../data/products.json"),
-      nuevaPelciulaGuardar
-    );
+    fs.writeFileSync(path.resolve(__dirname, "../data/products.json"), nuevaPelciulaGuardar);
     res.redirect("/products/productList");
   },
   delete: (req, res) => {
