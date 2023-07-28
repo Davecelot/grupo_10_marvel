@@ -22,8 +22,15 @@ const controller = {
 
   productList: function (req, res) {
     const peliculas = archivoJSON.leerJson("products.json");
-    res.send(peliculas);
-    //res.render("products/productList");
+    const generosAll = peliculas.map((pelicula) => pelicula.genero);
+    const generos = generosAll.filter(
+      (item, index) => generosAll.indexOf(item) === index
+    );
+    //     const generosClean = generos.filter((genero) => genero);
+    res.render("products/productList", {
+      generos: generos,
+      peliculas: peliculas,
+    });
   },
 
   createProduct: function (req, res) {
