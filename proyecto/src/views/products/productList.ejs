@@ -1,28 +1,18 @@
-<%- include("./partials/head.ejs")%>
+<%- include("../partials/head.ejs")%>
 
      <body>
-          <%- include("./partials/header.ejs")%>
+          <%- include("../partials/header.ejs")%>
                <link rel="stylesheet" href="/css/index.css">
                </head>
 
                <main>
-                    <div class="banner-container">
-                         <div class="image">
-                              <img class="image-hero" src="/images/spiderman.jpg" alt="Spider Man">
-                              <div class="marbete">
-                                   <div class="logo-hero">
-                                        <img src="images/logo-brandcolor.svg" class="img-logo-banner">
-                                   </div>
-                                   <div class="title-hero">
-                                        <label class="title">Spider Man</label>
-                                   </div>
-                                   <section class="button-bar-hero">
-                                        <input type="button" id="btnComprar" value="Comprar">
-                                        <input type="button" id="btnAlquilar" value="Alquilar">
-                                   </section>
-                              </div>
-                         </div>
-                    </div>
+                    <section class="common-category">
+                         <% for(genero of generos) { %>
+                              <h2>
+                                   <%= genero %>
+                              </h2>
+                              <% } %>
+                    </section>
                </main>
 
                <section class="common-category">
@@ -117,7 +107,7 @@
                     </div>
                </section>
 
-               <%- include("./partials/footer.ejs")%>
+               <%- include("../partials/footer.ejs")%>
 
      </body>
 
