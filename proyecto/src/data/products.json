@@ -135,18 +135,33 @@
     "subtitulos": "Español, Ingles"
   },
   {
-    "id": 10,
     "nombre": "Need for Speed",
-    "genero": "Accion",
     "duracion": "2h 12m",
-    "año": 2014,
+    "aÃ±o": "2014",
     "clasificacionEdad": "16+",
     "descripcion": "Recién salido de prisión, un corredor callejero que fue incriminado por un rico socio comercial se une a una carrera a campo traviesa con la venganza en mente. Su ex pareja, al enterarse del plan, ofrece una gran recompensa por su cabeza cuando comienza la carrera.",
     "advertenciaContenido": "lenguaje explicito, escenas de tortura, escenas de sexo",
     "director": "Scott Waugh",
     "reparto": "Aaron Paul, Dominic Cooper, Imogen Poots",
     "estudio": "Disney",
-    "imagen": "/images/movie-images/need-for-speed.jpg",
-    "subtitulos": "Español, Ingles, Frances"
+    "subtitulos": "Español, Ingles, Frances",
+    "precio": "260",
+    "oldImagen": "",
+    "id": "10",
+    "imagen": "pelicula-1690485689428.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Spider Man",
+    "duracion": "2h 1m",
+    "clasificacionEdad": "PG13",
+    "descripcion": "Average teenager Peter Parker is transformed into an extraordinary super hero after he is accidentally bitten by a radioactive spider. When his beloved uncle is savagely murdered during a robbery, young Peter vows to use his powers to avenge his death. Deeming himself \"Spider-Man ,\" he sets about ridding the streets of crime, bringing him into conflict with malevolent super-villain \"Green Goblin.",
+    "advertenciaContenido": "",
+    "director": "Sam Raimi",
+    "reparto": "Tobey Maguire, Willem Dafoe, Kirsten Dunst, James Franco, Cliff Robertson, Rosemary Harris",
+    "estudio": "Marvel Entertainment",
+    "subtitulos": "Ingles, Español",
+    "precio": "200",
+    "imagen": "pelicula-1690482356544.jpg"
   }
 ]
