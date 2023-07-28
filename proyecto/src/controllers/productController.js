@@ -26,6 +26,9 @@ const controller = {
     const generos = generosAll.filter(
       (item, index) => generosAll.indexOf(item) === index
     );
+    const peliculaGeneros = peliculas.filter(
+      (pelicula) => pelicula.genero === generos[0]
+    );
     //     const generosClean = generos.filter((genero) => genero);
     res.render("products/productList", {
       generos: generos,

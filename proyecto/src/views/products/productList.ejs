@@ -12,15 +12,15 @@
                                    <%= genero %>
                               </h2>
                               <div class="carousel-common-category-cards">
-                                   <% for(pelicula of peliculas) { %>
-                                        <% if(pelicula.genero==genero) { %>
+                                   <% const peliculaGeneros=peliculas.filter((pelicula)=> pelicula.genero ===
+                                        genero) %>
+                                        <% for(pelicula of peliculaGeneros) { %>
                                              <div class="product-common-card">
                                                   <img src="<%= pelicula.imagen %>"
                                                        alt="A landscape poster of the movie <%= pelicula.nombre %>"
                                                        class="image-common-card">
                                              </div>
                                              <% } %>
-                                                  <% } %>
                               </div>
                               <% } %>
                     </section>
