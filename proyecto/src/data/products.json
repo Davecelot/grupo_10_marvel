@@ -11,7 +11,7 @@
     "director": "Santiago Mitre",
     "reparto": "Ricardo Darin, Gina Mastronicola, Francisco Bertin",
     "estudio": "Amazon Studios",
-    "imagen": "/images/productDetail-images/argentina-1985.jpg",
+    "imagen": "/images/movie-images/argentina-1985.jpeg",
     "subtitulos": "Español, Ingles"
   },
   {
@@ -26,7 +26,7 @@
     "director": "Sam Mendes",
     "reparto": "Dean-Charles Chapman, George Mackay, Daniel Mays",
     "estudio": "Dreamworks",
-    "imagen": "/images/productDetail-images/argentina-1985.jpg",
+    "imagen": "/images/movie-images/1917-landscape-poster.png",
     "subtitulos": "Español, Ingles"
   },
   {
@@ -41,7 +41,7 @@
     "director": "J. A. Bayona",
     "reparto": "Naomi Watts, Ewan McGreggor, Tom Holland",
     "estudio": "Warnerbros",
-    "imagen": "/images/productDetail-images/argentina-1985.jpg",
+    "imagen": "/images/movie-images/the-impossible-landscape-poster.jpg",
     "subtitulos": "Español, Ingles"
   },
   {
@@ -56,6 +56,7 @@
     "director": "Nicolas Winding Refn",
     "reparto": "Ryan Gosling, Carey Mulligan, Bryan Cranston",
     "estudio": "Bold Films",
+    "imagen": "/images/movie-images/drive-landscape-poster.jpg",
     "subtitulos": "Español, Ingles"
   },
   {
@@ -70,6 +71,7 @@
     "director": "John Crowley",
     "reparto": "Saoirse Ronan, Emory Cohen, Domhnall Gleeson",
     "estudio": "Dreamworks",
+    "imagen": "/images/movie-images/brooklyn-landscape-poster.jpg",
     "subtitulos": "Español, Ingles"
   },
   {
@@ -84,6 +86,7 @@
     "director": "Edgar Wright",
     "reparto": "Ansel Elgort, Jon Bernthal, Jon Hamm",
     "estudio": "Bold Films",
+    "imagen": "/images/movie-images/baby-driver.jpg",
     "subtitulos": "Español, Ingles, Frances"
   },
   {
@@ -98,6 +101,7 @@
     "director": "Saul Dibb",
     "reparto": "Michelle Williams, Kristin Scott Thomas, Margot Robbie",
     "estudio": "Amazon Studios",
+    "imagen": "/images/movie-images/suite-francaise-landscape-poster.jpg",
     "subtitulos": "Español, Ingles"
   },
   {
@@ -112,6 +116,7 @@
     "director": "Gore Verbinski",
     "reparto": "Johnny Depp, Geoffrey Rush, Orlando Bloom",
     "estudio": "Disney",
+    "imagen": "/images/movie-images/pirates-ofthe-caribbean.jpg",
     "subtitulos": "Español"
   },
   {
@@ -126,6 +131,7 @@
     "director": "Jonathan Teplitzky",
     "reparto": "Colin Firth, Nicole Kidman, Stellan Skarsgard",
     "estudio": "Warnerbros",
+    "imagen": "/images/movie-images/the-railway-man-landscape-poster.jpg",
     "subtitulos": "Español, Ingles"
   },
   {
@@ -140,6 +146,7 @@
     "director": "Scott Waugh",
     "reparto": "Aaron Paul, Dominic Cooper, Imogen Poots",
     "estudio": "Disney",
+    "imagen": "/images/movie-images/need-for-speed.jpg",
     "subtitulos": "Español, Ingles, Frances"
   }
 ]

@@ -21,7 +21,9 @@ const controller = {
   },
 
   productList: function (req, res) {
-    res.render("products/productList");
+    const peliculas = archivoJSON.leerJson("products.json");
+    res.send(peliculas);
+    //res.render("products/productList");
   },
 
   createProduct: function (req, res) {
