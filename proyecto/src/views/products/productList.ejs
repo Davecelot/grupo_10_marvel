@@ -11,101 +11,23 @@
                               <h2>
                                    <%= genero %>
                               </h2>
+                              <div class="carousel-common-category-cards">
+                                   <% for(pelicula of peliculas) { %>
+                                        <% if(pelicula.genero==genero) { %>
+                                             <div class="product-common-card">
+                                                  <img src="<%= pelicula.imagen %>"
+                                                       alt="A landscape poster of the movie <%= pelicula.nombre %>"
+                                                       class="image-common-card">
+                                             </div>
+                                             <% } %>
+                                                  <% } %>
+                              </div>
                               <% } %>
                     </section>
                </main>
 
-               <section class="common-category">
-                    <h2>Películas más rentadas</h2>
-                    <div class="carousel-common-category-cards">
-                         <div class="product-common-card">
-                              <img src="images/movie-images/1917-landscape-poster.png"
-                                   alt="A landscape poster of the movie 1917" class="image-common-card">
-                         </div>
 
-                         <div class="product-common-card">
-                              <img src="images/movie-images/brooklyn-landscape-poster.jpg"
-                                   alt="A landscape poster of the movie Brooklyn" class="image-common-card">
-                         </div>
 
-                         <div class="product-common-card">
-                              <img src="images/movie-images/suite-francaise-landscape-poster.jpg"
-                                   alt="A landscape poster of the movie Suite Francaise" class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/movie-images/pirates-ofthe-caribbean.jpg"
-                                   alt="A landscape poster of the movie Pirates of the Caribbean on the stranger tides"
-                                   class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/movie-images/argentina-1985.jpeg"
-                                   alt="A landscape poster of the movie Argentina 1985 by Santiago Mitre"
-                                   class="image-common-card">
-                         </div>
-                    </div>
-               </section>
-
-               <section class="common-category">
-                    <h2>Top 10 de películas de la semana</h2>
-                    <div class="carousel-common-category-cards">
-                         <div class="product-common-card">
-                              <img src="images/movie-images/the-railway-man-landscape-poster.jpg"
-                                   alt="A landscape poster of the movie The Railway Man" class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/movie-images/the-impossible-landscape-poster.jpg"
-                                   alt="A landscape poster of the movie The Impossible" class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/movie-images/drive-landscape-poster.jpg"
-                                   alt="A landscape poster of the movie Drive" class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/movie-images/baby-driver.jpg"
-                                   alt="A landscape poster of the movie Baby Driver" class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/movie-images/need-for-speed.jpg"
-                                   alt="A landscape poster of the movie Need For Speed 2014" class="image-common-card">
-                         </div>
-                    </div>
-               </section>
-
-               <section class="common-category">
-                    <h2>Promociones</h2>
-                    <div class="carousel-common-category-cards">
-                         <div class="product-common-card">
-                              <img src="images/imagen-promo/camisas.jpg" alt="Camisetas Estampadas"
-                                   class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/imagen-promo/promocion-persona.png" alt="Gran Inventario"
-                                   class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/imagen-promo/atencion-personal.jpg" alt="Atencion Personal"
-                                   class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/imagen-promo/localidades.jpg" alt="Nuestras Instalaciones"
-                                   class="image-common-card">
-                         </div>
-
-                         <div class="product-common-card">
-                              <img src="images/imagen-promo/ventas.jpg" alt="Ventas De Peliculas"
-                                   class="image-common-card">
-                         </div>
-                    </div>
-               </section>
 
                <%- include("../partials/footer.ejs")%>
 
