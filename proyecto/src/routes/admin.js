@@ -7,7 +7,7 @@ const adminController = require("../controllers/adminController");
 //subir archivo y nombre
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.resolve(__dirname, "../../public/images/peliculas"));
+    cb(null, path.resolve(__dirname, "../../public/images/movie-images"));
   },
   filename: function (req, file, cb) {
     cb(null, "pelicula-" + Date.now() + path.extname(file.originalname));

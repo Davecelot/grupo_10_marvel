@@ -8,7 +8,7 @@
                <main class="main-productDetail">
                     <div class="img-container">
                          <h1>
-                              <%= dato.nombre %>
+                              <%=dato.nombre %>
                          </h1>
                          <img src=<%=dato.imagen %>
                          alt="A full-width image of the movie <%= dato.nombre %>" class="movie-image">
@@ -16,19 +16,15 @@
 
                     <div class="product-description">
                          <div class="brief-description">
-                              <span>2 H 6 MIN</span><span>16+</span><span>2022</span><span>HD</span>
+                              <span><%=dato.duracion %></span><span><%=dato.clasificacionEdad %></span><span><%=dato.year%></span>
                          </div>
                          <div class="container-btns">
                               <button type="submit" name="rent" class="primary-btn"><i
-                                        class="fa-solid fa-cart-shopping"></i><span>Alquilar</span></button>
+                                        class="fa-solid fa-cart-shopping"></i><span>Alquilar $<%=dato.precio %></span></button>
                               <button type="submit" name="rent" class="translucent-btn"><i
                                         class="fa-solid fa-plus"></i><span>Mi lista</span></button>
                          </div>
-                         <p>Inspirada en la historia real del fiscal Julio Strassera, Luis Moreno Ocampo y su joven
-                              equipo jurídico que se atrevieron a acusar, contra viento y marea, a contrarreloj y bajo
-                              constante amenaza, a los altos mandos de la sangrienta dictadura militar argentina
-                              (1976-1983) en el llamado Juicio a las Juntas de mediados de los años 80. Una batalla de
-                              David contra Goliat, con los héroes menos esperados.</p>
+                         <p><%=dato.descripcion %></p>
                     </div>
 
                     <div class="related-movies">
@@ -56,30 +52,27 @@
                          <div class="additional-info-list">
                               <div class="info-section">
                                    <h3>Advertencia de contenido</h3>
-                                   <p class="section-description">Violencia, consumo de alcohol, consumo de tabaco,
-                                        lenguaje malsonante, contenido sexual</p>
+                                   <p class="section-description"><%=dato.advertenciaContenido %></p>
                               </div>
 
                               <div class="info-section">
                                    <h3>Reparto</h3>
-                                   <p class="section-description">Ricardo Darín, Peter Lanzani, Alejandro Flechner</p>
+                                   <p class="section-description"><%=dato.reparto %></p>
                               </div>
 
                               <div class="info-section">
                                    <h3>Dirección</h3>
-                                   <p class="section-description">Santiago Mitre</p>
+                                   <p class="section-description"><%=dato.director %></p>
                               </div>
 
                               <div class="info-section">
                                    <h3>Estudio</h3>
-                                   <p class="section-description">Amazon Studios</p>
+                                   <p class="section-description"><%=dato.estudio %></p>
                               </div>
 
                               <div class="info-section">
                                    <h3>Subtítulos</h3>
-                                   <p class="section-description">Español, Inglés, Danés, Alemán, Francés, Italiano,
-                                        Filipino, Holandés, Polaco, Portugués (BR), Portugués (Portugal), Turco, Sueco,
-                                        Mandarín Simplificado</p>
+                                   <p class="section-description"><%=dato.subtitulos %></p>
                               </div>
                          </div>
 

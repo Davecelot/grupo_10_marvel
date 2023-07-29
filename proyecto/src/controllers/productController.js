@@ -47,7 +47,7 @@ const controller = {
       nombre: req.body.nombre,
       genero: req.body.genero,
       duracion: req.body.duracion,
-      año: req.body.año,
+      year: req.body.year,
       clasificacionEdad: req.body.clasificacionEdad,
       descripcion: req.body.descripcion,
       advertenciaContenido: req.body.advertenciaContenido,
@@ -56,13 +56,13 @@ const controller = {
       estudio: req.body.estudio,
       subtitulos: req.body.subtitulos,
       precio: req.body.precio,
-      imagen: req.file.filename,
+      imagen: "/images/movie-images/" +req.file.filename,
     };
     peliculas.push(nuevaPelicula);
-    let nuevaPelciulaGuardar = JSON.stringify(peliculas, null, 2);
+    let nuevaPeliculaGuardar = JSON.stringify(peliculas, null, 2);
     fs.writeFileSync(
       path.resolve(__dirname, "../data/products.json"),
-      nuevaPelciulaGuardar
+      nuevaPeliculaGuardar
     );
     res.redirect("/products/productList");
   },

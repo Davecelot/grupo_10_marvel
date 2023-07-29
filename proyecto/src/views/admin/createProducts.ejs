@@ -25,17 +25,22 @@
                                 <div class="control-formulario">
                                     <label>Duracion:</label>
                                     <input type="text" name="duracion" class="control"
-                                        placeholder="Escribe aquí la duracion">
+                                        placeholder="Formato horas (h) y minutos (m)">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Año:</label>
-                                    <input type="number" name="año" class="control"
+                                    <input type="text" name="year" class="control"
                                         placeholder="Escribe aquí el año">
                                 </div>
                                 <div class="control-formulario">
-                                    <label>Clasificacion Edad:</label>
-                                    <input type="text" name="clasificacionEdad" class="control"
-                                        placeholder="Escribe aquí la clasificacion">
+                                    <label for="clasificacionEdad" >Clasificacion Edad:</label>
+                                    <select id="clasificacionEdad" name="clasificacionEdad" class="control">
+                                        <option value="7+">7+</option>
+                                        <option value="12+">12+</option>
+                                        <option value="16+">16+</option>
+                                        <option value="18+">18+</option>
+                                        <option value="X">X</option>
+                                    </select>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Descripcion:</label>
@@ -45,7 +50,7 @@
                                 <div class="control-formulario">
                                     <label>Advertencia Contenido:</label>
                                     <input type="text" name="advertenciaContenido" class="control"
-                                        placeholder="Escribe aquí la advertencia de contenido">
+                                        placeholder="escenas de sexo, escenas de tortura, lenguaje explicito">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Director:</label>
@@ -55,7 +60,7 @@
                                 <div class="control-formulario">
                                     <label>Reparto:</label>
                                     <input type="text" name="reparto" class="control"
-                                        placeholder="Escribe aquí el reparto">
+                                        placeholder="Maximo 3 separado por comas">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Estudio:</label>
