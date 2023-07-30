@@ -1,15 +1,75 @@
-<%- include("../partials/head.ejs")%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/51007c3285.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/listProducts.css">
+    <title>Panel de Administrador</title>
 </head>
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <a href="/admin/index"><img src="/images/logo-white.svg" class="logo"></a>
+        </div>
 
-    <body>
-        <!-- Inicia la zona de header -->
-        <%- include("../partials/header.ejs")%>
+        <div class="header-desktop">
+            <a href="/admin/index"><img src="/images/logo-white.svg" class="logo"></a>
 
-        <!-- Inicia la zona de main -->
+            <div class="container-right">
+                <p>Bienvenid@, Usuario</p>
+                <form action="/">
+                    <button type="submit" class="translucent-btn" id="submit">Cerrar sesión</button>
+                </form>
+            </div>
+        </div>
+    </header>
 
-        <!-- termina  la zona de main -->
-        <!-- Inicia la zona de footer -->
-        <%- include("../partials/footer.ejs")%>
-    </body>
+    <main class="main-productList">
+        <div class="container-list">
+            <div class="container-top">
+                <div class="back-and-title">
+                    <i class="fa-solid fa-arrow-left"></i><p>Películas</p>
+                </div>
 
-    </html>
+                <a href="/admin/createProducts"><button type="submit" id="new-product" class="button-add">Agregar película</button></a>
+            </div>
+        </div>
+
+        <div class="product-list">
+            <div class="checkbox-group">
+                <input type="checkbox" name="select-all" value="select-all">
+                <label for="select-all">Seleccionar todas las películas</label>
+            </div>
+
+            <div class="movies-list">
+                <div class="movie-item">
+                    <div class="input-and-movie">
+                        <input type="checkbox" name="select-all" value="select-all">
+                        <div class="movie-and-title">
+                            <div class="movie-img">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                            <p>Piratas del Caribe: la maldición del Perla Negra</p>
+                        </div>
+                    </div>
+
+                    <div class="icon-btns">
+                        <a href="#"><i class="fa-solid fa-pen"></i></a>
+                        <a href="#"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include("../partials/footer.ejs")%>
+</body>
+</html>
