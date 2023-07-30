@@ -9,7 +9,20 @@
 /* >>>>>>>>>> MAIN <<<<<<<<<< */
 
 .main-productList {
+    display: flex;
+    justify-content: center;
     height: 80vh;
+    width: 100%;
+}
+
+/* >>>>>> CONTAINER LIST <<<<< */
+
+.container-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 16px 16px 32px 16px;
 }
 
 /* >>>>>> CONTAINER TOP <<<<< */
@@ -18,7 +31,6 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 16px 16px 24px 16px;
 }
 
 .back-and-title {
@@ -41,6 +53,10 @@
     font-size: 24px;
 }
 
+.back-and-title a {
+    color: #fbfbfb;
+}
+
 .button-add {
     /* mobile/specials/btn-text */
     color: #fbfbfb;
@@ -58,11 +74,17 @@
 
 /* >>>>>> PRODUCT LIST <<<<<< */
 
+.product-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
 /* >>>>>> CHECKBOX GROUP <<<<<< */
 
 .checkbox-group {
     display: flex;
-    padding: 0px 16px 16px 16px;
     color: #fbfbfb;
     gap: 8px;
     align-items: center;
@@ -89,7 +111,6 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 0px 16px 32px 16px;
 }
 
 /* >>>>> MOVIE ITEM <<<<< */
@@ -97,6 +118,7 @@ input[type="checkbox"] {
 .movie-item {
     display: flex;
     justify-content: space-between;
+    padding: 4px 8px;
 }
 
 /* >>>>> INPUT AND MOVIE <<<<< */
@@ -130,7 +152,7 @@ input[type="checkbox"] {
     color: #fbfbfb;
     font-size: 32px;
     display: flex;
-    width: 72px;
+    width: 45%;
     height: 72px;
     padding: 20px;
     justify-content: center;
@@ -150,4 +172,149 @@ input[type="checkbox"] {
 
 .icon-btns a {
     color: #fbfbfb;
+}
+
+/* >>>>>>>>>> MEDIA QUERIES <<<<<<<<<< */
+
+/* >>>>> TABLET <<<<< */
+
+@media (min-width: 481px) {
+
+    /* >>>>>>>>>> MAIN <<<<<<<<<< */
+
+    /* >>>>>> CONTAINER LIST <<<<< */
+
+    .container-list {
+        height: fit-content;
+        max-width: 684px;
+        /* background-color: red; */
+    }
+
+    /* >>>>> INPUT AND MOVIE <<<<< */
+
+    /* >>>>>> CHECKBOX <<<<<< */
+
+    .input-and-movie [type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border: none;
+    }
+
+    /* >>>>> INPUT AND MOVIE <<<<< */
+
+    .movie-img {
+        height: 104px;
+    }
+
+    .movie-and-title p {
+        /* mobile/body/base-text-mobile */
+        font-family: 'Ubuntu';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+    }
+
+    /* >>>>> BUTTON ICONS <<<<< */
+
+    .icon-btns {
+        font-size: 20px;
+        gap: 24px;
+    }
+
+}
+
+/* >>>>> DESKTOP <<<<< */
+
+@media (min-width: 769px) {
+
+    /* >>>>>>>>>> MAIN <<<<<<<<<< */
+
+    /* >>>>>> CONTAINER LIST <<<<< */
+
+    .container-list {
+        max-width: 80vw;
+    }
+
+    /* >>>>>> PRODUCT LIST <<<<<< */
+
+    .product-list {
+        gap: 24px;
+    }
+
+    /* >>>>>> CONTAINER TOP <<<<< */
+
+    .back-and-title p {
+        /* desktop/subtitles/subtitle-b-desktop */
+        font-family: 'Ubuntu';
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px; /* 128.571% */
+    }
+    
+    .back-and-title i {
+        font-size: 24px;
+    }
+
+    .button-add {
+        /* desktop/specials/btn-text */
+        font-family: 'Ubuntu';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px; /* 140% */
+        background-color: #280F50;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: none;
+    }
+
+    .button-add:hover {
+        background-color: #BB38F9;
+        cursor: pointer;
+    }
+
+    /* >>>>>> CHECKBOX GROUP <<<<<< */
+
+    .checkbox-group {
+        gap: 16px;
+    }
+
+    label[for="select-all"] {
+        /* desktop/body/large-text-desktop */
+        font-family: 'Ubuntu';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 140% */
+    }
+
+    /* >>>>> INPUT AND MOVIE <<<<< */
+
+    .movie-img {
+        height: 4em;
+        width: 50%;
+    }
+
+    .movie-and-title {
+        gap: 16px;
+        width: 60%;
+    }
+
+    .movie-and-title p {
+        /* desktop/body/base-text-desktop */
+        font-family: 'Ubuntu';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+
+    /* >>>>> BUTTON ICONS <<<<< */
+
+    .icon-btns i:hover {
+        color: #BB38F9;
+    }
+
 }

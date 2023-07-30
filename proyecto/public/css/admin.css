@@ -106,7 +106,7 @@ a {
 
 i.fa-chevron-right {
     position: absolute;
-    right: 17px;
+    right: 16px;
     top: 12px;
 }
 
@@ -204,7 +204,7 @@ i.fa-chevron-right {
     .translucent-btn {
         display: flex;
         flex-basis: 216px;
-        padding: 12px 16px;
+        padding: 8px 16px;
         justify-content: center;
         align-items: center;
         gap: 4px;
@@ -229,6 +229,21 @@ i.fa-chevron-right {
 
     /* >>>>>>>>>> MAIN <<<<<<<<<< */
 
+    /* >>>>> PANEL <<<<< */
+
+    .panel {
+        gap: 32px;
+    }
+
+    .panel h1 {
+        /* desktop/subtitles/subtitle-b-desktop */
+        font-family: 'Ubuntu';
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px; /* 128.571% */
+    }
+
     /* >>>>> LIST PANEL <<<<< */
 
     .list-panel {
@@ -237,6 +252,29 @@ i.fa-chevron-right {
 
     .item-panel {
         max-width: 400px;
+        gap: 16px;
+    }
+
+    .item-panel i {
+        color: #101820;
+        font-size: 24px;
+        width: 24px;
+        flex-shrink: 0;
+    }
+    
+    .item-panel p {
+        /* desktop/body/large-text-desktop */
+        color: #101820;
+        font-family: 'Ubuntu';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 140% */
+    }
+
+    i.fa-chevron-right {
+        position: absolute;
+        top: 9.5px;
     }
 
 }
