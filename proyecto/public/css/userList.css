@@ -1,0 +1,343 @@
+/* >>>>>>>>>> UNIVERSAL SELECTOR <<<<<<<<<< */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* >>>>>>>>>> MAIN <<<<<<<<<< */
+
+.main-userList {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+}
+
+/* >>>>>> LIST CONTAINER <<<<< */
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 16px 16px 32px 16px;
+}
+
+/* >>>>>> CONTAINER TOP <<<<< */
+
+.container-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.back-and-title {
+    display: flex;
+    color: #fbfbfb;
+    align-items: center;
+    gap: 16px;
+}
+
+.back-and-title p {
+    /* mobile/titles/title-s-mobile */
+    font-family: 'Ubuntu';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 133.333% */
+}
+
+.back-and-title i {
+    font-size: 24px;
+}
+
+.back-and-title a {
+    color: #fbfbfb;
+}
+
+.button-add {
+    /* mobile/specials/btn-text */
+    color: #fbfbfb;
+    font-family: 'Ubuntu';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.056px;
+    background-color: #280F50;
+    padding: 4px 16px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* >>>>>> USER LIST <<<<<< */
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+/* >>>>>> CHECKBOX GROUP <<<<<< */
+
+.checkbox-group {
+    display: flex;
+    color: #fbfbfb;
+    gap: 8px;
+    align-items: center;
+}
+
+label[for="select-all"] {
+    /* mobile/body/large-text-mobile */
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+
+/* >>>>>> USER LIST <<<<<< */
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* >>>>> ITEMS LIST <<<<< */
+
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* >>>>> USER ITEM <<<<< */
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+}
+
+/* >>>>> INPUT AND USER <<<<< */
+
+.input-and-user {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex: 1 0 0;
+}
+
+.user-and-avatar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar {
+    background-color: #fbfbfb;
+    color: #101820;
+    font-size: 24px;
+    display: flex;
+    padding: 14px 16px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-and-rol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-and-rol p {
+    /* mobile/body/base-text-mobile */
+    color: #fbfbfb;
+    font-family: 'Ubuntu';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+.user-and-rol span {
+    /* mobile/body/small-text-mobile */
+    color: #641AAD;
+    font-family: 'Ubuntu';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+}
+
+/* >>>>> BUTTON ICONS <<<<< */
+
+.icon-btns {
+    color: #fbfbfb;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-btns a {
+    color: #fbfbfb;
+}
+
+/* >>>>>>>>>> MEDIA QUERIES <<<<<<<<<< */
+
+/* >>>>> TABLET <<<<< */
+
+@media (min-width: 481px) {
+
+    /* >>>>>>>>>> MAIN <<<<<<<<<< */
+
+    /* >>>>>> LIST CONTAINER <<<<< */
+
+    .list-container {
+        height: fit-content;
+        max-width: 684px;
+        /* background-color: red; */
+    }
+
+    /* >>>>> INPUT AND USER <<<<< */
+
+    /* >>>>>> CHECKBOX <<<<<< */
+
+    .input-and-user [type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border: none;
+    }
+
+    /* >>>>> INPUT AND USER <<<<< */
+
+    /* >>>>> BUTTON ICONS <<<<< */
+
+    .icon-btns {
+        font-size: 20px;
+        gap: 24px;
+    }
+
+}
+
+/* >>>>> DESKTOP <<<<< */
+
+@media (min-width: 769px) {
+
+    /* >>>>>>>>>> MAIN <<<<<<<<<< */
+
+    /* >>>>>> LIST CONTAINER <<<<< */
+
+    .list-container {
+        max-width: 80vw;
+    }
+
+    /* >>>>>> USER LIST <<<<<< */
+
+    .user-list {
+        gap: 24px;
+    }
+
+    /* >>>>>> CONTAINER TOP <<<<< */
+
+    .back-and-title p {
+        /* desktop/subtitles/subtitle-b-desktop */
+        font-family: 'Ubuntu';
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px; /* 128.571% */
+    }
+    
+    .back-and-title i {
+        font-size: 24px;
+    }
+
+    .button-add {
+        /* desktop/specials/btn-text */
+        font-family: 'Ubuntu';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px; /* 140% */
+        background-color: #280F50;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: none;
+    }
+
+    .button-add:hover {
+        background-color: #BB38F9;
+        cursor: pointer;
+    }
+
+    /* >>>>>> CHECKBOX GROUP <<<<<< */
+
+    .checkbox-group {
+        gap: 16px;
+    }
+
+    label[for="select-all"] {
+        /* desktop/body/large-text-desktop */
+        font-family: 'Ubuntu';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 140% */
+    }
+
+    /* >>>>> INPUT AND USER <<<<< */
+
+    /* >>>>>> CHECKBOX <<<<<< */
+
+    .input-and-user [type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border: none;
+    }
+
+    /* >>>>> INPUT AND USER <<<<< */
+
+    .avatar {
+        font-size: 32px;
+    }
+
+    .user-and-rol p {
+        /* desktop/body/base-text-desktop */
+        color: #fbfbfb;
+        font-family: 'Ubuntu';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+    
+    .user-and-rol span {
+        /* desktop/body/small-text-desktop */
+        color: #641AAD;
+        font-family: 'Ubuntu';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+    }
+
+    /* >>>>> BUTTON ICONS <<<<< */
+
+    .icon-btns i:hover {
+        color: #BB38F9;
+    }
+
+}
