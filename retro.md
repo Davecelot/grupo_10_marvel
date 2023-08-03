@@ -4,28 +4,25 @@
 
 ## Comenzar a hacer: 
 
-- Reuniones más continuas
-- Concretar las decisiones de equipo para reuniones u otros temas
-- Definir un horario fijo que pueda ser dinámico para días de la semanas en los que podamos reunirnos, planificar y hacer
+- Trabajar más las tareas del Front-End
+- Reunirnos como equipo para solventar las dudas particulares que tengamos
 
 ## Hacer más:
 
-- Trabajar un poco más sobre las tareas del sprint para no dejar sobrantes
-- Darle mayor seguimiento a las tareas del sprint
-- Trabajar sobre las tareas del sprint para no dejar pendientes
-
+- Trabajar los tickets pendientes, y no comenzar un ticket nuevo hasta salir de los tickets del sprint anterior
+- Reunirnos cuando necesitemos ver a fondo alguna tarea pendiente para optimizar el tiempo
 
 ## Continuar haciendo: 
 
-- Mantener la buena comunicación de equipO
+- Mantener la buena comunicación de equipo
 
 ## Hacer menos: 
 
-- Evitar dejar cosas pendientes para el final del sprint
+- Posponer tickets para próximos sprints y arrastrar tareas viejas
 
 ## Dejar de hacer: 
 
-- Evitar dejar cosas pendientes para el final del sprint
+- Posponer tickets para próximos sprints y arrastrar tareas viejas
 
 -------------------------------------------------------------------------------------------------------
 ### Sprint 3
