@@ -13,6 +13,10 @@ const controller = {
     res.render("admin/index");
   },
 
+  userList: function (req, res) {
+    res.render("admin/userList");
+  },
+
   listProducts: function (req, res) {
     res.render("admin/listProducts");
   },
