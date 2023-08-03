@@ -31,7 +31,7 @@
                                 <div class="control-formulario">
                                     <label>Año:</label>
                                     <input type="number" name="año" class="control" placeholder="Escribe aquí el año"
-                                        value="<%= peliculaEditar.año%>">
+                                        value="<%= peliculaEditar.year%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Clasificacion Edad:</label>
@@ -81,7 +81,7 @@
                                 <!--Aquí solicito la imagen-->
                                 <div class="control-formulario">
                                     <figure class="form-group">
-                                        <img class="poster" src="/images/peliculas/<%=peliculaEditar.imagen%>"
+                                        <img class="poster" src="<%=peliculaEditar.imagen%>"
                                             alt="pelicula <%=peliculaEditar.nombre%>">
                                     </figure>
                                     <input type="hidden" name="oldImagen" value="<%=peliculaEditar.imagen%>">
