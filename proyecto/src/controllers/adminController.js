@@ -14,11 +14,15 @@ const controller = {
   },
 
   userList: function (req, res) {
-    res.render("admin/userList");
+    const users = mainController.leerJson('users.json');
+
+    res.render("admin/userList", { users });
   },
 
   listProducts: function (req, res) {
-    res.render("admin/listProducts");
+    const movies = mainController.leerJson('products.json');
+
+    res.render("admin/listProducts", { movies });
   },
 
   createProduct: function (req, res) {

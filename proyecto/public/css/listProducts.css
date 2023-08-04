@@ -11,7 +11,6 @@
 .main-productList {
     display: flex;
     justify-content: center;
-    height: 80vh;
     width: 100%;
 }
 
@@ -148,13 +147,11 @@ input[type="checkbox"] {
 }
 
 .movie-img {
-    background-color: #67728A;
     color: #fbfbfb;
     font-size: 32px;
     display: flex;
     width: 45%;
-    height: 72px;
-    padding: 20px;
+    height: 80px;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
@@ -203,7 +200,7 @@ input[type="checkbox"] {
     /* >>>>> INPUT AND MOVIE <<<<< */
 
     .movie-img {
-        height: 104px;
+        height: 124px;
     }
 
     .movie-and-title p {
@@ -293,8 +290,8 @@ input[type="checkbox"] {
     /* >>>>> INPUT AND MOVIE <<<<< */
 
     .movie-img {
-        height: 4em;
-        width: 50%;
+        height: 5em;
+        width: 40%;
     }
 
     .movie-and-title {

@@ -50,22 +50,25 @@
                 </div>
 
                 <div class="movies-list">
+
+                    <% for (i = 0; i < movies.length; i++) { %>
+
                     <div class="movie-item">
                         <div class="input-and-movie">
                             <input type="checkbox" name="select-all" value="select-all">
                             <div class="movie-and-title">
-                                <div class="movie-img">
-                                    <i class="fa-solid fa-image"></i>
-                                </div>
-                                <p>Piratas del Caribe: la maldición del Perla Negra</p>
+                                <img src="<%= movies[i].imagen %>" class="movie-img">
+                                <p><%= movies[i].nombre %></p>
                             </div>
                         </div>
 
                         <div class="icon-btns">
-                            <a href="/admin/editProducts/:id"><i class="fa-solid fa-pen"></i></a>
+                            <a href="/admin/editProducts/<%= movies[i].id %>"><i class="fa-solid fa-pen"></i></a>
                             <a href="#"><i class="fa-solid fa-trash"></i></a>
                         </div>
                     </div>
+
+                    <% } %>
                 </div>
             </div>
         </div>

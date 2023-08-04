@@ -3,6 +3,7 @@
   "id": 1,
   "nombre": "Diego Villarroel",
   "correo": "diego.villarroel@dh.com",
+  "rol": "Administrador",
   "contraseña": "password1",
   "image": null
  },
@@ -10,6 +11,7 @@
     "id": 2,
     "nombre": "Victoria Soto",
     "correo": "victoria.soto@dh.com",
+    "rol": "Administradora",
     "contraseña": "password2",
     "image": null
  },
@@ -17,6 +19,7 @@
     "id": 3,
     "nombre": "Edilberto Espinosa",
     "correo": "edilberto.espinosa@dh.com",
+    "rol": "Administrador",
     "contraseña": "password3",
     "image": null
  },
@@ -24,6 +27,7 @@
     "id": 4,
     "nombre": "Ismael Rojas",
     "correo": "ismael.rojas@dh.com",
+    "rol": "Administrador",
     "contraseña": "password4",
     "image": null
  }

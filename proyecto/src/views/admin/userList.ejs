@@ -49,26 +49,31 @@
                 </div>
 
                 <div class="items-list">
-                    <div class="user-item">
-                        <div class="input-and-user">
-                            <input type="checkbox" name="select-all" value="select-all">
-                            <div class="user-and-avatar">
-                                <div class="avatar">
-                                    <i class="fa-solid fa-user"></i>
-                                </div>
 
-                                <div class="user-and-rol">
-                                    <p>Victoria Soto</p>
-                                    <span>Administradora</span>
+                    <% for (let i = 0; i < users.length; i++) { %>
+
+                        <div class="user-item">
+                            <div class="input-and-user">
+                                <input type="checkbox" name="select-all" value="select-all">
+                                <div class="user-and-avatar">
+                                    <div class="avatar">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+
+                                    <div class="user-and-rol">
+                                        <p><%= users[i].nombre %></p>
+                                        <span><%= users[i].rol %></span>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <div class="icon-btns">
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                                <a href="#"><i class="fa-solid fa-trash"></i></a>
                             </div>
                         </div>
 
-                        <div class="icon-btns">
-                            <a href="#"><i class="fa-solid fa-pen"></i></a>
-                            <a href="#"><i class="fa-solid fa-trash"></i></a>
-                        </div>
-                    </div>
+                    <% } %>
                 </div>
             </div>
 
