@@ -1,34 +1,42 @@
 [
- {
-  "id": 1,
-  "nombre": "Diego Villarroel",
-  "correo": "diego.villarroel@dh.com",
-  "rol": "Administrador",
-  "contraseña": "password1",
-  "image": null
- },
- {
+  {
+    "id": 1,
+    "nombre": "Diego Villarroel",
+    "correo": "diego.villarroel@dh.com",
+    "rol": "Administrador",
+    "contraseña": "password1",
+    "image": null
+  },
+  {
     "id": 2,
     "nombre": "Victoria Soto",
     "correo": "victoria.soto@dh.com",
     "rol": "Administradora",
     "contraseña": "password2",
     "image": null
- },
- {
+  },
+  {
     "id": 3,
     "nombre": "Edilberto Espinosa",
     "correo": "edilberto.espinosa@dh.com",
     "rol": "Administrador",
     "contraseña": "password3",
     "image": null
- },
- {
+  },
+  {
     "id": 4,
     "nombre": "Ismael Rojas",
     "correo": "ismael.rojas@dh.com",
     "rol": "Administrador",
     "contraseña": "password4",
     "image": null
- }
+  },
+  {
+    "id": 5,
+    "nombre": "victoria",
+    "correo": "victoria@digitalhouse.com",
+    "rol": "User",
+    "contraseña": "$2a$10$oo3S6SvlCZIA8y1Uk1GqAecvpDUlIHOT5aw.g63Fi4FjBoAnQN/fS",
+    "image": "/images/user-images/usuario-1691700701547.jpg"
+  }
 ]

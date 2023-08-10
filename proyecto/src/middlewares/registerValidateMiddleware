@@ -6,9 +6,9 @@ module.exports = [
 	body('correo')
 		.notEmpty().withMessage('Favor de completar el email').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body('contraseña').notEmpty.withMessage('Favor de completar la contraseña'),
-	body('con-contraseña').notEmpty.withMessage('Favor de confirmar la contraseña'),
-    body('avatar').custom((value, { req }) => {
+    body('password').notEmpty().withMessage('Favor de completar la contraseña'),
+	body('conpassword').notEmpty().withMessage('Favor de confirmar la contraseña'),
+    body('imagen').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
