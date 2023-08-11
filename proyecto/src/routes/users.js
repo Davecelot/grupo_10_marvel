@@ -4,6 +4,7 @@ const path = require("path");
 const router = express.Router();
 const usersController = require("../controllers/usersController");
 const validations = require("../middlewares/registerValidateMiddleware");
+const validationsLogin = require("../middlewares/loginValidateMiddleware");
 
 //subir archivo y nombre
 var storage = multer.diskStorage({
@@ -25,6 +26,6 @@ router.post(
   validations,
   usersController.save
 );
-router.post("/login", usersController.logged);
+router.post("/login", validationsLogin, usersController.logged);
 
 module.exports = router;

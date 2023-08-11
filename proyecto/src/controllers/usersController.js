@@ -47,14 +47,30 @@ const controller = {
   },
 
   logged: (req, res) => {
-    const users = mainController.leerJson("users.json");
+    const resultValidation = validationResult(req);
     const mailFind = req.body.correo;
-    const user = users.find((user) => user.correo === mailFind);
-    if (user !== undefined) {
-      res.send(user);
+    const passFind = req.body.password;
+    const users = mainController.leerJson("users.json");
+    const user = users.find(
+      (user) => user.correo === mailFind && user.contraseña === passFind
+    );
+    if (user === undefined) {
+      const errorCredencial = {
+        type: "field",
+        value: "Sin Importancia",
+        msg: "Credenciales invalidas",
+        path: "credenciales",
+        location: "body",
+      };
+      resultValidation.errors.push(errorCredencial);
     }
-    {
-      res.send("Eres una persona mala");
+    if (resultValidation.errors.length === 0) {
+      return res.redirect("/");
+    } else {
+      return res.render("users/login", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
     }
   },
 };

@@ -14,17 +14,34 @@
                               <h3 class="titulo-form">Ingresa</h3>
                               <div class="formulario">
                                    <form action="#" method="POST" class="create-form">
-                                        <div class="control-formulario">
-                                             <label>Correo Electrónico:</label>
-                                             <input type="email" name="correo" class="control"
-                                                  placeholder="Escribe aquí tu correo" required>
-                                        </div>
-                                        <div class="control-formulario">
-                                             <label>Contraseña:</label>
-                                             <input type="password" name="contraseña" class="control"
-                                                  placeholder="Escribe aquí tu contraseña" required minlength="8"
-                                                  title="Ingresa una contraseña válida">
-                                        </div>
+                                        <% if (locals.errors && errors.credenciales) { %>
+                                             <div class="text-danger">
+                                                  <%= errors.credenciales.msg %>
+                                             </div>
+                                             <% } %>
+                                                  <div class="control-formulario">
+                                                       <label>Correo Electrónico:</label>
+                                                       <input type="email" name="correo" class="control"
+                                                            placeholder="Escribe aquí tu correo" required
+                                                            value="<%= locals.oldData ? oldData.correo : null %>">
+                                                  </div>
+                                                  <% if (locals.errors && errors.correo) { %>
+                                                       <div class="text-danger">
+                                                            <%= errors.correo.msg %>
+                                                       </div>
+                                                       <% } %>
+                                                            <div class="control-formulario">
+                                                                 <label>Contraseña:</label>
+                                                                 <input type="password" name="password" class="control"
+                                                                      placeholder="Escribe aquí tu contraseña"
+                                                                      title="Ingresa una contraseña válida" required
+                                                                      value="<%= locals.oldData ? oldData.correo : null %>">
+                                                            </div>
+                                                            <% if (locals.errors && errors.password) { %>
+                                                                 <div class="text-danger">
+                                                                      <%= errors.password.msg %>
+                                                                 </div>
+                                                                 <% } %>
                               </div>
                               <div class="control-formulario">
                                    <conteiner class="botones">
