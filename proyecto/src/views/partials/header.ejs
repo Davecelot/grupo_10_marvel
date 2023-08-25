@@ -9,11 +9,13 @@
                <a href="/home"><img src="/images/icon.svg" class="logo-movil"></a>
                <div class="search-sec">
                     <i class="fa-solid fa-magnifying-glass"></i><input type="search" class="search"
-                              placeholder="Encuentra tus peliculas Favoritas">
+                         placeholder="Encuentra tus peliculas Favoritas">
                </div>
                <div class="botones-top-bar">
-                    <button type="submit" class="boton-header" id="register"><a href="/users/register">Registrate</a></button>
-                    <button type="submit" class="boton-header" id="login"><a href="/users/login">Iniciar Sesión</a></button>
+                    <button type="submit" class="boton-header" id="register"><a
+                              href="/users/register">Registrate</a></button>
+                    <button type="submit" class="boton-header" id="login"><a href="/users/login">Iniciar
+                              Sesión</a></button>
                </div>
           </div>
 
@@ -37,5 +39,10 @@
                     <li><a href="/home">Tus Favoritos </a><i class="fa-solid fa-heart"></i></li>
                </ul>
           </nav>
+          <% if(locals.myUser) { %>
+               <h1 class="usuario">
+                    <%= locals.myUser %>
+               </h1>
+               <% } %>
      </conteiner>
 </header>

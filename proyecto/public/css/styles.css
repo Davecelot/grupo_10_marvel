@@ -60,6 +60,10 @@ conteiner {
   color: #fbfbfb;
 }
 
+.usuario {
+  color: #fbfbfb;
+}
+
 .boton-header {
   padding: 12px 0px;
   height: 52px;
@@ -303,7 +307,6 @@ conteiner {
   }
 
   /* Aqui trermina CSS de Footer entre 361 y 767 */
-
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -356,7 +359,7 @@ conteiner {
     width: 80%;
     justify-content: flex-start;
   }
- 
+
   /*Footer*/
   .social-nav ul {
     justify-content: flex-end;
@@ -375,7 +378,6 @@ conteiner {
   .policy-links li {
     margin-right: 0.5rem;
   }
-
 }
 
 @media (min-width: 1200px) {
@@ -406,5 +408,4 @@ conteiner {
   .policy-links li {
     margin-right: 1rem;
   }
-
 }

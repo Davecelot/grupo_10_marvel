@@ -65,6 +65,7 @@ const controller = {
       resultValidation.errors.push(errorCredencial);
     }
     if (resultValidation.errors.length === 0) {
+      req.session.Usuario = user.nombre;
       return res.redirect("/");
     } else {
       return res.render("users/login", {

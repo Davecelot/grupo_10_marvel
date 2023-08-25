@@ -9,6 +9,7 @@ const rutaProducts = require("./routes/products");
 const rutaAdmin = require("./routes/admin");
 const session = require("express-session");
 
+app.use(session({ secret: "supercalifragilisticoespialidoso" }));
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
@@ -18,6 +19,5 @@ app.use("/", rutaMain);
 app.use("/users", rutaUsers);
 app.use("/products", rutaProducts);
 app.use("/admin", rutaAdmin);
-app.use(session({ secret: "supercalifragilisticoespialidoso" }));
 
 app.listen(3000, console.log("Aplicacion levantada http://localhost:3000"));
