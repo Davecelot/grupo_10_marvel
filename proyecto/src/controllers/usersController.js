@@ -66,6 +66,11 @@ const controller = {
     }
     if (resultValidation.errors.length === 0) {
       req.session.Usuario = user.nombre;
+      if (req.body.preservar) {
+        res.cookie("usuario", "");
+      } else {
+        res.cookie("usuario", user.nombre);
+      }
       return res.redirect("/");
     } else {
       return res.render("users/login", {
