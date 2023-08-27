@@ -8,11 +8,6 @@ app.set("view engine", "ejs");
 
 const controller = {
   index: function (req, res) {
-    console.log(req.cookies);
-    //     const myUserCookie = req.cookies.Usuario;
-    //     if (myUserCookie) {
-    //       req.session.Usuario = myUserCookie;
-    //     }
     const myUser = req.session.Usuario;
     res.render("index", { myUser });
   },

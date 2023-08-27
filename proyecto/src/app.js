@@ -8,8 +8,12 @@ const rutaUsers = require("./routes/users");
 const rutaProducts = require("./routes/products");
 const rutaAdmin = require("./routes/admin");
 const session = require("express-session");
+const cookieParser = require("cookie-parser");
+const rememberUserMiddleware = require("./middlewares/rememberUserMiddleware");
 
 app.use(session({ secret: "supercalifragilisticoespialidoso" }));
+app.use(cookieParser());
+app.use(rememberUserMiddleware);
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");

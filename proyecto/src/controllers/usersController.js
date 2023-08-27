@@ -67,9 +67,9 @@ const controller = {
     if (resultValidation.errors.length === 0) {
       req.session.Usuario = user.nombre;
       if (req.body.preservar) {
-        res.cookie("usuario", "");
+        res.cookie("usuario", user.nombre, { maxAge: 3600000 });
       } else {
-        res.cookie("usuario", user.nombre);
+        res.clearCookie("usuario");
       }
       return res.redirect("/");
     } else {
