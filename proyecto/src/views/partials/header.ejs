@@ -11,12 +11,14 @@
                     <i class="fa-solid fa-magnifying-glass"></i><input type="search" class="search"
                          placeholder="Encuentra tus peliculas Favoritas">
                </div>
-               <div class="botones-top-bar">
-                    <button type="submit" class="boton-header" id="register"><a
-                              href="/users/register">Registrate</a></button>
-                    <button type="submit" class="boton-header" id="login"><a href="/users/login">Iniciar
-                              Sesión</a></button>
-               </div>
+               <% if(!(locals.usuario==undefined)) { %>
+                    <div class="botones-top-bar">
+                         <button type="submit" class="boton-header" id="register"><a
+                                   href="/users/register">Registrate</a></button>
+                         <button type="submit" class="boton-header" id="login"><a href="/users/login">Iniciar
+                                   Sesión</a></button>
+                    </div>
+                    <% } %>
           </div>
 
           <nav class="main-navbar">
