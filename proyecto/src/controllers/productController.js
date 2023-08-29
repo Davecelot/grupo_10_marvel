@@ -21,6 +21,7 @@ const controller = {
   },
 
   productList: function (req, res) {
+    const myUser = req.session.Usuario;
     const peliculas = archivoJSON.leerJson("products.json");
     const generosAll = peliculas.map((pelicula) => pelicula.genero);
     const generos = generosAll.filter(
@@ -33,6 +34,7 @@ const controller = {
     res.render("products/productList", {
       generos: generos,
       peliculas: peliculas,
+      myUser: myUser,
     });
   },
 
@@ -56,7 +58,7 @@ const controller = {
       estudio: req.body.estudio,
       subtitulos: req.body.subtitulos,
       precio: req.body.precio,
-      imagen: "/images/movie-images/" +req.file.filename,
+      imagen: "/images/movie-images/" + req.file.filename,
     };
     peliculas.push(nuevaPelicula);
     let nuevaPeliculaGuardar = JSON.stringify(peliculas, null, 2);
