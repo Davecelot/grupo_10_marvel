@@ -4,27 +4,23 @@
 
 ## Comenzar a hacer:
 
--
--
+-Reunión una vez a la semana
 
 ## Hacer más:
 
--
--
+-Reforzar la comunicación para mantenernos activos como equipo
 
 ## Continuar haciendo:
 
--
+-Seguir tomando las tareas para avanzar en el PI
 
 ## Hacer menos:
 
--
+-Intentar no dejar tareas para proximo sprint
 
 ## Dejar de hacer:
 
--
-
----
+- ***
 
 ### Sprint 4
 
