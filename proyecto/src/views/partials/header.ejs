@@ -11,7 +11,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i><input type="search" class="search"
                          placeholder="Encuentra tus peliculas Favoritas">
                </div>
-               <% if(!(locals.usuario==undefined)) { %>
+               <% if((locals==undefined) || (locals.myUser==undefined)) { %>
                     <div class="botones-top-bar">
                          <button type="submit" class="boton-header" id="register"><a
                                    href="/users/register">Registrate</a></button>
@@ -38,10 +38,12 @@
                          </ul>
                     </li>
                     <li><a href="/home">Proximamente </a><i class="fa-solid fa-film"></i></li>
-                    <li><a href="/home">Tus Favoritos </a><i class="fa-solid fa-heart"></i></li>
+                    <% if( (locals !=undefined) && (locals.myUser !=undefined) ) { %>
+                         <li><a href="/home">Tus Favoritos </a><i class="fa-solid fa-heart"></i></li>
+                         <% } %>
                </ul>
           </nav>
-          <% if(locals.myUser) { %>
+          <% if((locals !=undefined) && (locals.myUser !=undefined)) { %>
                <h1 class="usuario">
                     <%= locals.myUser %>
                </h1>

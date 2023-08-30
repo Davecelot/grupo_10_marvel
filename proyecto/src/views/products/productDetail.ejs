@@ -16,15 +16,26 @@
 
                     <div class="product-description">
                          <div class="brief-description">
-                              <span><%=dato.duracion %></span><span><%=dato.clasificacionEdad %></span><span><%=dato.year%></span>
+                              <span>
+                                   <%=dato.duracion %>
+                              </span><span>
+                                   <%=dato.clasificacionEdad %>
+                              </span><span>
+                                   <%=dato.year%>
+                              </span>
                          </div>
-                         <div class="container-btns">
-                              <button type="submit" name="rent" class="primary-btn"><i
-                                        class="fa-solid fa-cart-shopping"></i><span>Alquilar $<%=dato.precio %></span></button>
-                              <button type="submit" name="rent" class="translucent-btn"><i
-                                        class="fa-solid fa-plus"></i><span>Mi lista</span></button>
-                         </div>
-                         <p><%=dato.descripcion %></p>
+                         <% if((locals !=undefined) && (locals.myUser !=undefined)) { %>
+                              <div class="container-btns">
+                                   <button type="submit" name="rent" class="primary-btn"><i
+                                             class="fa-solid fa-cart-shopping"></i><span>Alquilar $<%=dato.precio %>
+                                                  </span></button>
+                                   <button type="submit" name="rent" class="translucent-btn"><i
+                                             class="fa-solid fa-plus"></i><span>Mi lista</span></button>
+                              </div>
+                              <% } %>
+                                   <p>
+                                        <%=dato.descripcion %>
+                                   </p>
                     </div>
 
                     <div class="related-movies">
@@ -52,27 +63,37 @@
                          <div class="additional-info-list">
                               <div class="info-section">
                                    <h3>Advertencia de contenido</h3>
-                                   <p class="section-description"><%=dato.advertenciaContenido %></p>
+                                   <p class="section-description">
+                                        <%=dato.advertenciaContenido %>
+                                   </p>
                               </div>
 
                               <div class="info-section">
                                    <h3>Reparto</h3>
-                                   <p class="section-description"><%=dato.reparto %></p>
+                                   <p class="section-description">
+                                        <%=dato.reparto %>
+                                   </p>
                               </div>
 
                               <div class="info-section">
                                    <h3>Dirección</h3>
-                                   <p class="section-description"><%=dato.director %></p>
+                                   <p class="section-description">
+                                        <%=dato.director %>
+                                   </p>
                               </div>
 
                               <div class="info-section">
                                    <h3>Estudio</h3>
-                                   <p class="section-description"><%=dato.estudio %></p>
+                                   <p class="section-description">
+                                        <%=dato.estudio %>
+                                   </p>
                               </div>
 
                               <div class="info-section">
                                    <h3>Subtítulos</h3>
-                                   <p class="section-description"><%=dato.subtitulos %></p>
+                                   <p class="section-description">
+                                        <%=dato.subtitulos %>
+                                   </p>
                               </div>
                          </div>
 

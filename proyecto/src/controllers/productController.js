@@ -10,10 +10,11 @@ app.set("view engine", "ejs");
 
 const controller = {
   productDetail: function (req, res) {
+    const myUser = req.session.Usuario;
     const id = parseInt(req.params.id);
     const datos = archivoJSON.leerJson("products.json");
     const dato = datos.find((dato) => dato.id === id);
-    res.render("products/productDetail", { dato });
+    res.render("products/productDetail", { dato: dato, myUser: myUser });
   },
 
   productCart: function (req, res) {

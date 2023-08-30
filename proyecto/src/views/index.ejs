@@ -20,10 +20,12 @@
                                    <div class="title-hero">
                                         <label class="title">Spider Man</label>
                                    </div>
-                                   <section class="button-bar-hero">
-                                        <input type="button" id="btnComprar" value="Comprar">
-                                        <input type="button" id="btnAlquilar" value="Alquilar">
-                                   </section>
+                                   <% if(locals !=undefined && locals.myUser !=undefined) { %>
+                                        <section class="button-bar-hero">
+                                             <input type="button" id="btnComprar" value="Comprar">
+                                             <input type="button" id="btnAlquilar" value="Alquilar">
+                                        </section>
+                                        <% } %>
                               </div>
                          </div>
                     </div>
