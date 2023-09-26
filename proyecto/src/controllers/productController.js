@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const mainController = require("./mainController");
 const app = express();
-const archivoJSON = require("../data/archivoJSON");
+const archivoJSON = require("../database/archivoJSON");
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.set("view engine", "ejs");

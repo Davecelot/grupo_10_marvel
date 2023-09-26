@@ -3,7 +3,8 @@ const path = require("path");
 const fs = require("fs");
 const mainController = require("./mainController");
 const app = express();
-const archivoJSON = require("../data/archivoJSON");
+const archivoJSON = require("../database/archivoJSON");
+const db = require('../database/models');
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.set("view engine", "ejs");
@@ -13,16 +14,16 @@ const controller = {
     res.render("admin/index");
   },
 
-  userList: function (req, res) {
-    const users = mainController.leerJson('users.json');
-
-    res.render("admin/userList", { users });
+  userList: (req, res) => {
+    const users = db.User.findAll().then(usuarios => {
+      return res.render("admin/userList", { users });
+    })
   },
 
-  listProducts: function (req, res) {
-    const movies = mainController.leerJson('products.json');
-
-    res.render("admin/listProducts", { movies });
+  listProducts: (req, res) => {
+    const movies = db.Movie.findAll().then(peliculas => {
+      return res.render("admin/listProducts", { movies });
+    })
   },
 
   createProduct: function (req, res) {
@@ -52,7 +53,7 @@ const controller = {
       estudio: req.body.estudio,
       subtitulos: req.body.subtitulos,
       precio: req.body.precio,
-      imagen: "/images/movie-images/" +req.file.filename,
+      imagen: "/images/movie-images/" + req.file.filename,
     };
 
     peliculas.push(nuevaPelicula);
