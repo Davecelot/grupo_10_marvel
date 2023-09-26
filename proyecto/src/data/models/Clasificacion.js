@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
 
   let cols = {
     id: {
-      type: dataTypes.INT(10).UNSIGNED,
+      type: dataTypes.BIGINT(10).UNSIGNED,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
@@ -26,4 +26,13 @@ module.exports = (sequelize, dataTypes) => {
   };
 
   const Clasificacion = sequelize.define(alias, cols, config);
+
+  Clasificacion.associate = function (models) {
+    Clasificacion.hasMany(models.Movie, {
+      as: "movies",
+      foreign_key: classificationId,
+    });
+  };
+
+  return Clasificacion;
 };
