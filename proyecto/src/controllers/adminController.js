@@ -4,7 +4,7 @@ const fs = require("fs");
 const mainController = require("./mainController");
 const app = express();
 const archivoJSON = require("../database/archivoJSON");
-const db = require('../database/models');
+const db = require("../database/models");
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.set("view engine", "ejs");
@@ -15,13 +15,13 @@ const controller = {
   },
 
   userList: (req, res) => {
-    const users = db.User.findAll().then(usuarios => {
+    db.User.findAll().then(users => {
       return res.render("admin/userList", { users });
-    })
+  })
   },
 
   listProducts: (req, res) => {
-    const movies = db.Movie.findAll().then(peliculas => {
+    db.Movie.findAll().then(movies => {
       return res.render("admin/listProducts", { movies });
     })
   },
@@ -30,11 +30,11 @@ const controller = {
     res.render("admin/createProducts");
   },
 
-  editProduct: function (req, res) {
-    let peliculas = mainController.leerJson("products.json")
-    const peliculaId = req.params.id;
-    let peliculaEditar = peliculas.find(pelicula => pelicula.id == peliculaId)
-    res.render("admin/editProducts", { peliculaEditar });
+  editProduct: (req, res) => {
+    db.Movie.findByPk(req.params.id)
+      .then(movie => {
+          res.render('admin/editProducts', {movie});
+      });
   },
 
   save: (req, res) => {
@@ -73,20 +73,28 @@ const controller = {
     res.redirect("/admin/listProducts");
   },
 
-  put: (req, res) => {
-    let peliculas = mainController.leerJson("products.json");
+  update: function(req, res) {
     req.body.id = req.params.id;
     req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-    let peliculaUpdate = peliculas.map((pelicula) => {
-      if (pelicula.id == req.body.id) {
-        return (pelicula = req.body);
-      }
-      return pelicula;
-    });
-    let peliculaActualizada = JSON.stringify(peliculaUpdate, null, 2);
-    fs.writeFileSync(path.resolve(__dirname, "../data/products.json"), peliculaActualizada);
+    let promMovies = Movies.findByPk(movieId);
+    Promise
+        .all([promMovies])
+        .then(([Movie]) => {
+          //Movie.release_date = moment( new Date(Movie.release_date)).toLocaleDateString();
+          Movie.release_date = moment(Movie.release_date).locale('es-us').format('YYYY-MM-DD');
+          return res.render(path.resolve(__dirname, '..', 'views',  'moviesEdit'), {Movie})})
+      .catch(error => res.send(error))
     res.redirect("/admin/listProducts");
   },
+
+  destroy: function (req,res) {
+    let movieId = req.params.id;
+    Movies
+    .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
+    .then(()=>{
+        return res.redirect('/movies')})
+    .catch(error => res.send(error)) 
+}
 };
 
 module.exports = controller;

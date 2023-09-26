@@ -23,6 +23,7 @@ router.get("/createProducts", adminController.createProduct);
 router.post("/createProducts", upload.single("imagen"), adminController.save);
 router.get("/editProducts/delete/:id", adminController.delete);
 router.get("/editProducts/:id", adminController.editProduct)
-router.put("/editProducts/:id", upload.single('imagen'), adminController.put);
+router.put("/editProducts/:id", upload.single('imagen'), adminController.update);
+router.delete("/editProducts/delete/:id", adminController.destroy)
 
 module.exports = router;
