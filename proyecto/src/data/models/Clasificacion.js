@@ -1,5 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
   let alias = "Clasificacion";
+
   let cols = {
     id: {
       type: dataTypes.INT(10).UNSIGNED,
@@ -16,4 +17,13 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: true,
     },
   };
+
+  let config = {
+    timestamps: true,
+    createdAt: "created_at",
+    updatedAt: "updated_at",
+    deletedAt: false,
+  };
+
+  const Clasificacion = sequelize.define(alias, cols, config);
 };

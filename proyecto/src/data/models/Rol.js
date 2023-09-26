@@ -16,4 +16,13 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: true,
     },
   };
+
+  let config = {
+    timestamps: true,
+    createdAt: "created_at",
+    updatedAt: "updated_at",
+    deletedAt: false,
+  };
+
+  const Rol = sequelize.define(alias, cols, config);
 };
