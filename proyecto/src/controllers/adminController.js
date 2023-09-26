@@ -31,9 +31,11 @@ const controller = {
   },
 
   editProduct: (req, res) => {
-    db.Movie.findByPk(req.params.id)
-      .then(movie => {
-          res.render('admin/editProducts', {movie});
+    db.Movie.findByPk(req.params.id,{
+      include: ["genres","classifications"]
+    })
+      .then(peliculaEditar => {
+          res.render('admin/editProducts', {peliculaEditar});
       });
   },
 

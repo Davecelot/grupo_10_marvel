@@ -21,12 +21,12 @@
                                     <label>Titulo:</label>
                                     <input type="text" name="nombre" class="control"
                                         placeholder="Escribe aquí el titulo" required autofocus pattern="[a-zA-Z\s]+"
-                                        title="Ingresa un titulo válido" value="<%= peliculaEditar.nombre%>">
+                                        title="Ingresa un titulo válido" value="<%= peliculaEditar.name%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Duracion:</label>
                                     <input type="text" name="duracion" class="control"
-                                        placeholder="Escribe aquí la duracion" value="<%= peliculaEditar.duracion%>">
+                                        placeholder="Escribe aquí la duracion" value="<%= peliculaEditar.length%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Año:</label>
@@ -37,19 +37,19 @@
                                     <label>Clasificacion Edad:</label>
                                     <input type="text" name="clasificacionEdad" class="control"
                                         placeholder="Escribe aquí la clasificacion"
-                                        value="<%= peliculaEditar.clasificacionEdad%>">
+                                        value="<%= peliculaEditar.classifications.name%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Descripcion:</label>
                                     <textarea name="descripcion" class="control"
                                         placeholder="Escribe aquí la descripcion"
-                                        required><%= peliculaEditar.descripcion%></textarea>
+                                        required><%= peliculaEditar.description%></textarea>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Advertencia Contenido:</label>
                                     <input type="text" name="advertenciaContenido" class="control"
                                         placeholder="Escribe aquí la advertencia de contenido"
-                                        value="<%= peliculaEditar.advertenciaContenido%>">
+                                        value="<%= peliculaEditar.contentWarning%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Director:</label>
@@ -59,32 +59,32 @@
                                 <div class="control-formulario">
                                     <label>Reparto:</label>
                                     <input type="text" name="reparto" class="control"
-                                        placeholder="Escribe aquí el reparto" value="<%= peliculaEditar.reparto%>">
+                                        placeholder="Escribe aquí el reparto" value="<%= peliculaEditar.cast%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Estudio:</label>
                                     <input type="text" name="estudio" class="control"
-                                        placeholder="Escribe aquí el estudio" value="<%= peliculaEditar.estudio%>">
+                                        placeholder="Escribe aquí el estudio" value="<%= peliculaEditar.studio%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Subtitulos:</label>
                                     <input type="text" name="subtitulos" class="control"
                                         placeholder="Escribe aquí los subtitulos"
-                                        value="<%= peliculaEditar.subtitulos%>">
+                                        value="<%= peliculaEditar.subtitles%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Precio:</label>
                                     <input type="number" name="precio" class="control"
                                         placeholder="Escribe aquí el precio" required title="Ingresa un precio válido"
-                                        value="<%= peliculaEditar.precio%>">
+                                        value="<%= peliculaEditar.price%>">
                                 </div>
                                 <!--Aquí solicito la imagen-->
                                 <div class="control-formulario">
                                     <figure class="form-group">
-                                        <img class="poster" src="<%=peliculaEditar.imagen%>"
-                                            alt="pelicula <%=peliculaEditar.nombre%>">
+                                        <img class="poster" src="<%=peliculaEditar.image%>"
+                                            alt="pelicula <%=peliculaEditar.name%>">
                                     </figure>
-                                    <input type="hidden" name="oldImagen" value="<%=peliculaEditar.imagen%>">
+                                    <input type="hidden" name="oldImagen" value="<%=peliculaEditar.image%>">
                                     <label>Imagen:</label>
                                     <input type="file" name="imagen" class="control" required
                                         title="Ingresa una imagen válida">
@@ -101,7 +101,7 @@
                                         <option value="romantica">Romantica</option>
                                         <option value="terror">Terror</option>
                                         <option selected="selected">
-                                            <%=peliculaEditar.genero%>
+                                            <%=peliculaEditar.genres.name%>
                                         </option>
                                     </select>
                                 </div>
