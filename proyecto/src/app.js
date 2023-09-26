@@ -25,3 +25,11 @@ app.use("/products", rutaProducts);
 app.use("/admin", rutaAdmin);
 
 app.listen(3000, console.log("Aplicacion levantada http://localhost:3000"));
+
+//probar modelo
+/*const db = require("./database/models");
+db.User.findAll()
+.then((result) => {
+    console.log(result)
+})
+*/
