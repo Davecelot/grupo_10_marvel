@@ -28,8 +28,13 @@ app.listen(3000, console.log("Aplicacion levantada http://localhost:3000"));
 
 //probar modelo
 /*const db = require("./database/models");
-db.User.findAll()
+db.Movie.findAll({
+    include: ["genres","classifications"]
+}
+)
 .then((result) => {
-    console.log(result)
+    console.log(JSON.stringify(result,null,2));
 })
-*/
+.catch((error) => {
+    console.log(error)
+})*/

@@ -28,14 +28,6 @@ module.exports = () => {
     }
   );
 
- /* Classification.associate = function (models) {
-    Classification.hasMany(Movie, {
-      as: "movies",
-      foreign_key: "classificationId"
-    });
-  };
-*/
-
   return Classification;
 
 };

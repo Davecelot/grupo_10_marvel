@@ -27,11 +27,6 @@ module.exports = () => {
       deletedAt: false,
     }
   );
-
-  /*Genero.hasMany(Movie, {
-    as: "movies",
-    foreign_key: "genreId"
-  });
-*/
+  
   return Genero;
 };

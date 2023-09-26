@@ -1,7 +1,7 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, Model } = require('sequelize');
 const sequelize = require("../sequelize");
-const Genero = require('./Genero');
-const Classification = require('./Classification');
+const Genero = sequelize.define('genres', { name: DataTypes.STRING(50), description: DataTypes.STRING(255) }, { createdAt: "created_at", updatedAt: "updated_at" });
+const Classification = sequelize.define('classifications', { name: DataTypes.STRING(50), description: DataTypes.STRING(255) }, { createdAt: "created_at", updatedAt: "updated_at" });
 
 module.exports = () => {
     const Movie = sequelize.define('Movie',
@@ -16,10 +16,10 @@ module.exports = () => {
                 type: DataTypes.STRING(50),
                 allowNull: false
             },
-            genreId: DataTypes.BIGINT(10),
+            genreId: { type: DataTypes.BIGINT(10), foreignKey: true },
             length: DataTypes.BIGINT(10),
             year: DataTypes.BIGINT(4).UNSIGNED,
-            classificationId: DataTypes.BIGINT(10),
+            classificationId: { type: DataTypes.BIGINT(10), foreignKey: true },
             description: {
                 type: DataTypes.STRING(255),
                 allowNull: false
@@ -43,15 +43,11 @@ module.exports = () => {
         }
     )
 
-   /* Movie.belongsTo(Genero, {
-        as: "genres",
-        foreignKey: "genreId"
-    })
+    Genero.hasMany(Movie, { foreignKey: "genreId" })
+    Movie.belongsTo(Genero, { as: "genres", foreignKey: "genreId" })
 
-    /*Movie.belongsTo(Classification, {
-        as: "classifications",
-        foreignKey: 'classificationId'
-    })*/
+    Classification.hasMany(Movie, { foreignKey: "classificationId" })
+    Movie.belongsTo(Classification, { as: "classifications", foreignKey: 'classificationId' })
 
     return Movie;
 };

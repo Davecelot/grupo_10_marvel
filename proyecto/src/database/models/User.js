@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require("../sequelize");
+const Rol = sequelize.define('roles', { name: DataTypes.STRING(50), description: DataTypes.STRING(255) }, { createdAt: "created_at", updatedAt: "updated_at" });
 
 module.exports = () => {
     const User = sequelize.define('User',
@@ -18,7 +19,10 @@ module.exports = () => {
                 type: DataTypes.STRING(50),
                 allowNull: false
             },
-            roleId: DataTypes.BIGINT(10).UNSIGNED,
+            roleId: {
+                type: DataTypes.BIGINT(10).UNSIGNED,
+                foreignKey: true
+            },
             password: {
                 type: DataTypes.STRING(50),
                 allowNull: false
@@ -35,6 +39,9 @@ module.exports = () => {
             deletedAt: false
         }
     )
+
+    Rol.hasMany(User, { foreignKey: "roleId" })
+    User.belongsTo(Rol, { as: "roles", foreignKey: "roleId" })
 
     return User;
 };
