@@ -20,7 +20,7 @@
                                 <div class="control-formulario">
                                     <label>Titulo:</label>
                                     <input type="text" name="nombre" class="control"
-                                        placeholder="Escribe aquí el titulo" required autofocus pattern="[a-zA-Z\s]+"
+                                        placeholder="Escribe aquí el titulo" required autofocus
                                         title="Ingresa un titulo válido" value="<%= peliculaEditar.name%>">
                                 </div>
                                 <div class="control-formulario">
@@ -34,10 +34,15 @@
                                         value="<%= peliculaEditar.year%>">
                                 </div>
                                 <div class="control-formulario">
-                                    <label>Clasificacion Edad:</label>
-                                    <input type="text" name="clasificacionEdad" class="control"
-                                        placeholder="Escribe aquí la clasificacion"
-                                        value="<%= peliculaEditar.classifications.name%>">
+                                    <label for="clasificacionEdad">Clasificacion Edad:</label>
+                                    <select name="clasificacionEdad" id="" required>
+                                        <% allClassification.forEach(clasif=> { %>
+                                            <option value="<%= clasif.id %>" <% if (peliculaEditar.classifications.id==clasif.id) { %>
+                                                <%= 'selected' %>
+                                                    <% }; %>><%= clasif.name %>
+                                            </option>
+                                            <% }); %>
+                                    </select>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Descripcion:</label>
@@ -86,12 +91,21 @@
                                     </figure>
                                     <input type="hidden" name="oldImagen" value="<%=peliculaEditar.image%>">
                                     <label>Imagen:</label>
-                                    <input type="file" name="imagen" class="control" required
+                                    <input type="file" name="imagen" class="control"
                                         title="Ingresa una imagen válida">
                                 </div>
                                 <div class="control-formulario">
                                     <label for="genero">Genero:</label>
-                                    <select id="genero">
+                                    <select name="genero" id="" required>
+                                        <% allGenres.forEach(genre=> { %>
+                                            <option value="<%= genre.id %>" <% if (peliculaEditar.genres.id==genre.id) { %>
+                                                <%= 'selected' %>
+                                                    <% }; %>><%= genre.name %>
+                                            </option>
+                                            <% }); %>
+                                    </select>
+                                    <!--
+                                 <select id="genero">
                                         <option value="accion">Accion</option>
                                         <option value="aventura">Aventura</option>
                                         <option value="comedia">Comedia</option>
@@ -103,7 +117,7 @@
                                         <option selected="selected">
                                             <%=peliculaEditar.genres.name%>
                                         </option>
-                                    </select>
+                                    </select>-->
                                 </div>
                         </div>
                         <div class="control-formulario">

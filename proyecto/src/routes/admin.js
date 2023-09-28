@@ -21,9 +21,9 @@ router.get("/listProducts", adminController.listProducts);
 router.get("/userList", adminController.userList);
 router.get("/createProducts", adminController.createProduct);
 router.post("/createProducts", upload.single("imagen"), adminController.save);
-router.get("/editProducts/delete/:id", adminController.delete);
+router.get("/editProducts/delete/:id", adminController.deleteProduct);
+router.delete("/editProducts/delete/:id", adminController.destroy)
 router.get("/editProducts/:id", adminController.editProduct)
 router.put("/editProducts/:id", upload.single('imagen'), adminController.update);
-router.delete("/editProducts/delete/:id", adminController.destroy)
 
 module.exports = router;

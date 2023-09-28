@@ -19,7 +19,7 @@
                                 <div class="control-formulario">
                                     <label>Titulo:</label>
                                     <input type="text" name="nombre" class="control"
-                                        placeholder="Escribe aquí el titulo" required autofocus pattern="[a-zA-Z\s]+"
+                                        placeholder="Escribe aquí el titulo" required autofocus
                                         title="Ingresa un titulo válido">
                                 </div>
                                 <div class="control-formulario">
@@ -34,13 +34,20 @@
                                 </div>
                                 <div class="control-formulario">
                                     <label for="clasificacionEdad" >Clasificacion Edad:</label>
+                                    <select name="clasificacionEdad" id="" required>
+                                        <option value="" selected>- Selecciona Clasificacion - </option>
+                                        <% allClassification.forEach(clasif => { %>
+                                        <option value="<%= clasif.id %>"><%= clasif.name %></option>
+                                        <% }); %>
+                                    </select>
+                                    <!--
                                     <select id="clasificacionEdad" name="clasificacionEdad" class="control">
                                         <option value="7+">7+</option>
                                         <option value="12+">12+</option>
                                         <option value="16+">16+</option>
                                         <option value="18+">18+</option>
                                         <option value="X">X</option>
-                                    </select>
+                                    </select>-->
                                 </div>
                                 <div class="control-formulario">
                                     <label>Descripcion:</label>
@@ -84,6 +91,13 @@
                                 </div>
                                 <div class="control-formulario">
                                     <label for="genero">Genero:</label>
+                                    <select name="genero" id="" required>
+                                        <option value="" selected>- Selecciona Genero - </option>
+                                        <% allGenres.forEach(genre => { %>
+                                        <option value="<%= genre.id %>"><%= genre.name %></option>
+                                        <% }); %>
+                                    </select>
+                                    <!--
                                     <select id="genero">
                                         <option value="accion">Accion</option>
                                         <option value="aventura">Aventura</option>
@@ -93,7 +107,7 @@
                                         <option value="musical">Musical</option>
                                         <option value="romantica">Romantica</option>
                                         <option value="terror">Terror</option>
-                                    </select>
+                                    </select>-->
                                 </div>
                         </div>
                         <div class="control-formulario">

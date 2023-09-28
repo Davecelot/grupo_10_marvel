@@ -17,7 +17,7 @@ const controller = {
   userList: (req, res) => {
     db.User.findAll().then(users => {
       return res.render("admin/userList", { users });
-  })
+    })
   },
 
   listProducts: (req, res) => {
@@ -27,76 +27,97 @@ const controller = {
   },
 
   createProduct: function (req, res) {
-    res.render("admin/createProducts");
+    db.Classification.findAll()
+      .then(allClassification => {
+        db.Genero.findAll()
+          .then(allGenres => {
+            res.render('admin/createProducts', { allGenres, allClassification });
+          });
+      })
   },
 
   editProduct: (req, res) => {
-    db.Movie.findByPk(req.params.id,{
-      include: ["genres","classifications"]
-    })
-      .then(peliculaEditar => {
-          res.render('admin/editProducts', {peliculaEditar});
+    const id = req.params.id
+    db.Classification.findAll()
+      .then(allClassification => {
+        db.Genero.findAll()
+        .then(allGenres => {
+          db.Movie.findByPk(req.params.id, {
+            include: ["genres", "classifications"]
+          })
+            .then(peliculaEditar => {
+              console.log(id);
+              res.render('admin/editProducts', { peliculaEditar, allClassification, allGenres });
+            });
+        });
+      });
+  },
+
+  deleteProduct: (req, res) => {
+    db.Movie.findByPk(req.params.id)
+      .then(Movie => {
+        res.render('moviesDelete.ejs', { Movie });
       });
   },
 
   save: (req, res) => {
-    let peliculas = mainController.leerJson("products.json");
-    let nuevaPelicula = {
-      id: peliculas[peliculas.length - 1].id + 1,
-      nombre: req.body.nombre,
-      genero: req.body.genero,
-      duracion: req.body.duracion,
+    db.Movie.create({
+      name: req.body.nombre,
+      genreId: req.body.genero,
+      length: req.body.duracion,
       year: req.body.year,
-      clasificacionEdad: req.body.clasificacionEdad,
-      descripcion: req.body.descripcion,
-      advertenciaContenido: req.body.advertenciaContenido,
+      classificationId: req.body.clasificacionEdad,
+      description: req.body.descripcion,
+      contentWarning: req.body.advertenciaContenido,
       director: req.body.director,
-      reparto: req.body.reparto,
-      estudio: req.body.estudio,
-      subtitulos: req.body.subtitulos,
-      precio: req.body.precio,
-      imagen: "/images/movie-images/" + req.file.filename,
-    };
+      cast: req.body.reparto,
+      studio: req.body.estudio,
+      subtitles: req.body.subtitulos,
+      price: req.body.precio,
+      image: "/images/movie-images/" + req.file.filename
+    })
+      .then(movie => {
+        res.redirect("/admin/listProducts");
+      }).catch(error => res.send(error));
 
-    peliculas.push(nuevaPelicula);
-    let nuevaPeliculaGuardar = JSON.stringify(peliculas, null, 2);
-    fs.writeFileSync(path.resolve(__dirname, "../data/products.json"), nuevaPeliculaGuardar);
-    res.redirect("/admin/listProducts");
   },
 
-  delete: (req, res) => {
-    let peliculas = mainController.leerJson("products.json");
-    let peliculaDeleteId = parseInt(req.params.id);
-    const peliculasFinal = peliculas.filter(
-      (pelicula) => pelicula.id != peliculaDeleteId
-    );
-    let peliculaGuardar = JSON.stringify(peliculasFinal, null, 2);
-    fs.writeFileSync(path.resolve(__dirname, "../data/products.json"), peliculaGuardar);
-    res.redirect("/admin/listProducts");
-  },
-
-  update: function(req, res) {
-    req.body.id = req.params.id;
+  update: function (req, res) {
     req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-    let promMovies = Movies.findByPk(movieId);
-    Promise
-        .all([promMovies])
-        .then(([Movie]) => {
-          //Movie.release_date = moment( new Date(Movie.release_date)).toLocaleDateString();
-          Movie.release_date = moment(Movie.release_date).locale('es-us').format('YYYY-MM-DD');
-          return res.render(path.resolve(__dirname, '..', 'views',  'moviesEdit'), {Movie})})
-      .catch(error => res.send(error))
-    res.redirect("/admin/listProducts");
+    db.Movie
+      .update(
+        {
+          name: req.body.nombre,
+          genreId: req.body.genero,
+          length: req.body.duracion,
+          year: req.body.year,
+          classificationId: req.body.clasificacionEdad,
+          description: req.body.descripcion,
+          contentWarning: req.body.advertenciaContenido,
+          director: req.body.director,
+          cast: req.body.reparto,
+          studio: req.body.estudio,
+          subtitles: req.body.subtitulos,
+          price: req.body.precio,
+          image: "/images/movie-images/" + req.body.imagen,
+        },
+        {
+          where: { id: req.params.id }
+        }
+      )
+      .then(() => {
+        res.redirect("/admin/listProducts");
+      }).catch(error => res.send(error));
   },
 
-  destroy: function (req,res) {
-    let movieId = req.params.id;
-    Movies
-    .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
-    .then(()=>{
-        return res.redirect('/movies')})
-    .catch(error => res.send(error)) 
-}
+  destroy: function (req, res) {
+    db.Movie.destroy({
+      where: { id: req.params.id }
+    }).then(() => {
+      return res.redirect('/movies');
+    })
+      .catch(error => res.send(error));
+  }
 };
 
 module.exports = controller;
