@@ -13,7 +13,7 @@ CREATE TABLE `classifications` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---  classifications  --
+--  genres  --
 CREATE TABLE `genres` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE `genres` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---  classifications  --
+--  roles  --
 CREATE TABLE `roles` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE `users` (
   `name` varchar(50) DEFAULT NULL,
   `mail` varchar(50) DEFAULT NULL,
   `roleId` int unsigned DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
+  `password` varchar(200) DEFAULT NULL,
   `image` varchar(50) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
