@@ -13,9 +13,11 @@ const controller = {
   login: function (req, res) {
     res.render("users/login");
   },
+
   register: function (req, res) {
     res.render("users/register");
   },
+
   save: function (req, res) {
     const resultValidation = validationResult(req);
     const users = mainController.leerJson("users.json");
@@ -79,6 +81,15 @@ const controller = {
       });
     }
   },
+
+  userList: (req, res) => {
+    res.send("Entraste a la lista de usuarios");
+  },
+
+  userDetail: (req, res) => 
+  {
+     res.send('Entraste al detalle del usuario')
+  }
 };
 
 module.exports = controller;
