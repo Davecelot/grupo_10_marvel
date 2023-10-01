@@ -1,6 +1,6 @@
 <!-- Escribir aqui el codigo de  la seccion Menu Navbar -->
 <header class="main-header">
-     <conteiner>
+     <div class="container">
           <a href="#" class="hamburger-button">
                <i class="fa-solid fa-bars"></i></a>
 
@@ -23,9 +23,9 @@
 
           <nav class="main-navbar">
                <ul class="menu-navbar">
-                    <li><a href="/products/productList">Estrenos </a><i class="fa-solid fa-clapperboard"></i></li>
-                    <li><a href="/home">Top 10 </a><i class="fa-solid fa-fire"></i></li>
-                    <li><a href="/home">Categorias </a><i class="fa-solid fa-video"></i>
+                    <li><a href="/products/productList">Estrenos <i class="fa-solid fa-clapperboard"></i></a></li>
+                    <li><a href="/home">Top 10 <i class="fa-solid fa-fire"></i> </a></li>
+                    <li><a href="/home">Categorias <i class="fa-solid fa-video"></i></a>
                          <ul class="submenu-navbar">
                               <li><a href="/home"></a>Accion</li>
                               <li><a href="/home"></a>Aventura</li>
@@ -37,9 +37,9 @@
                               <li><a href="/home"></a>Terror</li>
                          </ul>
                     </li>
-                    <li><a href="/home">Proximamente </a><i class="fa-solid fa-film"></i></li>
+                    <li><a href="/home">Proximamente <i class="fa-solid fa-film"></i></a></li>
                     <% if( (locals !=undefined) && (locals.myUser !=undefined) ) { %>
-                         <li><a href="/home">Tus Favoritos </a><i class="fa-solid fa-heart"></i></li>
+                         <li><a href="/home">Tus Favoritos <i class="fa-solid fa-heart"></i></a></li>
                          <% } %>
                </ul>
           </nav>
@@ -48,5 +48,5 @@
                     <%= locals.myUser %>
                </h1>
                <% } %>
-     </conteiner>
+     </div class="container">
 </header>

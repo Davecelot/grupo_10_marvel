@@ -13,7 +13,7 @@ const controller = {
   },
   leerJson: (archivo) => {
     return JSON.parse(
-      fs.readFileSync(path.resolve(__dirname, `../data/${archivo}`))
+      fs.readFileSync(path.resolve(__dirname, `../database/${archivo}`))
     );
   },
 };

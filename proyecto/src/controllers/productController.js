@@ -64,7 +64,7 @@ const controller = {
     peliculas.push(nuevaPelicula);
     let nuevaPeliculaGuardar = JSON.stringify(peliculas, null, 2);
     fs.writeFileSync(
-      path.resolve(__dirname, "../data/products.json"),
+      path.resolve(__dirname, "../database/products.json"),
       nuevaPeliculaGuardar
     );
     res.redirect("/products/productList");
