@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="/css/userList.css">
     <title>Lista de Usuarios</title>
 </head>
+
 <body>
     <header>
         <div class="top-bar">
@@ -31,12 +33,13 @@
             </div>
         </div>
     </header>
-        
+
     <main class="main-userList">
         <div class="list-container">
             <div class="container-top">
                 <div class="back-and-title">
-                    <a href="/admin/index"><i class="fa-solid fa-arrow-left"></i></a><p>Usuarios</p>
+                    <a href="/admin/index"><i class="fa-solid fa-arrow-left"></i></a>
+                    <p>Usuarios</p>
                 </div>
 
                 <a href="#"><button type="submit" id="new-product" class="button-add">Agregar usuario</button></a>
@@ -50,19 +53,28 @@
 
                 <div class="items-list">
 
-                    <% for (let i = 0; i < users.length; i++) { %>
+                    <% for (let i=0; i < users.length; i++) { %>
 
                         <div class="user-item">
                             <div class="input-and-user">
                                 <input type="checkbox" name="select-all" value="select-all">
                                 <div class="user-and-avatar">
                                     <div class="avatar">
-                                        <i class="fa-solid fa-user"></i>
+                                        <i class="fa-solid fa-user" src="<% users[i].image %>"></i>
                                     </div>
 
                                     <div class="user-and-rol">
-                                        <p><%= users[i].nombre %></p>
-                                        <span><%= users[i].rol %></span>
+                                        <p>
+                                            <%= users[i].name %>
+                                        </p>
+                                        <% allRoles.forEach(rol=> { %>
+                                            <% if (users[i].roleId==rol.id) { %>
+                                                <span>
+                                                    <%= rol.name %>
+                                                </span>
+                                                <% }; %>>
+                                                    <% }); %>
+
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +85,7 @@
                             </div>
                         </div>
 
-                    <% } %>
+                        <% } %>
                 </div>
             </div>
 
@@ -82,4 +94,5 @@
 
     <%- include("../partials/footer.ejs")%>
 </body>
+
 </html>

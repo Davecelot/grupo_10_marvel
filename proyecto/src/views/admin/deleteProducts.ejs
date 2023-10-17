@@ -1,0 +1,29 @@
+<%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/deleteProducts.css">
+    </head>
+
+    <body>
+        <!-- Inicia la zona de header -->
+        <%- include("../partials/header.ejs")%>
+            <div class="contenedorBorrado">
+                <p class="control-formulario">
+                <h1>Estas seguro de querer borrar esta película: <%= Movie.name %>?</h1>
+                    <figure class="form-group">
+                        <img class="poster" src="<%=Movie.image%>"
+                            alt="pelicula <%=Movie.name%>">
+                    </figure>
+                <form action="/admin/editProducts/delete/<%= Movie.id %>" method="POST">
+                    <br>
+                    <div class="botones">
+                        <button class="boton-formulario" type="submit">Borrar la Película</button>
+                        <a class="botonVolver" href="/admin/listProducts">Listado de Películas</a>
+                    </div>
+                </form>
+                </p>
+            </div>
+
+            <!-- Inicia la zona de footer -->
+            <%- include("../partials/footer.ejs")%>
+    </body>
+
+    </html>

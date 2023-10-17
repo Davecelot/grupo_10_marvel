@@ -1,0 +1,61 @@
+
+.contenedorBorrado{
+    display: flex;
+    flex-direction: column;
+    padding: 35px 16px 35px 16px;
+    gap: 15px;
+    color: #fbfbfb;
+    font-family: 'Ubuntu';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.control-formulario {
+    gap: 4px;
+  }
+
+.botones {
+    gap: 5px;
+  }
+
+.boton-formulario {
+    width: 348px;
+    padding: 12px 16px;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 4px;
+    background: var(--colors-brand-purple-700, #280F50);
+    border: none;
+    color: #fbfbfb;
+    font-size: 25px;
+  }
+
+  .boton-formulario:hover {
+    background-color: #bb38f9;
+  }
+
+  .botonVolver{
+    padding: 12px 16px;
+    font-size: 25px;
+    color: #fbfbfb;
+    text-align: center;
+  }
+
+  .botonVolver:hover{
+    color: #bb38f9;
+  }
+
+  .poster{
+    width: 30%;
+    padding: 15px 0px 0px 0px;
+  }
+
+  .form-group{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }

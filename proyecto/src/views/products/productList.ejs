@@ -7,21 +7,26 @@
 
                <main>
                     <section class="common-category">
-                         <% for(genero of generos) { %>
+                         <% for(let i = 0; i < generosAll.length; i++ ) { %>
                               <h2>
-                                   <%= genero %>
+                                   <%= generosAll[i].name %>
                               </h2>
+
                               <div class="carousel-common-category-cards">
-                                   <% const peliculaGeneros=peliculas.filter((pelicula)=> pelicula.genero ===
-                                        genero) %>
-                                        <% for(pelicula of peliculaGeneros) { %>
+
+                                   <% movies.forEach(movie=> { %>
+                                        <% if (generosAll[i].id==movie.genreId) { %>
                                              <div class="product-common-card">
-                                                  <img src="<%= pelicula.imagen %>"
-                                                       alt="A landscape poster of the movie <%= pelicula.nombre %>"
-                                                       class="image-common-card">
+                                                  <a href="/products/productDetail/<%= movie.id %>">
+                                                  <img src="<%= movie.image %>"
+                                                       alt="A landscape poster of the movie <%= movie.name %>"
+                                                       class="image-common-card"></a>
                                              </div>
-                                             <% } %>
+                                             <% }; %>>
+                                                  <% }); %>
+
                               </div>
+
                               <% } %>
                     </section>
                </main>

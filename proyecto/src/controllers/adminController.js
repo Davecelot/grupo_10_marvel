@@ -15,9 +15,13 @@ const controller = {
   },
 
   userList: (req, res) => {
-    db.User.findAll().then(users => {
-      return res.render("admin/userList", { users });
-    })
+    db.User.findAll().
+      then(users => {
+        db.Rol.findAll()
+          .then(allRoles => {
+            return res.render("admin/userList", { users, allRoles });
+          });
+      });
   },
 
   listProducts: (req, res) => {
@@ -41,22 +45,22 @@ const controller = {
     db.Classification.findAll()
       .then(allClassification => {
         db.Genero.findAll()
-        .then(allGenres => {
-          db.Movie.findByPk(req.params.id, {
-            include: ["genres", "classifications"]
-          })
-            .then(peliculaEditar => {
-              console.log(id);
-              res.render('admin/editProducts', { peliculaEditar, allClassification, allGenres });
-            });
-        });
+          .then(allGenres => {
+            db.Movie.findByPk(req.params.id, {
+              include: ["genres", "classifications"]
+            })
+              .then(peliculaEditar => {
+                console.log(id);
+                res.render('admin/editProducts', { peliculaEditar, allClassification, allGenres });
+              });
+          });
       });
   },
 
   deleteProduct: (req, res) => {
     db.Movie.findByPk(req.params.id)
       .then(Movie => {
-        res.render('moviesDelete.ejs', { Movie });
+        res.render('admin/deleteProducts', { Movie });
       });
   },
 
@@ -114,7 +118,7 @@ const controller = {
     db.Movie.destroy({
       where: { id: req.params.id }
     }).then(() => {
-      return res.redirect('/movies');
+      return res.redirect('/admin/listProducts');
     })
       .catch(error => res.send(error));
   }
