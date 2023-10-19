@@ -24,7 +24,46 @@
 
                <div class="prizing">
                     <h3>Método de pago</h3>
+
+                    <div class="form-to-pay">
+                         <form action="#" method="POST">
+                                   <select name="paymentMethod" id="" required>
+                                        <option value="" selected>Selecciona un método de pago</option>
+                                        <option value=""><i class="fa-brands fa-cc-visa"></i> Visa</option>
+                                        <option value=""><i class="fa-brands fa-cc-mastercard"></i> MasterCard</option>
+                                        <option value=""><i class="fa-brands fa-cc-amex"></i> American Express</option>
+                                   </select>
+     
+                              <div class="input-style">
+                                   <label for="cardNumber">Nro. de tajerta</label>
+                                   <input name="cardNumber" type="number" placeholder="0000 0000 0000 0000" class="input-form">
+                              </div>
+     
+                              <div class="input-style">
+                                   <label for="clientName">Nombre del titular</label>
+                                   <input name="clientName" type="text" placeholder="Escribe el nombre como aparece en la tarjeta" class="input-form">
+                              </div>
+                              
+                              <!-- La fecha de vencimiento y el CVV debe estar en un mismo DIV para mobile -->
+                              <div class="input-style">
+                                   <label for="expirationDate">Fecha de vto.</label>
+                                   <input name="expirationDate" type="date" placeholder="dd/mm" class="input-form">
+                              </div>
+     
+                              <div class="input-style">
+                                   <label for="cvv">CVV</label>
+                                   <input name="cvv" type="number" placeholder="000" class="input-form">
+                              </div>
+     
+                              <div class="final-prize">
+                                   <h4>Total</h4><p>$3200 ARG</p>
+                              </div>
+     
+                              <button class="btn-filled"><i class="fa-solid fa-cart-shopping"></i> Confirmar compra</button>
+                         </form>
+                    </div>
                </div>
+
           </div>
      </main>
      <!-- Termina  la zona de main -->
