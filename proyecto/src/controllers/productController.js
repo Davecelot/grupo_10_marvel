@@ -32,7 +32,23 @@ const controller = {
 
   productList: function (req, res) {
     const myUser = req.session.Usuario;
-    db.Movie.findAll()
+    db.Movie.findAll({
+      include: ["genres"]
+    })
+      .then(movies => {
+        db.Genero.findAll()
+          .then(generosAll => {
+            return res.render("products/productList", { movies, myUser, generosAll });
+          })
+      })
+  },
+
+  productListGenero: function (req, res) {
+    const myUser = req.session.Usuario;
+    db.Movie.findAll({
+      include: ["genres"],
+      where: { genreId: req.params.id }
+    })
       .then(movies => {
         db.Genero.findAll()
           .then(generosAll => {
