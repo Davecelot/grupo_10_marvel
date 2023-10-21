@@ -5,6 +5,7 @@ const mainController = require("./mainController");
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const app = express();
+const db = require("../database/models");
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.set("view engine", "ejs");
@@ -83,13 +84,17 @@ const controller = {
   },
 
   userList: (req, res) => {
-    res.send("Entraste a la lista de usuarios");
+    db.User.findAll().then((users) => res.render("users/userList", { users }));
   },
 
-  userDetail: (req, res) => 
-  {
-     res.send('Entraste al detalle del usuario')
-  }
+  userDetail: (req, res) => {
+    const id = parseInt(req.params.id);
+    db.User.findByPk(id, {
+      include: ["rol"],
+    }).then((user) => {
+      res.render("users/userDetail", { user });
+    });
+  },
 };
 
 module.exports = controller;

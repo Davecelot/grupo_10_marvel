@@ -1,0 +1,35 @@
+<%- include("../partials/head.ejs")%>
+     <link rel="stylesheet" href="/css/userDetail.css">
+     </head>
+
+     <body>
+          <%- include("../partials/header.ejs")%>
+
+               <main class="main-userDetail">
+                    <div class="img-container">
+                         <h1>
+                              <%=user.name %>
+                         </h1>
+                         <img src=<%=user.image %>
+                         alt="A full-width image of the user <%= user.name %>" class="user-image">
+                    </div>
+
+                    <div class="user-description">
+                         <div class="brief-description">
+                              <span>
+                                   <%=user.mail %>
+                              </span><span>
+
+                                   <%= user.role.name %>
+
+                              </span>
+                         </div>
+                    </div>
+
+
+               </main>
+
+               <%- include("../partials/footer.ejs")%>
+     </body>
+
+     </html>

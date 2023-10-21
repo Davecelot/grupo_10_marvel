@@ -1,20 +1,20 @@
 /* Aqui inicia CSS de Banner/Contenedor */
 
 .banner-container {
-    height: 30vw;
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .banner-container .image {
-    height: 100%;
-    position: relative;
-    display: inline-block;
+  height: 100%;
+  position: relative;
+  display: inline-block;
 }
 
 .image-hero {
-    height: 100%;
+  height: 100%;
 }
 
 .banner-container .marbete {
@@ -27,14 +27,13 @@
   bottom: 0;
   height: 100%;
   padding: 40px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   gap: 20px;
 }
 
-
 .banner-container .marbete .title-hero {
-    color: white;
-    font-size: 1rem;
+  color: white;
+  font-size: 1rem;
 }
 
 .banner-container .marbete .logo-hero img {
@@ -42,12 +41,12 @@
 }
 
 .banner-container .image input {
-    font-size: 0.8rem;
-    padding: 0 20px;
+  font-size: 0.8rem;
+  padding: 0 20px;
 }
 
 #btnAlquilar {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 /* Aqui termina CSS de Banner/Contenedor */
@@ -55,46 +54,53 @@
 /* SECTION: COMMON CATEGORY */
 
 .common-category {
-    margin: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .common-category h2 {
-    font-size: 16px;
-    line-height: 24px;
-    color: #fbfbfb;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fbfbfb;
 }
 
 .carousel-common-category-cards {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
 .product-common-card {
-    flex-basis: 24%;
-    height: 88px;
+  flex-basis: 24%;
+  height: 88px;
+}
+
+.user-common-card {
+  flex-basis: 24%;
+  height: 88px;
 }
 
 .image-common-card {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 /* END OF SECTION: COMMON CATEGORY */
 
 @media only screen and (min-width: 361px) and (max-width: 767px) {
-   
+  /* Aqui termina CSS de Banner/Contenedor para media entre 361 y 767*/
 
-    /* Aqui termina CSS de Banner/Contenedor para media entre 361 y 767*/
-
-    /* SECTION: COMMON CATEGORY - media query 361*/
+  /* SECTION: COMMON CATEGORY - media query 361*/
 
   .product-common-card {
+    height: 124px;
+  }
+
+  .user-common-card {
     height: 124px;
   }
 
@@ -102,7 +108,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-     /* Aqui inicia CSS de Banner/Contenedor para media de 768 a 1199*/
+  /* Aqui inicia CSS de Banner/Contenedor para media de 768 a 1199*/
 
   .banner-container .marbete .title-hero {
     font-size: 2.75rem;
@@ -121,12 +127,15 @@
     height: 200px;
   }
 
-  /* END OF SECTION: COMMON CATEGORY */
+  .user-common-card {
+    height: 200px;
+  }
 
+  /* END OF SECTION: COMMON CATEGORY */
 }
 
 @media (min-width: 1200px) {
-     /* Aqui inicia CSS de Banner/Contenedor para media de 1200 en adelante*/
+  /* Aqui inicia CSS de Banner/Contenedor para media de 1200 en adelante*/
 
   .banner-container {
     display: flex;
@@ -148,7 +157,6 @@
     font-size: 1.5rem;
   }
 
-
   .banner-container .marbete .title-hero {
     color: white;
     font-size: 3.5rem;
@@ -167,11 +175,15 @@
     height: 224px;
   }
 
+  .user-common-card {
+    height: 224px;
+  }
+
   /* END OF SECTION: COMMON CATEGORY */
 }
 
 @media only screen and (max-width: 767px) {
-  .banner-container  {
+  .banner-container {
     height: 30vh;
   }
 

@@ -1,0 +1,30 @@
+<%- include("../partials/head.ejs")%>
+
+     <body>
+          <%- include("../partials/header.ejs")%>
+               <link rel="stylesheet" href="/css/index.css">
+               </head>
+
+               <main>
+                    <div class="control-listado">
+                         <section class="common-category">
+                              <h2>Listado De Usuarios</h2>
+                              <% for(let i=0; i<users.length; i++ ) { %>
+                                   <div class="user-common-card">
+                                        <a href="/users/userDetail/<%= users[i].id %>">
+                                             <%= users[i].name %>
+                                        </a>
+                                   </div>
+                                   <% } %>
+                         </section>
+                    </div>
+               </main>
+
+
+
+
+               <%- include("../partials/footer.ejs")%>
+
+     </body>
+
+     </html>
