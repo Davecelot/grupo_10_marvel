@@ -1,6 +1,6 @@
 <%- include("../partials/head.ejs")%>
-<link rel="stylesheet" href="/css/createProducts.css">
-</head>
+    <link rel="stylesheet" href="/css/createProducts.css">
+    </head>
 
     <body>
         <!-- Inicia la zona de header -->
@@ -15,44 +15,65 @@
                         <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
                         <h3 class="titulo-form">Nueva Pelicula</h3>
                         <div class="formulario">
-                            <form action="/admin/createProducts" method="POST" class="create-form" enctype="multipart/form-data">
+                            <form action="/admin/createProducts" method="POST" class="create-form"
+                                enctype="multipart/form-data">
                                 <div class="control-formulario">
                                     <label>Titulo:</label>
                                     <input type="text" name="nombre" class="control"
-                                        placeholder="Escribe aquí el titulo" required autofocus
-                                        title="Ingresa un titulo válido">
+                                        placeholder="Escribe aquí el titulo" autofocus id="nombre"
+                                        value="<%= locals.old ? old.nombre : null %>">
+                                    <% if (locals.errors && errors.nombre) {%>
+                                        <h3 class="feedback">
+                                            <%= errors.nombre.msg %>
+                                        </h3>
+                                        <% } %>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Duracion:</label>
                                     <input type="text" name="duracion" class="control"
-                                        placeholder="Formato horas (h) y minutos (m)">
+                                        placeholder="Formato horas (h) y minutos (m)"
+                                        value="<%= locals.old ? old.duracion : null %>">
+                                    <% if (locals.errors && errors.duracion) {%>
+                                        <h3 class="feedback">
+                                            <%= errors.duracion.msg %>
+                                        </h3>
+                                        <% } %>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Año:</label>
-                                    <input type="text" name="year" class="control"
-                                        placeholder="Escribe aquí el año">
+                                    <input type="text" name="year" class="control" placeholder="Escribe aquí el año"
+                                        value="<%= locals.old ? old.year : null %>">
+                                    <% if (locals.errors && errors.year) {%>
+                                        <h3 class="feedback">
+                                            <%= errors.year.msg %>
+                                        </h3>
+                                        <% } %>
                                 </div>
                                 <div class="control-formulario">
-                                    <label for="clasificacionEdad" >Clasificacion Edad:</label>
-                                    <select name="clasificacionEdad" id="" required>
+                                    <label id="clasificacionEdad">Clasificacion Edad:</label>
+                                    <select name="clasificacionEdad" id="">
                                         <option value="" selected>- Selecciona Clasificacion - </option>
-                                        <% allClassification.forEach(clasif => { %>
-                                        <option value="<%= clasif.id %>"><%= clasif.name %></option>
-                                        <% }); %>
+                                        <% allClassification.forEach(clasif=> { %>
+                                            <option value="<%= clasif.id %>">
+                                                <%= clasif.name %>
+                                            </option>
+                                            <% });%>
                                     </select>
-                                    <!--
-                                    <select id="clasificacionEdad" name="clasificacionEdad" class="control">
-                                        <option value="7+">7+</option>
-                                        <option value="12+">12+</option>
-                                        <option value="16+">16+</option>
-                                        <option value="18+">18+</option>
-                                        <option value="X">X</option>
-                                    </select>-->
+                                    <% if (locals.errors && errors.clasificacionEdad) {%>
+                                        <h3 class="feedback">
+                                            <%= errors.clasificacionEdad.msg %>
+                                        </h3>
+                                        <% } %>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Descripcion:</label>
-                                    <textarea name="descripcion" class="control"
-                                        placeholder="Escribe aquí la descripcion" required></textarea>
+                                    <input name="descripcion" class="control" placeholder="Escribe aquí la descripcion"
+                                        value="<%= locals.old ? old.descripcion : null %>">
+                                    <% if (locals.errors && errors.descripcion) {%>
+                                        <h3 class="feedback">
+                                            <%= errors.descripcion.msg %>
+                                        </h3>
+                                        <% } %>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Advertencia Contenido:</label>
@@ -82,32 +103,39 @@
                                 <div class="control-formulario">
                                     <label>Precio:</label>
                                     <input type="number" name="precio" class="control"
-                                        placeholder="Escribe aquí el precio" required title="Ingresa un precio válido">
+                                        placeholder="Escribe aquí el precio"
+                                        value="<%= locals.old ? old.precio : null %>">
+                                    <% if (locals.errors && errors.precio) {%>
+                                        <h3 class="feedback">
+                                            <%= errors.precio.msg %>
+                                        </h3>
+                                        <% } %>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Imagen:</label>
-                                    <input type="file" name="imagen" class="control" required
-                                        title="Ingresa una imagen válida">
+                                    <input type="file" name="imagen" class="control" title="Ingresa una imagen válida"
+                                        value="<%= locals.old ? old.imagen : null %>">
+                                    <% if (locals.errors && errors.imagen) {%>
+                                        <h3 class="feedback">
+                                            <%= errors.imagen.msg %>
+                                        </h3>
+                                        <% } %>
                                 </div>
                                 <div class="control-formulario">
-                                    <label for="genero">Genero:</label>
-                                    <select name="genero" id="" required>
+                                    <label id="genero">Genero:</label>
+                                    <select name="genero" id="">
                                         <option value="" selected>- Selecciona Genero - </option>
-                                        <% allGenres.forEach(genre => { %>
-                                        <option value="<%= genre.id %>"><%= genre.name %></option>
-                                        <% }); %>
+                                        <% allGenres.forEach(genre=> { %>
+                                            <option value="<%= genre.id %>">
+                                                <%= genre.name %>
+                                            </option>
+                                            <% });%>
                                     </select>
-                                    <!--
-                                    <select id="genero">
-                                        <option value="accion">Accion</option>
-                                        <option value="aventura">Aventura</option>
-                                        <option value="comedia">Comedia</option>
-                                        <option value="drama">Drama</option>
-                                        <option value="infantil">Infantil</option>
-                                        <option value="musical">Musical</option>
-                                        <option value="romantica">Romantica</option>
-                                        <option value="terror">Terror</option>
-                                    </select>-->
+                                    <% if (locals.errors && errors.genero) {%>
+                                        <h3 class="feedback">
+                                            <%= errors.genero.msg %>
+                                        </h3>
+                                        <% } %>
                                 </div>
                         </div>
                         <div class="control-formulario">

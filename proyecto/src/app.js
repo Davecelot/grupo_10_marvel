@@ -7,9 +7,11 @@ const rutaMain = require("./routes/main");
 const rutaUsers = require("./routes/users");
 const rutaProducts = require("./routes/products");
 const rutaAdmin = require("./routes/admin");
+const rutaApi = require("./routes/api/users");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const rememberUserMiddleware = require("./middlewares/rememberUserMiddleware");
+const expressValidator = require("express-validator");
 
 app.use(session({ secret: "supercalifragilisticoespialidoso" }));
 app.use(cookieParser());
@@ -23,6 +25,7 @@ app.use("/", rutaMain);
 app.use("/users", rutaUsers);
 app.use("/products", rutaProducts);
 app.use("/admin", rutaAdmin);
+app.use("/api", rutaApi);
 
 app.listen(3000, console.log("Aplicacion levantada http://localhost:3000"));
 

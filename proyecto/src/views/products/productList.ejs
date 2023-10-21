@@ -7,27 +7,27 @@
 
                <main>
                     <section class="common-category">
-                         <% for(let i = 0; i < generosAll.length; i++ ) { %>
+                         <% generosAll.forEach(genero=> { %>
                               <h2>
-                                   <%= generosAll[i].name %>
+                                   <%= genero.name %>
                               </h2>
-
+                              <% movies.forEach(movie=> { %>
+                              <% if(genero.name == movie.genres.name){%>
                               <div class="carousel-common-category-cards">
 
-                                   <% movies.forEach(movie=> { %>
-                                        <% if (generosAll[i].id==movie.genreId) { %>
-                                             <div class="product-common-card">
-                                                  <a href="/products/productDetail/<%= movie.id %>">
-                                                  <img src="<%= movie.image %>"
-                                                       alt="A landscape poster of the movie <%= movie.name %>"
-                                                       class="image-common-card"></a>
-                                             </div>
-                                             <% }; %>>
-                                                  <% }); %>
+                                   <div class="product-common-card">
+                                        <a href="/products/productDetail/<%= movie.id %>">
+                                             <img src="<%= movie.image %>"
+                                                  alt="A landscape poster of the movie <%= movie.name %>"
+                                                  class="image-common-card"></a>
+                                   </div>
 
                               </div>
-
                               <% } %>
+
+                              <% }); %>
+
+                              <% }) %>
                     </section>
                </main>
 

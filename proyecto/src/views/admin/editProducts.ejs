@@ -20,8 +20,8 @@
                                 <div class="control-formulario">
                                     <label>Titulo:</label>
                                     <input type="text" name="nombre" class="control"
-                                        placeholder="Escribe aquí el titulo" required autofocus
-                                        title="Ingresa un titulo válido" value="<%= peliculaEditar.name%>">
+                                        placeholder="Escribe aquí el titulo" autofocus title="Ingresa un titulo válido"
+                                        value="<%= peliculaEditar.name%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label>Duracion:</label>
@@ -30,14 +30,15 @@
                                 </div>
                                 <div class="control-formulario">
                                     <label>Año:</label>
-                                    <input type="number" name="año" class="control" placeholder="Escribe aquí el año"
+                                    <input type="text" name="year" class="control" placeholder="Escribe aquí el año"
                                         value="<%= peliculaEditar.year%>">
                                 </div>
                                 <div class="control-formulario">
                                     <label for="clasificacionEdad">Clasificacion Edad:</label>
-                                    <select name="clasificacionEdad" id="" required>
+                                    <select name="clasificacionEdad" id="">
                                         <% allClassification.forEach(clasif=> { %>
-                                            <option value="<%= clasif.id %>" <% if (peliculaEditar.classifications.id==clasif.id) { %>
+                                            <option value="<%= clasif.id %>" <% if
+                                                (peliculaEditar.classifications.id==clasif.id) { %>
                                                 <%= 'selected' %>
                                                     <% }; %>><%= clasif.name %>
                                             </option>
@@ -47,8 +48,7 @@
                                 <div class="control-formulario">
                                     <label>Descripcion:</label>
                                     <textarea name="descripcion" class="control"
-                                        placeholder="Escribe aquí la descripcion"
-                                        required><%= peliculaEditar.description%></textarea>
+                                        placeholder="Escribe aquí la descripcion"><%= peliculaEditar.description%></textarea>
                                 </div>
                                 <div class="control-formulario">
                                     <label>Advertencia Contenido:</label>
@@ -80,7 +80,7 @@
                                 <div class="control-formulario">
                                     <label>Precio:</label>
                                     <input type="number" name="precio" class="control"
-                                        placeholder="Escribe aquí el precio" required title="Ingresa un precio válido"
+                                        placeholder="Escribe aquí el precio" title="Ingresa un precio válido"
                                         value="<%= peliculaEditar.price%>">
                                 </div>
                                 <!--Aquí solicito la imagen-->
@@ -91,33 +91,20 @@
                                     </figure>
                                     <input type="hidden" name="oldImagen" value="<%=peliculaEditar.image%>">
                                     <label>Imagen:</label>
-                                    <input type="file" name="imagen" class="control"
-                                        title="Ingresa una imagen válida">
+                                    <input type="file" name="imagen" class="control" title="Ingresa una imagen válida">
                                 </div>
                                 <div class="control-formulario">
                                     <label for="genero">Genero:</label>
-                                    <select name="genero" id="" required>
+                                    <select name="genero" id="">
                                         <% allGenres.forEach(genre=> { %>
-                                            <option value="<%= genre.id %>" <% if (peliculaEditar.genres.id==genre.id) { %>
+                                            <option value="<%= genre.id %>" <% if (peliculaEditar.genres.id==genre.id) {
+                                                %>
                                                 <%= 'selected' %>
                                                     <% }; %>><%= genre.name %>
                                             </option>
                                             <% }); %>
                                     </select>
-                                    <!--
-                                 <select id="genero">
-                                        <option value="accion">Accion</option>
-                                        <option value="aventura">Aventura</option>
-                                        <option value="comedia">Comedia</option>
-                                        <option value="drama">Drama</option>
-                                        <option value="infantil">Infantil</option>
-                                        <option value="musical">Musical</option>
-                                        <option value="romantica">Romantica</option>
-                                        <option value="terror">Terror</option>
-                                        <option selected="selected">
-                                            <%=peliculaEditar.genres.name%>
-                                        </option>
-                                    </select>-->
+                                    <%=peliculaEditar.genres.name%>
                                 </div>
                         </div>
                         <div class="control-formulario">

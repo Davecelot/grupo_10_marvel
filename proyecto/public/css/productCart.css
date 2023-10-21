@@ -112,6 +112,7 @@
     align-items: center;
     width: 50%;
     margin-right: 32px;
+    gap: 24px;
 }
 
 .prizing h3 {
@@ -123,4 +124,137 @@
     font-style: normal;
     font-weight: 500;
     line-height: 32px; /* 133.333% */
+}
+
+/* >>>>> form-to-pay <<<<< */
+
+.form-to-pay {
+    display: flex;
+    flex-direction: column;
+    /* gap: 16px; */
+    align-items: center;
+    width: 100%;
+}
+
+/* >>>>> select <<<<< */
+
+select {
+    border-radius: 4px;
+    border: 1px solid var(--colors-text-text-white, #FBFBFB);
+    background-color: transparent;
+
+    max-width: 448px;
+    width: 100%;
+    padding: 12px 16px;
+
+    color: var(--colors-text-text-white, #FBFBFB);
+    /* desktop/body/large-text-desktop */
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+}
+
+select option {
+    background-color: #101820;
+}
+
+/* >>>>> input-style <<<<< */
+
+.input-style {
+    display: flex;
+    width: 448px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 16px;
+}
+
+.input-style label {
+    color: var(--colors-text-text-white, #FBFBFB);
+
+    /* desktop/specials/label-text */
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+}
+
+.input-form {
+    border-radius: 8px;
+    background: var(--colors-surface-surface-white, #FBFBFB);
+
+    color: var(--colors-text-text-black, #101820);
+    /* desktop/body/base-text-desktop */
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+
+    width: 100%;
+    padding: 16px;
+    border: none;
+}
+
+.input-form input::placeholder {
+    color: var(--colors-text-text-disabled, #67728A);
+}
+
+/* >>>>> final-prize <<<<< */
+
+.final-prize {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 448px;
+    margin: 16px 0px 16px 0px;
+}
+
+.final-prize h4 {
+    color: var(--colors-text-text-white, #FBFBFB);
+
+    /* desktop/titles/title-s-desktop */
+    font-family: Ubuntu;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px; /* 122.222% */
+}
+
+.final-prize p {
+    color: var(--colors-brand-colors-accent, #BB38F9);
+
+    /* desktop/titles/title-s-desktop */
+    font-family: Ubuntu;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px; /* 122.222% */
+}
+
+/* >>>>> btn-filled <<<<< */
+
+.btn-filled {
+    border: none;
+    border-radius: 4px;
+    background: var(--colors-brand-purple-700, #280F50);
+    color: var(--colors-text-text-white, #FBFBFB);
+
+    /* desktop/specials/btn-text */
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+
+    display: flex;
+    max-width: 448px;
+    width: 100%;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }

@@ -112,6 +112,12 @@
   #reset:hover {
     color: #bb38f9;
   }
+
+  .feedback{
+    padding-top: 2px;
+    color: red;
+    font-size: 20px;
+  }
   
   @media (min-width: 350px) and (max-width: 507px){
   
