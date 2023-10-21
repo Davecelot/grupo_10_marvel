@@ -6,26 +6,32 @@
           <%- include("../partials/header.ejs")%>
 
                <main class="main-userDetail">
-                    <div class="img-container">
-                         <h1>
-                              <%=user.name %>
-                         </h1>
-                         <img src=<%=user.image %>
-                         alt="A full-width image of the user <%= user.name %>" class="user-image">
-                    </div>
-
                     <div class="user-description">
                          <div class="brief-description">
                               <span>
-                                   <%=user.mail %>
-                              </span><span>
-
-                                   <%= user.role.name %>
-
+                                   Nombre De Usuario : <%= user.name %>
                               </span>
                          </div>
+                         <% if(user.image.trim.length) { %>
+                              <div class="brief-description">
+                                   <span>
+                                        Foto De Usuario :
+                                        <img src=<%=user.image %>
+                                        alt="A full-width image of the user <%= user.name %>" class="user-image">
+                                   </span>
+                              </div>
+                              <% } %>
+                                   <div class="brief-description">
+                                        <span>
+                                             Correo Electrónico : <%= user.mail %>
+                                        </span>
+                                   </div>
+                                   <div class="brief-description">
+                                        <span>
+                                             Rol De Usuario : <%= user.roles.name %>
+                                        </span>
+                                   </div>
                     </div>
-
 
                </main>
 

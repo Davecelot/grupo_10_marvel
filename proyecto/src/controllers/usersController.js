@@ -90,7 +90,7 @@ const controller = {
   userDetail: (req, res) => {
     const id = parseInt(req.params.id);
     db.User.findByPk(id, {
-      include: ["rol"],
+      include: ["roles"],
     }).then((user) => {
       res.render("users/userDetail", { user });
     });
