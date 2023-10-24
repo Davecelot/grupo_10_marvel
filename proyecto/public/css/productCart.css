@@ -17,27 +17,27 @@
     align-items: center;
     gap: 16px;
     justify-content: flex-start;
-    margin: 0px 32px 0px 32px;
+    margin: 0px 16px 0px 16px;
 }
 
 .page-title h1 {
-    /* desktop/titles/title-s-desktop */
-    font-family: 'Ubuntu';
-    font-size: 36px;
+    /* mobile/titles/title-s-mobile */
+    font-family: Ubuntu;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 44px; /* 122.222% */
+    line-height: 32px; /* 133.333% */
 }
 
 .page-title i {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 /* >>>>> hero-img <<<<< */
 
 .hero-img {
     width: 100%;
-    height: 584px;
+    height: 272px;
     background: linear-gradient(180deg, #0D051B 0%, rgba(13, 5, 27, 0.00) 16.44%), linear-gradient(0deg, #0D051B 0%, #0D051B 0%, rgba(13, 5, 27, 0.00) 17.69%), url(/images/productDetail-images/argentina-1985.jpg), lightgray 50%;
     background-size: cover;
 }
@@ -46,93 +46,92 @@
 
 .movie-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-    margin-top: 32px;
 }
 
 /* >>>>> description <<<<< */
 
 .description {
-    height: 832px;
+    padding: 16px 0px 16px 0px;
     display: flex;
-    width: 50%;
-    margin-left: 32px;
+    margin: 0px 16px 0px 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
-    padding-right: 32px;
+    gap: 16px;
 }
 
 .description h2 {
     color: var(--colors-text-text-white, #FBFBFB);
 
-    /* desktop/titles/title-b-desktop */
+    /* mobile/titles/title-s-mobile */
     font-family: Ubuntu;
-    font-size: 40px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 48px; /* 120% */
+    line-height: 32px; /* 133.333% */
 }
 
 .detail-info {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 }
 
 .detail-info span {
     color: var(--colors-text-text-white, #FBFBFB);
 
-    /* desktop/body/base-text-desktop */
+    /* mobile/body/small-text-mobile */
     font-family: Ubuntu;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 20px; /* 166.667% */
 }
 
 .description p {
     color: var(--colors-text-text-white, #FBFBFB);
 
-    /* desktop/body/large-text-desktop */
-    font-family: 'Ubuntu';
-    font-size: 20px;    
+    /* mobile/body/base-text-mobile */
+    font-family: Ubuntu;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px; /* 140% */
+    line-height: 24px; /* 171.429% */
 }
 
 /* >>>>> prizing <<<<< */
 
 .prizing {
-    height: 832px;
     display: flex;
+    margin: 16px 16px 0px 16px;
     flex-direction: column;
-    align-items: center;
-    width: 50%;
-    margin-right: 32px;
-    gap: 24px;
+    align-items: flex-start;
+    gap: 8px;
 }
 
 .prizing h3 {
     color: var(--colors-text-text-white, #FBFBFB);
 
-    /* desktop/subtitles/subtitle-s-desktop */
+    /* mobile/subtitles/subtitle-s-mobile */
     font-family: Ubuntu;
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 32px; /* 133.333% */
+    line-height: 28px; /* 155.556% */
 }
 
 /* >>>>> form-to-pay <<<<< */
+
+form {
+    width: 100%;
+}
 
 .form-to-pay {
     display: flex;
     flex-direction: column;
     /* gap: 16px; */
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -143,17 +142,16 @@ select {
     border: 1px solid var(--colors-text-text-white, #FBFBFB);
     background-color: transparent;
 
-    max-width: 448px;
     width: 100%;
-    padding: 12px 16px;
+    padding: 16px;
 
     color: var(--colors-text-text-white, #FBFBFB);
-    /* desktop/body/large-text-desktop */
+    /* mobile/body/base-text-mobile */
     font-family: Ubuntu;
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px; /* 140% */
+    line-height: 24px; /* 171.429% */
 }
 
 select option {
@@ -164,7 +162,7 @@ select option {
 
 .input-style {
     display: flex;
-    width: 448px;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
@@ -174,12 +172,12 @@ select option {
 .input-style label {
     color: var(--colors-text-text-white, #FBFBFB);
 
-    /* desktop/specials/label-text */
+    /* mobile/specials/label-text */
     font-family: Ubuntu;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 140% */
+    line-height: 24px; /* 150% */
 }
 
 .input-form {
@@ -187,20 +185,28 @@ select option {
     background: var(--colors-surface-surface-white, #FBFBFB);
 
     color: var(--colors-text-text-black, #101820);
-    /* desktop/body/base-text-desktop */
+    /* mobile/body/base-text-mobile */
     font-family: Ubuntu;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 24px; /* 171.429% */
 
     width: 100%;
-    padding: 16px;
+    padding: 8px 16px 8px 16px;
     border: none;
 }
 
 .input-form input::placeholder {
     color: var(--colors-text-text-disabled, #67728A);
+}
+
+/* >>>>> expirationDate-cvv <<<<< */
+
+.expirationDate-cvv {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
 }
 
 /* >>>>> final-prize <<<<< */
@@ -209,30 +215,29 @@ select option {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 448px;
     margin: 16px 0px 16px 0px;
 }
 
 .final-prize h4 {
     color: var(--colors-text-text-white, #FBFBFB);
 
-    /* desktop/titles/title-s-desktop */
+    /* mobile/subtitles/subtitle-b-mobile */
     font-family: Ubuntu;
-    font-size: 36px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 44px; /* 122.222% */
+    line-height: 28px; /* 140% */
 }
 
 .final-prize p {
     color: var(--colors-brand-colors-accent, #BB38F9);
 
-    /* desktop/titles/title-s-desktop */
+    /* mobile/subtitles/subtitle-b-mobile */
     font-family: Ubuntu;
-    font-size: 36px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 44px; /* 122.222% */
+    line-height: 28px; /* 140% */
 }
 
 /* >>>>> btn-filled <<<<< */
@@ -243,18 +248,294 @@ select option {
     background: var(--colors-brand-purple-700, #280F50);
     color: var(--colors-text-text-white, #FBFBFB);
 
-    /* desktop/specials/btn-text */
+    /* mobile/specials/btn-text */
     font-family: Ubuntu;
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 140% */
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.056px;
 
     display: flex;
-    max-width: 448px;
     width: 100%;
-    padding: 16px;
+    padding: 8px;
     justify-content: center;
     align-items: center;
     gap: 8px;
+    margin-bottom: 48px;
+}
+
+/* >>>>>>>>>> @media (responsives) <<<<<<<<<< */
+
+@media (min-width: 481px) {
+    
+}
+
+@media (min-width: 769px) {
+    /* >>>>>>>>>> MAIN <<<<<<<<<< */
+
+    /* >>>>> page-title <<<<< */
+
+    .page-title {
+        color: var(--colors-text-text-white, #FBFBFB);
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        justify-content: flex-start;
+        margin: 0px 32px 0px 32px;
+    }
+
+    .page-title h1 {
+        /* desktop/titles/title-s-desktop */
+        font-family: 'Ubuntu';
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 44px; /* 122.222% */
+    }
+
+    .page-title i {
+        font-size: 32px;
+    }
+
+    /* >>>>> hero-img <<<<< */
+
+    .hero-img {
+        width: 100%;
+        height: 584px;
+        background: linear-gradient(180deg, #0D051B 0%, rgba(13, 5, 27, 0.00) 16.44%), linear-gradient(0deg, #0D051B 0%, #0D051B 0%, rgba(13, 5, 27, 0.00) 17.69%), url(/images/productDetail-images/argentina-1985.jpg), lightgray 50%;
+        background-size: cover;
+    }
+
+    /* >>>>> movie-content <<<<< */
+
+    .movie-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 32px;
+    }
+
+    /* >>>>> description <<<<< */
+
+    .description {
+        height: 832px;
+        display: flex;
+        width: 50%;
+        margin-left: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding-right: 32px;
+    }
+
+    .description h2 {
+        color: var(--colors-text-text-white, #FBFBFB);
+
+        /* desktop/titles/title-b-desktop */
+        font-family: Ubuntu;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 48px; /* 120% */
+    }
+
+    .detail-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .detail-info span {
+        color: var(--colors-text-text-white, #FBFBFB);
+
+        /* desktop/body/base-text-desktop */
+        font-family: Ubuntu;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+
+    .description p {
+        color: var(--colors-text-text-white, #FBFBFB);
+
+        /* desktop/body/large-text-desktop */
+        font-family: 'Ubuntu';
+        font-size: 20px;    
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 140% */
+    }
+
+    /* >>>>> prizing <<<<< */
+
+    .prizing {
+        height: 832px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin-right: 32px;
+        gap: 24px;
+    }
+
+    .prizing h3 {
+        color: var(--colors-text-text-white, #FBFBFB);
+
+        /* desktop/subtitles/subtitle-s-desktop */
+        font-family: Ubuntu;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; /* 133.333% */
+    }
+
+    /* >>>>> form-to-pay <<<<< */
+
+    form {
+        width: auto;
+    }
+
+    .form-to-pay {
+        display: flex;
+        flex-direction: column;
+        /* gap: 16px; */
+        align-items: center;
+        width: 100%;
+    }
+
+    /* >>>>> select <<<<< */
+
+    select {
+        border-radius: 4px;
+        border: 1px solid var(--colors-text-text-white, #FBFBFB);
+        background-color: transparent;
+
+        max-width: 448px;
+        width: 100%;
+        padding: 12px 16px;
+
+        color: var(--colors-text-text-white, #FBFBFB);
+        /* desktop/body/large-text-desktop */
+        font-family: Ubuntu;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 140% */
+    }
+
+    select option {
+        background-color: #101820;
+    }
+
+    /* >>>>> input-style <<<<< */
+
+    .input-style {
+        display: flex;
+        width: 448px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        margin-top: 16px;
+    }
+
+    .input-style label {
+        color: var(--colors-text-text-white, #FBFBFB);
+
+        /* desktop/specials/label-text */
+        font-family: Ubuntu;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px; /* 140% */
+    }
+
+    .input-form {
+        border-radius: 8px;
+        background: var(--colors-surface-surface-white, #FBFBFB);
+
+        color: var(--colors-text-text-black, #101820);
+        /* desktop/body/base-text-desktop */
+        font-family: Ubuntu;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+
+        width: 100%;
+        padding: 16px;
+        border: none;
+    }
+
+    .input-form input::placeholder {
+        color: var(--colors-text-text-disabled, #67728A);
+    }
+
+    /* >>>>> expirationDate-cvv <<<<< */
+
+    .expirationDate-cvv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    /* >>>>> final-prize <<<<< */
+
+    .final-prize {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 448px;
+        margin: 16px 0px 16px 0px;
+    }
+
+    .final-prize h4 {
+        color: var(--colors-text-text-white, #FBFBFB);
+
+        /* desktop/titles/title-s-desktop */
+        font-family: Ubuntu;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 44px; /* 122.222% */
+    }
+
+    .final-prize p {
+        color: var(--colors-brand-colors-accent, #BB38F9);
+
+        /* desktop/titles/title-s-desktop */
+        font-family: Ubuntu;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 44px; /* 122.222% */
+    }
+
+    /* >>>>> btn-filled <<<<< */
+
+    .btn-filled {
+        border: none;
+        border-radius: 4px;
+        background: var(--colors-brand-purple-700, #280F50);
+        color: var(--colors-text-text-white, #FBFBFB);
+
+        /* desktop/specials/btn-text */
+        font-family: Ubuntu;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px; /* 140% */
+
+        display: flex;
+        max-width: 448px;
+        width: 100%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
 }
