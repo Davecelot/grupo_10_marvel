@@ -1,41 +1,52 @@
 <%- include("../partials/head.ejs")%>
-     <link rel="stylesheet" href="/css/userDetail.css">
-     </head>
 
-     <body>
+     <body background="/images/fondo.jpg">
+          <!-- Inicia la zona de header -->
           <%- include("../partials/header.ejs")%>
+               <link rel="stylesheet" href="/css/register.css">
+               </head>
 
-               <main class="main-userDetail">
-                    <div class="user-description">
-                         <div class="brief-description">
-                              <span>
-                                   Nombre De Usuario : <%= user.name %>
-                              </span>
-                         </div>
-                         <% if(user.image.trim.length) { %>
-                              <div class="brief-description">
-                                   <span>
-                                        Foto De Usuario :
-                                        <img src=<%=user.image %>
-                                        alt="A full-width image of the user <%= user.name %>" class="user-image">
-                                   </span>
+               <!-- Detalle De Usuario -->
+               <div class="container registro-cont">
+                    <div class="registro">
+                         <div class="form">
+                              <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
+                              <h3 class="titulo-form"> Detalle del usuario <%= user.name %>
+                              </h3>
+                              <div class="formulario">
+                                   <div class="control-formulario">
+                                        <label>Nombre : <%= user.name %></label>
+                                   </div>
+                                   <div class="control-formulario">
+                                        <label>Correo Electrónico : <%= user.mail %></label>
+                                   </div>
+                                   <div class="control-formulario">
+                                        <label for="cmbRol">Rol : <%= user.roles.name %></label>
+                                   </div>
+                                   <div class="control-formulario">
+                                        <label>Imagen:</label>
+                                        <img src="<%= user.image %>" alt="<%= user.image %>">
+                                   </div>
                               </div>
-                              <% } %>
-                                   <div class="brief-description">
-                                        <span>
-                                             Correo Electrónico : <%= user.mail %>
-                                        </span>
+                              <div class="control-formulario">
+                                   <div class="container botones">
+                                        <form action="/users/userEdit/<%= user.id %>">
+                                             <button type="submit" class="boton-formulario" id="editar">Editar</button>
+                                        </form>
+                                        <form action="/users/userDelete/<%= user.id %>">
+                                             <button type="submit" class="boton-formulario"
+                                                  id="borrar">Eliminar</button>
+                                        </form>
                                    </div>
-                                   <div class="brief-description">
-                                        <span>
-                                             Rol De Usuario : <%= user.roles.name %>
-                                        </span>
-                                   </div>
+                              </div>
+
+                         </div>
                     </div>
-
-               </main>
-
+               </div>
+               <!-- Aqui inicia la seccion Footer -->
+               <!-- Escribir aqui el codigo de  la seccion Footer -->
                <%- include("../partials/footer.ejs")%>
+                    <!-- Aqui termina la seccion Footer -->
      </body>
 
      </html>

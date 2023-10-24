@@ -16,12 +16,11 @@ const controller = {
   },
 
   register: function (req, res) {
-    res.render("users/register");
+    db.Rol.findAll().then((roles) => res.render("users/register", { roles }));
   },
 
   save: function (req, res) {
     const resultValidation = validationResult(req);
-    const users = mainController.leerJson("users.json");
 
     if (resultValidation.errors.length > 0) {
       return res.render("users/register", {
@@ -30,23 +29,47 @@ const controller = {
       });
     }
 
-    let nuevoUsuario = {
-      id: users[users.length - 1].id + 1,
-      nombre: req.body.nombre,
-      correo: req.body.correo,
-      rol: "User",
-      contraseña: bcryptjs.hashSync(req.body.password, 10),
-      image: "/images/user-images/" + req.file.filename,
-    };
+    //const users = mainController.leerJson("users.json");
+    db.User.findAll().then((users) => {
+      console.log(req.body);
+      let nuevoId;
+      if (users.length) {
+        nuevoId = users[users.length - 1].id + 1;
+      } else {
+        nuevoId = 1;
+      }
 
-    users.push(nuevoUsuario);
-    let nuevoUsuarioGuardar = JSON.stringify(users, null, 2);
-    fs.writeFileSync(
-      path.resolve(__dirname, "../data/users.json"),
-      nuevoUsuarioGuardar
-    );
+      const nuevoUsuario = {
+        id: nuevoId,
+        name: req.body.nombre,
+        mail: req.body.correo,
+        roleId: req.body.cmbRol,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        image: "/images/user-images/" + req.file.filename,
+      };
 
-    return res.redirect("/users/login");
+      //  res.send(nuevoUsuario);
+
+      db.User.create(nuevoUsuario).then(() => res.redirect("/users/login"));
+    });
+
+    //     let nuevoUsuario = {
+    //       id: users[users.length - 1].id + 1,
+    //       nombre: req.body.nombre,
+    //       correo: req.body.correo,
+    //       rol: "User",
+    //       contraseña: bcryptjs.hashSync(req.body.password, 10),
+    //       image: "/images/user-images/" + req.file.filename,
+    //     };
+
+    //     users.push(nuevoUsuario);
+    //     let nuevoUsuarioGuardar = JSON.stringify(users, null, 2);
+    //     fs.writeFileSync(
+    //       path.resolve(__dirname, "../data/users.json"),
+    //       nuevoUsuarioGuardar
+    //     );
+
+    //     return res.redirect("/users/login");
   },
 
   logged: (req, res) => {
@@ -91,9 +114,17 @@ const controller = {
     const id = parseInt(req.params.id);
     db.User.findByPk(id, {
       include: ["roles"],
-    }).then((user) => {
-      res.render("users/userDetail", { user });
-    });
+    }).then((user) => res.render("users/userDetail", { user }));
+  },
+
+  userEdit: (req, res) => {
+    const id = parseInt(req.params.id);
+    db.User.findByPk(id, { include: ["roles"] }).then((user) => res.send(user));
+  },
+
+  userDelete: (req, res) => {
+    const id = parseInt(req.params.id);
+    db.User.findByPk(id).then((user) => res.send(user));
   },
 };
 
