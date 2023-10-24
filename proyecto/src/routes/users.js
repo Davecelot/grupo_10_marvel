@@ -20,6 +20,9 @@ const upload = multer({ storage });
 
 router.get("/", usersController.userList);
 router.get("/userDetail/:id", usersController.userDetail);
+router.get("/userEdit/:id", usersController.userEdit);
+router.get("/userDelete/:id", usersController.userDelete);
+
 router.get("/register", usersController.register);
 router.get("/login", usersController.login);
 router.post(

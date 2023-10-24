@@ -128,7 +128,7 @@ const controller = {
                         studio: req.body.estudio,
                         subtitles: req.body.subtitulos,
                         price: req.body.precio,
-                        image: "/images/movie-images/" + req.body.imagen,
+                        image: (req.body.imagen ? "/images/movie-images/" + req.body.imagen : req.body.poster)
                       },
                       {
                         where: { id: req.params.id }
