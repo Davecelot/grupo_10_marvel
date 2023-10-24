@@ -6,14 +6,14 @@
                <link rel="stylesheet" href="/css/register.css">
                </head>
 
-               <!-- Formulario Registro -->
+               <!-- Editar Usuario -->
                <div class="container registro-cont">
                     <div class="registro">
                          <div class="form">
                               <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
                               <h3 class="titulo-form">Regístrate</h3>
                               <div class="formulario">
-                                   <form action="/users/register" method="POST" class="create-form"
+                                   <form action="/users/userEdit" method="POST" class="create-form"
                                         enctype="multipart/form-data">
                                         <div class="control-formulario">
                                              <label>Nombre:</label>
@@ -44,7 +44,7 @@
                                              <input type="password" name="password" class="control"
                                                   placeholder="Escribe aquí tu contraseña" minlength="8"
                                                   <%=locals.errors && errors.password ? 'is-invalid' : null %>"
-                                             value="<%= locals.oldData ? oldData.password : null %>">
+                                             value="">
                                                   <% if (locals.errors && errors.password) { %>
                                                        <div class="text-danger">
                                                             <%= errors.password.msg %>
@@ -56,7 +56,7 @@
                                              <input type="password" name="conpassword" class="control"
                                                   placeholder="Escribe nuevamente tu contraseña" minlength="8"
                                                   <%=locals.errors && errors.conpassword ? 'is-invalid' : null %>"
-                                             value="<%= locals.oldData ? oldData.conpassword : null %>">
+                                             value="">
                                                   <% if (locals.errors && errors.conpassword) { %>
                                                        <div class="text-danger">
                                                             <%= errors.conpassword.msg %>
@@ -67,7 +67,7 @@
                                              <label for="cmbRol">Rol : </label>
                                              <select name="cmbRol" id="cmbRol">
                                                   <% for(let i=0; i < roles.length; i++) { %>
-                                                       <option value="<%= roles[i].id %>">
+                                                       <option value="<%= roles[i].id %>" <% if(user.roles.id === roles[i].id) {"selected"} %>>
                                                             <%= roles[i].name %>
                                                        </option>
                                                        <% } %>
@@ -87,8 +87,7 @@
                               </div>
                               <div class="control-formulario">
                                    <div class="container botones">
-                                        <button type="reset" class="boton-formulario" id="reset">Borrar</button>
-                                        <button type="submit" class="boton-formulario" id="submit">Enviar</button>
+                                        <button type="submit" class="boton-formulario" id="submit">Actualizar</button>
                                    </div>
                               </div>
                               <label>¿Ya tienes una cuenta? <a href="/users/login">Ingresa aquí</a></label>
