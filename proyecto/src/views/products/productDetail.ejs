@@ -28,15 +28,15 @@
                          </div>
                          <% if((locals !=undefined) && (locals.myUser !=undefined)) { %>
                               <div class="container-btns">
-                                   <button type="submit" name="rent" class="primary-btn"><i
+                                   <a href="/products/productCart/<%= movie.id %>"><button type="submit" name="rent" class="primary-btn"><i
                                              class="fa-solid fa-cart-shopping"></i><span>Alquilar $<%=movie.price %>
-                                        </span></button>
+                                        </span></button></a>
                                    <button type="submit" name="rent" class="translucent-btn"><i
                                              class="fa-solid fa-plus"></i><span>Mi lista</span></button>
                               </div>
                               <% } %>
                                    <p>
-                                        <%=movie.descripcion %>
+                                        <%=movie.description %>
                                    </p>
                     </div>
 
