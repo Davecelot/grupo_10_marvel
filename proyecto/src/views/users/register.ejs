@@ -4,6 +4,8 @@
           <!-- Inicia la zona de header -->
           <%- include("../partials/header.ejs")%>
                <link rel="stylesheet" href="/css/register.css">
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"></script>
+               <script src="/js/validatorRegister.js"></script>
                </head>
 
                <!-- Formulario Registro -->
@@ -14,7 +16,7 @@
                               <h3 class="titulo-form">Regístrate</h3>
                               <div class="formulario">
                                    <form action="/users/register" method="POST" class="create-form"
-                                        enctype="multipart/form-data">
+                                        enctype="multipart/form-data" id="register-form">
                                         <div class="control-formulario">
                                              <label>Nombre:</label>
                                              <input type="text" name="nombre" class="control"
@@ -74,14 +76,14 @@
                                                   </div>
                                                   <% } %>
                                         </div>
-                              </div>
-                              <div class="control-formulario">
-                                   <div class="container botones">
-                                        <button type="reset" class="boton-formulario" id="reset">Borrar</button>
-                                        <button type="submit" class="boton-formulario" id="submit">Enviar</button>
-                                   </div>
-                              </div>
+                                        <div class="control-formulario">
+                                             <div class="container botones">
+                                                  <button type="reset" class="boton-formulario" id="reset">Borrar</button>
+                                                  <button type="submit" class="boton-formulario" id="submit">Enviar</button>
+                                             </div>
+                                        </div>
                               <label>¿Ya tienes una cuenta? <a href="/users/login">Ingresa aquí</a></label>
+                              <div class="error-list"></div>
                               </form>
 
                          </div>
