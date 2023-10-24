@@ -15,11 +15,11 @@
 
           <div class="movie-content">
                <div class="description">
-                    <div class="movie-name"><h2>Argentina 1985</h2></div>
+                    <div class="movie-name"><h2><%=movie.name %></h2></div>
 
-                    <div class="detail-info"><span>2 H 6 MIN</span> <span>16+</span> <span>2022</span> <span>HD</span></div>
+                    <div class="detail-info"><span><%=movie.length %></span> <span><%= movie.classifications.name %></span> <span><%=movie.year%></span> <span>HD</span></div>
 
-                    <p>Inspirada en la historia real del fiscal Julio Strassera, Luis Moreno Ocampo y su joven equipo jurídico que se atrevieron a acusar, contra viento y marea, a contrarreloj y bajo constante amenaza, a los altos mandos de la sangrienta dictadura militar argentina (1976-1983) en el llamado Juicio a las Juntas de mediados de los años 80. Una batalla de David contra Goliat, con los héroes menos esperados.</p>
+                    <p><%=movie.descripcion %></p>
                </div>
 
                <div class="prizing">
@@ -44,19 +44,20 @@
                                    <input name="clientName" type="text" placeholder="Escribe el nombre como aparece en la tarjeta" class="input-form">
                               </div>
                               
-                              <!-- La fecha de vencimiento y el CVV debe estar en un mismo DIV para mobile -->
-                              <div class="input-style">
-                                   <label for="expirationDate">Fecha de vto.</label>
-                                   <input name="expirationDate" type="date" placeholder="dd/mm" class="input-form">
-                              </div>
-     
-                              <div class="input-style">
-                                   <label for="cvv">CVV</label>
-                                   <input name="cvv" type="number" placeholder="000" class="input-form">
+                              <div class="expirationDate-cvv">
+                                   <div class="input-style">
+                                        <label for="expirationDate">Fecha de vto.</label>
+                                        <input name="expirationDate" type="date" placeholder="dd/mm" class="input-form">
+                                   </div>
+          
+                                   <div class="input-style">
+                                        <label for="cvv">CVV</label>
+                                        <input name="cvv" type="number" placeholder="000" class="input-form">
+                                   </div>
                               </div>
      
                               <div class="final-prize">
-                                   <h4>Total</h4><p>$3200 ARG</p>
+                                   <h4>Total</h4><p><%=movie.price %></p>
                               </div>
      
                               <button class="btn-filled"><i class="fa-solid fa-cart-shopping"></i> Confirmar compra</button>

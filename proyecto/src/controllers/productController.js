@@ -27,7 +27,20 @@ const controller = {
   },
 
   productCart: function (req, res) {
-    res.render("products/productCart");
+    const myUser = req.session.Usuario;
+    const id = parseInt(req.params.id);
+    db.Classification.findAll()
+      .then(allClassification => {
+        db.Genero.findAll()
+          .then(allGenres => {
+            db.Movie.findByPk(req.params.id, {
+              include: ["genres", "classifications"]
+            }).then(movie => {
+              res.render("products/productCart", { movie, myUser, allClassification, allGenres });
+            });
+          });
+      });
+    // res.render("products/productCart");
   },
 
   productList: function (req, res) {

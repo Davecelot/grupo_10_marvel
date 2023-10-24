@@ -88,6 +88,19 @@
   object-fit: cover;
   border-radius: 4px;
 }
+.error-list {
+  color: red;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.error-list ul{
+  list-style: none;
+}
+
+.error-list li{
+  padding: 5px 0;
+}
 
 /* END OF SECTION: COMMON CATEGORY */
 
