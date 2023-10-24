@@ -13,7 +13,7 @@
                               <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
                               <h3 class="titulo-form">Regístrate</h3>
                               <div class="formulario">
-                                   <form action="/users/userEdit" method="POST" class="create-form"
+                                   <form action="/admin/userEdit" method="POST" class="create-form"
                                         enctype="multipart/form-data">
                                         <div class="control-formulario">
                                              <label>Nombre:</label>
@@ -45,11 +45,11 @@
                                                   placeholder="Escribe aquí tu contraseña" minlength="8"
                                                   <%=locals.errors && errors.password ? 'is-invalid' : null %>"
                                              value="">
-                                                  <% if (locals.errors && errors.password) { %>
-                                                       <div class="text-danger">
-                                                            <%= errors.password.msg %>
-                                                       </div>
-                                                       <% } %>
+                                             <% if (locals.errors && errors.password) { %>
+                                                  <div class="text-danger">
+                                                       <%= errors.password.msg %>
+                                                  </div>
+                                                  <% } %>
                                         </div>
                                         <div class="control-formulario">
                                              <label>Confirmar contraseña:</label>
@@ -57,17 +57,18 @@
                                                   placeholder="Escribe nuevamente tu contraseña" minlength="8"
                                                   <%=locals.errors && errors.conpassword ? 'is-invalid' : null %>"
                                              value="">
-                                                  <% if (locals.errors && errors.conpassword) { %>
-                                                       <div class="text-danger">
-                                                            <%= errors.conpassword.msg %>
-                                                       </div>
-                                                       <% } %>
+                                             <% if (locals.errors && errors.conpassword) { %>
+                                                  <div class="text-danger">
+                                                       <%= errors.conpassword.msg %>
+                                                  </div>
+                                                  <% } %>
                                         </div>
                                         <div class="control-formulario">
                                              <label for="cmbRol">Rol : </label>
                                              <select name="cmbRol" id="cmbRol">
                                                   <% for(let i=0; i < roles.length; i++) { %>
-                                                       <option value="<%= roles[i].id %>" <% if(user.roles.id === roles[i].id) {"selected"} %>>
+                                                       <option value="<%= roles[i].id %>" <%
+                                                            if(user.roles.id===roles[i].id) {"selected"} %>>
                                                             <%= roles[i].name %>
                                                        </option>
                                                        <% } %>
@@ -90,7 +91,6 @@
                                         <button type="submit" class="boton-formulario" id="submit">Actualizar</button>
                                    </div>
                               </div>
-                              <label>¿Ya tienes una cuenta? <a href="/users/login">Ingresa aquí</a></label>
                               </form>
 
                          </div>

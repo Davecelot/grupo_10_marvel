@@ -40,7 +40,7 @@ router.put(
 
 router.get("/userList", adminController.userList);
 router.get("/userDetail/:id", adminController.userDetail);
-// router.get("/userEdit/:id", usersController.userEdit);
-// router.get("/userDelete/:id", usersController.userDelete);
+router.get("/userEdit/:id", adminController.userEdit);
+router.get("/userDelete/:id", adminController.userDelete);
 
 module.exports = router;

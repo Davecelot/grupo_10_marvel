@@ -105,27 +105,6 @@ const controller = {
       });
     }
   },
-
-  userList: (req, res) => {
-    db.User.findAll().then((users) => res.render("users/userList", { users }));
-  },
-
-  userDetail: (req, res) => {
-    const id = parseInt(req.params.id);
-    db.User.findByPk(id, {
-      include: ["roles"],
-    }).then((user) => res.render("users/userDetail", { user }));
-  },
-
-  userEdit: (req, res) => {
-    const id = parseInt(req.params.id);
-    db.User.findByPk(id, { include: ["roles"] }).then((user) => res.send(user));
-  },
-
-  userDelete: (req, res) => {
-    const id = parseInt(req.params.id);
-    db.User.findByPk(id).then((user) => res.send(user));
-  },
 };
 
 module.exports = controller;
