@@ -11,7 +11,9 @@
                     <div class="registro">
                          <div class="form">
                               <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
-                              <h3 class="titulo-form"> Detalle del usuario <%= user.name %>
+                              <h3 class="titulo-form">
+                                   <% if(lectura) { %> Detalle del <% } else { %> Eliminar el <% } %> usuario <%=
+                                                       user.name %>
                               </h3>
                               <div class="formulario">
                                    <div class="control-formulario">
@@ -30,13 +32,17 @@
                               </div>
                               <div class="control-formulario">
                                    <div class="container botones">
-                                        <form action="/admin/userEdit/<%= user.id %>">
-                                             <button type="submit" class="boton-formulario" id="editar">Editar</button>
-                                        </form>
-                                        <form action="/admin/userDelete/<%= user.id %>">
+                                        <form action="/admin/userList">
                                              <button type="submit" class="boton-formulario"
-                                                  id="borrar">Eliminar</button>
+                                                  id="regresar">Regresar</button>
                                         </form>
+                                        <% if(!(lectura)) { %>
+                                             <form action="/admin/userDelete/<%= user.id %>?_method=DELETE"
+                                                  method="POST">
+                                                  <button type="submit" class="boton-formulario"
+                                                       id="borrar">Eliminar</button>
+                                             </form>
+                                             <% } %>
                                    </div>
                               </div>
 

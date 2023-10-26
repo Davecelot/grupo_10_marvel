@@ -11,10 +11,10 @@
                     <div class="registro">
                          <div class="form">
                               <a href="/home"><img src="/images/logo-white.svg" class="logo-w"></a>
-                              <h3 class="titulo-form">Regístrate</h3>
+                              <h3 class="titulo-form">Editar usuario</h3>
                               <div class="formulario">
-                                   <form action="/admin/userEdit" method="POST" class="create-form"
-                                        enctype="multipart/form-data">
+                                   <form action="/admin/userEdit/<%= oldData.id %>?_method=PUT" method="POST"
+                                        class="create-form" enctype="multipart/form-data">
                                         <div class="control-formulario">
                                              <label>Nombre:</label>
                                              <input type="text" name="nombre" class="control"
@@ -39,7 +39,7 @@
                                                        </div>
                                                        <% } %>
                                         </div>
-                                        <div class="control-formulario">
+                                        <!-- <div class="control-formulario">
                                              <label>Contraseña:</label>
                                              <input type="password" name="password" class="control"
                                                   placeholder="Escribe aquí tu contraseña" minlength="8"
@@ -62,19 +62,20 @@
                                                        <%= errors.conpassword.msg %>
                                                   </div>
                                                   <% } %>
-                                        </div>
+                                        </div> -->
                                         <div class="control-formulario">
                                              <label for="cmbRol">Rol : </label>
                                              <select name="cmbRol" id="cmbRol">
                                                   <% for(let i=0; i < roles.length; i++) { %>
-                                                       <option value="<%= roles[i].id %>" <%
-                                                            if(user.roles.id===roles[i].id) {"selected"} %>>
+                                                       <option value="<%= roles[i].id %>"
+                                                            <%=parseInt(oldData.rolId)==parseInt(roles[i].id)
+                                                            ? 'selected' : null %>>
                                                             <%= roles[i].name %>
                                                        </option>
                                                        <% } %>
                                              </select>
                                         </div>
-                                        <div class="control-formulario">
+                                        <!-- <div class="control-formulario">
                                              <label>Imagen:</label>
                                              <input type="file" name="imagen" class="control"
                                                   title="Ingresa una imagen válida" <%=locals.errors && errors.imagen
@@ -84,7 +85,7 @@
                                                        <%= errors.imagen.msg %>
                                                   </div>
                                                   <% } %>
-                                        </div>
+                                        </div> -->
                               </div>
                               <div class="control-formulario">
                                    <div class="container botones">

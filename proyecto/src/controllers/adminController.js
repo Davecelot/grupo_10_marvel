@@ -6,6 +6,7 @@ const app = express();
 const archivoJSON = require("../database/archivoJSON");
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
+const bcryptjs = require("bcryptjs");
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.set("view engine", "ejs");
@@ -162,19 +163,84 @@ const controller = {
 
   userDetail: (req, res) => {
     const id = parseInt(req.params.id);
+    const lectura = true;
     db.User.findByPk(id, {
       include: ["roles"],
-    }).then((user) => res.render("admin/userDetail", { user }));
+    }).then((user) => res.render("admin/userDetail", { user, lectura }));
   },
 
   userEdit: (req, res) => {
     const id = parseInt(req.params.id);
-    db.User.findByPk(id, { include: ["roles"] }).then((user) => res.send(user));
+    db.User.findByPk(id, { include: ["roles"] }).then((user) => {
+      db.Rol.findAll().then((allRoles) => {
+        const oldData = {
+          id: user.id,
+          nombre: user.name,
+          correo: user.mail,
+          rolId: user.roleId,
+          roles: user.roles,
+        };
+        console.log("oldData : ", oldData);
+        console.log("roles : ", allRoles);
+        return res.render("admin/userEdit", { oldData, roles: allRoles });
+        //    res.send(user);
+      });
+    });
+  },
+
+  userUpdate: (req, res) => {
+    const id = parseInt(req.params.id);
+    const resultValidation = validationResult(req);
+    const oldData = {
+      id: id,
+      nombre: req.body.nombre,
+      correo: req.body.correo,
+      rolId: req.body.rolId,
+      roles: req.body.roles,
+    };
+
+    if (resultValidation.errors.length > 0) {
+      db.Rol.findAll().then((allRoles) => {
+        return res.render(`admin/userEdit`, {
+          errors: resultValidation.mapped(),
+          oldData,
+          roles: allRoles,
+        });
+      });
+    } else {
+      const usuario = {
+        id: id,
+        name: req.body.nombre,
+        mail: req.body.correo,
+        roleId: req.body.cmbRol,
+        //    password: bcryptjs.hashSync(req.body.password, 10),
+        //    image: "/images/user-images/" + req.file.filename,
+      };
+
+      db.User.update(usuario, { where: { id: id } })
+        .then(() => res.redirect("/admin/userList"))
+        .catch((error) => res.send(error));
+    }
   },
 
   userDelete: (req, res) => {
     const id = parseInt(req.params.id);
-    db.User.findByPk(id).then((user) => res.send(user));
+    const lectura = false;
+    db.User.findByPk(id, {
+      include: ["roles"],
+    }).then((user) => res.render("admin/userDetail", { user, lectura }));
+  },
+
+  userDestroy: (req, res) => {
+    const id = parseInt(req.params.id);
+    console.log(id);
+    db.User.destroy({
+      where: { id: id },
+    })
+      .then(() => {
+        return res.redirect("/admin/userList");
+      })
+      .catch((error) => res.send(error));
   },
 };
 

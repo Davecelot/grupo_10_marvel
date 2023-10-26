@@ -5,6 +5,7 @@ const multer = require("multer");
 const adminController = require("../controllers/adminController");
 const productsEditValidateMiddleware = require("../middlewares/productsEditValidateMiddleware");
 const productsCreateValidateMiddleware = require("../middlewares/productsCreateValidateMiddleware");
+const validations = require("../middlewares/userEditValidations");
 const { body } = require("express-validator");
 
 //subir archivo y nombre
@@ -41,6 +42,13 @@ router.put(
 router.get("/userList", adminController.userList);
 router.get("/userDetail/:id", adminController.userDetail);
 router.get("/userEdit/:id", adminController.userEdit);
+router.put(
+  "/userEdit/:id",
+  upload.single("imagen"),
+  validations,
+  adminController.userUpdate
+);
 router.get("/userDelete/:id", adminController.userDelete);
+router.delete("/userDelete/:id", adminController.userDestroy);
 
 module.exports = router;
