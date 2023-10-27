@@ -2,8 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("#product-form");
+    form.addEventListener("submit", function(event) {
 
-    form.addEventListener("submit", function (event) {
         const nameInput = form.querySelector("input[name='nombre']");
         const durationInput = form.querySelector("input[name='duracion']");
         const yearInput = form.querySelector("input[name='year']");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const imagenInput = form.querySelector('input[name="imagen"]');
         const generoSelect = form.querySelector('select[name="genero"]');
         const precioValue = parseFloat(precioField.value); // Convertir el valor a float
-
+        
         let hasErrors = false;
 
         // Limpiar la lista de errores
@@ -25,9 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
         errorListDiv.innerHTML = ''; // limpia cualquier error anterior
 
         const errorList = document.createElement('ul');
-
         // Validar nombre
-        if (validator.isEmpty(nameInput.value.trim())) {
+        if (validator.isEmpty(nameInput.value)) {
             const li = document.createElement('li');
             li.textContent = "El nombre de la película es obligatorio.";
             errorList.appendChild(li);
@@ -158,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Verificar si no se ha seleccionado una clasificación de edad
-        if (validator.isEmpty(clasificacionEdadSelect.value)) {
+        if (validator.isEmpty(ratingSelect.value)) {
             const li = document.createElement('li');
             li.textContent = "Debes seleccionar una clasificación de edad.";
             errorList.appendChild(li);
