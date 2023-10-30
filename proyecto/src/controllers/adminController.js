@@ -169,6 +169,51 @@ const controller = {
     }).then((user) => res.render("admin/userDetail", { user, lectura }));
   },
 
+  userCreate: function (req, res) {
+    db.Rol.findAll().then((roles) => res.render("admin/userCreate", { roles }));
+  },
+
+  userSave: function (req, res) {
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      db.Rol.findAll().then((roles) =>
+        res.render("admin/userCreate", {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          roles,
+        })
+      );
+    } else {
+      db.User.findAll().then((users) => {
+        let nuevoId;
+        if (users.length) {
+          nuevoId = users[users.length - 1].id + 1;
+        } else {
+          nuevoId = 1;
+        }
+
+        console.log("req.file : ", req.file);
+
+        const nuevoUsuario = {
+          id: nuevoId,
+          name: req.body.nombre,
+          mail: req.body.correo,
+          roleId: req.body.cmbRol,
+          password: bcryptjs.hashSync(req.body.password, 10),
+          //image: "/images/user-images/" + req.file.imagen,
+          image: "",
+        };
+
+        //  res.send(nuevoUsuario);
+
+        db.User.create(nuevoUsuario).then(() =>
+          res.redirect("/admin/userlist")
+        );
+      });
+    }
+  },
+
   userEdit: (req, res) => {
     const id = parseInt(req.params.id);
     db.User.findByPk(id, { include: ["roles"] }).then((user) => {
