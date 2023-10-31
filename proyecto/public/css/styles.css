@@ -72,6 +72,14 @@ body {
   color: #fbfbfb;
 }
 
+ #cerrar a{
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: #fbfbfb;
+}
+
 .usuario {
   color: #fbfbfb;
   margin: 0;
@@ -110,6 +118,15 @@ body {
 
 #login a:hover {
   color: #bb38f9;
+}
+
+#cerrar {
+  color: #fbfbfb;
+  background: #280f50;
+}
+
+#cerrar:hover {
+  background-color: #bb38f9;
 }
 
 .search-sec {

@@ -1,30 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://kit.fontawesome.com/51007c3285.js" crossorigin="anonymous"></script>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="/css/normalize.css">
-     <link rel="stylesheet" href="/css/styles.css">
+<%- include("../partials/head.ejs")%>
      <link rel="stylesheet" href="/css/admin.css">
      <link rel="stylesheet" href="/css/userList.css">
      <title>Lista de Usuarios</title>
-</head>
+     </head>
 
-<body>
-     <header>
+     <body>
+
+          <%- include("../partials/header.ejs")%>
+
+               <!-- <header>
           <div class="top-bar">
                <a href="#"><i class="fa-solid fa-bars"></i></a>
                <a href="/admin/index"><img src="/images/logo-white.svg" class="logo"></a>
           </div>
-
           <div class="header-desktop">
                <a href="/admin/index"><img src="/images/logo-white.svg" class="logo"></a>
-
                <div class="container-right">
                     <p>Bienvenid@, Usuario</p>
                     <form action="/">
@@ -32,71 +22,69 @@
                     </form>
                </div>
           </div>
-     </header>
-
-     <main class="main-userList">
-          <div class="list-container">
-               <div class="container-top">
-                    <div class="back-and-title">
-                         <a href="/admin/index"><i class="fa-solid fa-arrow-left"></i></a>
-                         <p>Usuarios</p>
-                    </div>
-
-                    <a href="/admin/userCreate"><button type="submit" id="new-product" class="button-add">Agregar
-                              usuario</button></a>
-               </div>
-
-               <div class="user-list">
-                    <div class="checkbox-group">
-                         <input type="checkbox" name="select-all" value="select-all">
-                         <label for="select-all">Seleccionar todos los usuarios</label>
-                    </div>
-
-                    <div class="items-list">
-
-                         <% for (let i=0; i < users.length; i++) { %>
-
-                              <div class="user-item">
-                                   <div class="input-and-user">
-                                        <input type="checkbox" name="select-all" value="select-all">
-                                        <div class="user-and-avatar">
-                                             <div class="avatar">
-                                                  <i class="fa-solid fa-user" src="<% users[i].image %>"></i>
-                                             </div>
-
-                                             <div class="user-and-rol">
-                                                  <p>
-                                                       <%= users[i].name %>
-                                                  </p>
-                                                  <% allRoles.forEach(rol=> { %>
-                                                       <% if (users[i].roleId==rol.id) { %>
-                                                            <span>
-                                                                 <%= rol.name %>
-                                                            </span>
-                                                            <% }; %>>
-                                                                 <% }); %>
-
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div class="icon-btns">
-                                        <a href="/admin/userDetail/<%= users[i].id %>"><i
-                                                  class="fa-solid fa-newspaper"></i></a>
-                                        <a href="/admin/userEdit/<%= users[i].id %>"><i class="fa-solid fa-pen"></i></a>
-                                        <a href="/admin/userDelete/<%= users[i].id %>"><i
-                                                  class="fa-solid fa-trash"></i></a>
-                                   </div>
+     </header> 
+-->
+               <main class="main-userList">
+                    <div class="list-container">
+                         <div class="container-top">
+                              <div class="back-and-title">
+                                   <a href="/admin/index"><i class="fa-solid fa-arrow-left"></i></a>
+                                   <p>Usuarios</p>
                               </div>
 
-                              <% } %>
+                              <a href="/admin/userCreate"><button type="submit" id="new-product"
+                                        class="button-add">Agregar
+                                        usuario</button></a>
+                         </div>
+
+                         <div class="user-list">
+                              <div class="checkbox-group">
+                                   <input type="checkbox" name="select-all" value="select-all">
+                                   <label for="select-all">Seleccionar todos los usuarios</label>
+                              </div>
+
+                              <div class="items-list">
+                                   <% for (let i=0; i < users.length; i++) { %>
+                                        <div class="user-item">
+                                             <div class="input-and-user">
+                                                  <input type="checkbox" name="select-all" value="select-all">
+                                                  <div class="user-and-avatar">
+                                                       <img class="avatar" src="<%= users[i].image %>">
+
+                                                       <div class="user-and-rol">
+                                                            <p>
+                                                                 <%= users[i].name %>
+                                                            </p>
+                                                            <% allRoles.forEach(rol=> { %>
+                                                                 <% if (users[i].roleId==rol.id) { %>
+                                                                      <span>
+                                                                           <%= rol.name %>
+                                                                      </span>
+                                                                      <% }; %>
+                                                                           <% }); %>
+
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <div class="icon-btns">
+                                                  <a href="/admin/userDetail/<%= users[i].id %>"><i
+                                                            class="fa-solid fa-newspaper"></i></a>
+                                                  <a href="/admin/userEdit/<%= users[i].id %>"><i
+                                                            class="fa-solid fa-pen"></i></a>
+                                                  <a href="/admin/userDelete/<%= users[i].id %>"><i
+                                                            class="fa-solid fa-trash"></i></a>
+                                             </div>
+                                        </div>
+
+                                        <% } %>
+                              </div>
+                         </div>
+
                     </div>
-               </div>
+               </main>
 
-          </div>
-     </main>
+               <%- include("../partials/footer.ejs")%>
+     </body>
 
-     <%- include("../partials/footer.ejs")%>
-</body>
-
-</html>
+     </html>

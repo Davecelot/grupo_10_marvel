@@ -19,6 +19,15 @@
                                    Sesión</a></button>
                     </div>
                     <% } %>
+                         <% if((locals !=undefined) && (locals.myUser !=undefined)) { %>
+                              <h1 class="usuario">
+                                   Bienvenid@ <%= locals.myUser %>
+                              </h1>
+                              <form action="/">
+                                   <button type="submit" class="boton-header" id="cerrar"><a href="/users/login">Cerrar
+                                             sesión</a></button>
+                              </form>
+                              <% } %>
           </div>
 
           <nav class="main-navbar">
@@ -40,10 +49,5 @@
                          <% } %>
                </ul>
           </nav>
-          <% if((locals !=undefined) && (locals.myUser !=undefined)) { %>
-               <h1 class="usuario">
-                    <%= locals.myUser %>
-               </h1>
-               <% } %>
      </div class="container">
 </header>

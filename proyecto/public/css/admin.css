@@ -16,16 +16,16 @@
 
 /* >>>>> TOPP APP BAR MOBILE <<<<< */
 
-.top-bar {
+/*V.top-bar {
     display: flex;
     position: relative;
     justify-content: center;
     width: 100%;
     height: 64px;
-    /* background-color: red; */
+    /* background-color: red; 
 }
 
-.top-bar i {
+/*V.top-bar i {
     position: absolute;
     color: #fbfbfb;
     font-size: 32px;  
@@ -141,7 +141,7 @@ i.fa-chevron-right {
 
     /* >>>>>>>>>> HEADER <<<<<<<<<< */
 
-    .logo {
+  /*V   .logo {
         width: 140px;
         height: 32px;
         flex-shrink: 0;
@@ -149,12 +149,12 @@ i.fa-chevron-right {
 
     /* >>>>>  TOP APP BAR <<<<< */
 
-    .top-bar {
+  /*V  .top-bar {
         display: none;
     }
 
     /* >>>>> MENU DESKTOP <<<<< */
-
+/*V 
     .header-desktop {
         display: flex;
         width: 100%;
@@ -166,7 +166,7 @@ i.fa-chevron-right {
 
     /* >>>>> MENU <<<<< */
 
-    .menu ul {
+   /*V  .menu ul {
         display: flex;
         gap: 16px;
     }
@@ -174,13 +174,13 @@ i.fa-chevron-right {
     .menu li {
         list-style: none;
         color: #fbfbfb;
-        /* desktop/subtitles/subtitle-s-desktop */
-        font-family: Ubuntu;
+        /* desktop/subtitles/subtitle-s-desktop 
+         font-family: Ubuntu;
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
-        line-height: 32px; /* 133.333% */
-    }
+        line-height: 32px; /* 133.333% 
+    } */
 
     /* >>>>> RIGHT CONTAINER <<<<< */
 

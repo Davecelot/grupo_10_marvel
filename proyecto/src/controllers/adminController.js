@@ -13,24 +13,28 @@ app.set("view engine", "ejs");
 
 const controller = {
   index: function (req, res) {
-    res.render("admin/index");
+    const myUser = req.session.Usuario;
+    res.render("admin/index", {myUser});
   },
 
   listProducts: (req, res) => {
+    const myUser = req.session.Usuario;
     db.Movie.findAll().then((movies) => {
-      return res.render("admin/listProducts", { movies });
+      return res.render("admin/listProducts", { movies, myUser });
     });
   },
 
   createProduct: function (req, res) {
+    const myUser = req.session.Usuario;
     db.Classification.findAll().then((allClassification) => {
       db.Genero.findAll().then((allGenres) => {
-        res.render("admin/createProducts", { allGenres, allClassification });
+        res.render("admin/createProducts", { allGenres, allClassification, myUser });
       });
     });
   },
 
   editProduct: (req, res) => {
+    const myUser = req.session.Usuario;
     const id = req.params.id;
     db.Classification.findAll().then((allClassification) => {
       db.Genero.findAll().then((allGenres) => {
@@ -42,6 +46,7 @@ const controller = {
             peliculaEditar,
             allClassification,
             allGenres,
+            myUser
           });
         });
       });
@@ -49,12 +54,14 @@ const controller = {
   },
 
   deleteProduct: (req, res) => {
+    const myUser = req.session.Usuario;
     db.Movie.findByPk(req.params.id).then((Movie) => {
-      res.render("admin/deleteProducts", { Movie });
+      res.render("admin/deleteProducts", { Movie, myUser });
     });
   },
 
   save: (req, res) => {
+    const myUser = req.session.Usuario;
     let resultValidation = validationResult(req).mapped();
     db.Classification.findAll().then((allClassification) => {
       db.Genero.findAll().then((allGenres) => {
@@ -87,6 +94,7 @@ const controller = {
             old: req.body,
             allClassification,
             allGenres,
+            myUser
           });
         }
       });
@@ -94,6 +102,7 @@ const controller = {
   },
 
   update: function (req, res) {
+    const myUser = req.session.Usuario;
     req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
     let resultValidation = validationResult(req).mapped();
     console.log(resultValidation);
@@ -136,6 +145,7 @@ const controller = {
               allClassification,
               allGenres,
               peliculaEditar,
+              myUser
             });
           }
         });
@@ -154,26 +164,30 @@ const controller = {
   },
 
   userList: (req, res) => {
+    const myUser = req.session.Usuario;
     db.User.findAll().then((users) => {
       db.Rol.findAll().then((allRoles) => {
-        return res.render("admin/userList", { users, allRoles });
+        return res.render("admin/userList", { users, allRoles, myUser });
       });
     });
   },
 
   userDetail: (req, res) => {
+    const myUser = req.session.Usuario;
     const id = parseInt(req.params.id);
     const lectura = true;
     db.User.findByPk(id, {
       include: ["roles"],
-    }).then((user) => res.render("admin/userDetail", { user, lectura }));
+    }).then((user) => res.render("admin/userDetail", { user, lectura, myUser }));
   },
 
   userCreate: function (req, res) {
-    db.Rol.findAll().then((roles) => res.render("admin/userCreate", { roles }));
+    const myUser = req.session.Usuario;
+    db.Rol.findAll().then((roles) => res.render("admin/userCreate", { roles, myUser }));
   },
 
   userSave: function (req, res) {
+    const myUser = req.session.Usuario;
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
@@ -215,6 +229,7 @@ const controller = {
   },
 
   userEdit: (req, res) => {
+    const myUser = req.session.Usuario;
     const id = parseInt(req.params.id);
     db.User.findByPk(id, { include: ["roles"] }).then((user) => {
       db.Rol.findAll().then((allRoles) => {
@@ -227,13 +242,14 @@ const controller = {
         };
         console.log("oldData : ", oldData);
         console.log("roles : ", allRoles);
-        return res.render("admin/userEdit", { oldData, roles: allRoles });
+        return res.render("admin/userEdit", { oldData, roles: allRoles, myUser });
         //    res.send(user);
       });
     });
   },
 
-  userUpdate: (req, res) => {
+  userUpdate: (req, res) => { 
+    const myUser = req.session.Usuario;
     const id = parseInt(req.params.id);
     const resultValidation = validationResult(req);
     const oldData = {
@@ -250,6 +266,7 @@ const controller = {
           errors: resultValidation.mapped(),
           oldData,
           roles: allRoles,
+          myUser
         });
       });
     } else {
@@ -269,15 +286,17 @@ const controller = {
   },
 
   userDelete: (req, res) => {
+    const myUser = req.session.Usuario;
     const id = parseInt(req.params.id);
     const lectura = false;
     db.User.findByPk(id, {
       include: ["roles"],
-    }).then((user) => res.render("admin/userDetail", { user, lectura }));
+    }).then((user) => res.render("admin/userDetail", { user, lectura, myUser }));
   },
 
   userDestroy: (req, res) => {
     const id = parseInt(req.params.id);
+    const myUser = req.session.Usuario;
     console.log(id);
     db.User.destroy({
       where: { id: id },

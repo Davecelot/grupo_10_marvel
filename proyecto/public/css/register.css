@@ -73,6 +73,11 @@ input, textarea, select {
   gap: 4px;
 }
 
+.control-formulario img {
+  width: 50%;
+  padding: 15px 0px 0px 0px;
+}
+
 .botones {
   gap: 5px;
 }
