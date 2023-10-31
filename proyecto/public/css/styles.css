@@ -19,6 +19,85 @@ body {
   align-items: center;
 }
 
+/*Menu Burger*/
+
+.hamburger-menu {
+  display: none;
+  padding: 10px;
+}
+
+.hamburger-menu ul{
+  display: none;
+}
+
+.hamburger-menu input:checked  ~ ul{
+  display:block;
+}
+
+.hamburger-menu input {
+  display: none;
+}
+
+.hamburger-menu label {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  color: white;
+}
+
+/* Estilo del boton cuando se pasa el mouse por encima*/
+.hamburger-menu label:hover{
+  background: #280f50;
+}
+
+/* Estilo del boton cuando el menú está expandido*/
+.hamburger-menu input:checked ~ label {
+  background: #280f50; 
+}
+
+.hamburger-menu ul{
+  margin-top:0;
+  padding: 0;
+  width: 200px;
+
+}
+
+.hamburger-menu li{
+  display: block;
+  background: #280f50;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid white;
+  color: #fbfbfb;
+}
+
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+.hamburger-menu li:hover {
+  filter: brightness(110%);
+}
+
+.hamburger-menu ul a {
+  text-decoration: none;
+  color: #fbfbfb;
+  padding: 5px 0;
+  font: "Ubuntu";
+  gap: 4px;
+  font-family: Ubuntu;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  transition: all .3s;
+}
+
 /*NavBar*/
 
 .main-header {
@@ -289,21 +368,6 @@ body {
     width: 100px;
   }
 
-  .hamburger-button {
-    background-color: #03264c;
-    color: #ffffff;
-    display: flex;
-    width: 42px;
-    height: 42px;
-    padding: 15px 0px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 15px;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-  }
-
   .main-navbar {
     display: none;
   }
@@ -348,6 +412,10 @@ body {
     text-align: center;
   }
 
+  .hamburger-menu {
+    display: flex;
+  }
+
   /* Aqui trermina CSS de Footer entre 361 y 767 */
 }
 
@@ -378,19 +446,8 @@ body {
     display: none;
   }
 
-  .hamburger-button {
-    background-color: #03264c;
-    color: #ffffff;
+  .hamburger-menu {
     display: flex;
-    width: 62px;
-    height: 62px;
-    padding: 15px 0px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 35px;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
   }
 
   .container {
@@ -402,7 +459,6 @@ body {
     width: 80%;
     justify-content: flex-start;
   }
-
 
   .social-nav ul li {
     margin-right: 0.5rem;
@@ -425,11 +481,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-
-  /*NavBar*/
-  .hamburger-button {
-    display: none;
-  }
 
   /*Footer*/
   .follow {
