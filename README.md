@@ -10,25 +10,29 @@ Personas que regularmente consumen contenido audiovisual, específicamente pelí
 
 ## Benchmark y referencias
 
-* Prime Video (https://www.primevideo.com/): Prime Video es una plataforma de streaming con una interfaz moderna, que funciona por suscripción y, dependiendo del nivel de tu suscripción, la posibilidad de comprar contenido que no esté dentro de tu plan.
+- Prime Video (https://www.primevideo.com/): Prime Video es una plataforma de streaming con una interfaz moderna, que funciona por suscripción y, dependiendo del nivel de tu suscripción, la posibilidad de comprar contenido que no esté dentro de tu plan.
 
-* Netflix (https://www.netflix.com/): Netflix es una plataforma de streaming que funciona por suscripción. Al igual que Prime Video, también tiene una interfaz moderna y es una de las plataformas más utilizadas para consumir contenido audiovisual. Es no solo una referencia gráfica, sino también como modelo de negocios.
+- Netflix (https://www.netflix.com/): Netflix es una plataforma de streaming que funciona por suscripción. Al igual que Prime Video, también tiene una interfaz moderna y es una de las plataformas más utilizadas para consumir contenido audiovisual. Es no solo una referencia gráfica, sino también como modelo de negocios.
 
-* DirecTV GO (https://www.directvgo.com/ar/home): DirecTV GO es la plataforma online de DirecTV, con planes de suscripción y la posibilidad de ver contenido de "pay per view". De DirecTV GO referenciamos el modelo de negocios y las funcionalidades que ofrece como producto digital.
+- DirecTV GO (https://www.directvgo.com/ar/home): DirecTV GO es la plataforma online de DirecTV, con planes de suscripción y la posibilidad de ver contenido de "pay per view". De DirecTV GO referenciamos el modelo de negocios y las funcionalidades que ofrece como producto digital.
 
-* Vix (https://vix.com/es-es/ondemand): VIX es un servicio de streaming gratis con más de 100 canales, noticiero y hasta deportes con más de 40,000 horas de contenido. Además de contar con una sección de video bajo demanda con algunas películas y novelas que ofrece la plataforma
+- Vix (https://vix.com/es-es/ondemand): VIX es un servicio de streaming gratis con más de 100 canales, noticiero y hasta deportes con más de 40,000 horas de contenido. Además de contar con una sección de video bajo demanda con algunas películas y novelas que ofrece la plataforma
 
-* Star Plus (https://www.starplus.com/es-mx): Star+ es un servicio de streaming en Latinoamérica que ofrece un amplio catálogo de series y películas, además de deportes en vivo y eventos de ESPN
+- Star Plus (https://www.starplus.com/es-mx): Star+ es un servicio de streaming en Latinoamérica que ofrece un amplio catálogo de series y películas, además de deportes en vivo y eventos de ESPN
 
-* Warner Bros (https://www.warnerbros.com/): Servicio de contenidos on demand de WB en USA.
+- Warner Bros (https://www.warnerbros.com/): Servicio de contenidos on demand de WB en USA.
 
-* Red Box (https://www.redbox.com/) Uniso sitio para renta de peliculas en Kioskos en USA.
+- Red Box (https://www.redbox.com/) Uniso sitio para renta de peliculas en Kioskos en USA.
 
-* Max (https://www.max.com/) Streaming de servicios de HBO (Max recientemente rebrandeado).
+- Max (https://www.max.com/) Streaming de servicios de HBO (Max recientemente rebrandeado).
 
 ## Trello
 
 https://trello.com/b/CLSg8DLH/marvels-sprints
+
+## Repositorio dashboard
+
+https://github.com/edilbertoespinosa/proyecto-render
 
 ## ¿Quiénes somos?
 
