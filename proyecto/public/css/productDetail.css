@@ -235,6 +235,10 @@
         align-items: flex-start;
         gap: 16px;
     }
+
+    .container-btns a {
+        text-decoration: none;
+    }
     
     .primary-btn {
         display: flex;

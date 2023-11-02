@@ -26,7 +26,7 @@
                                    <%=movie.year%>
                               </span>
                          </div>
-                         <% if((locals !=undefined) && (locals.myUser !=undefined)) { %>
+
                               <div class="container-btns">
                                    <a href="/products/productCart/<%= movie.id %>"><button type="submit" name="rent" class="primary-btn"><i
                                              class="fa-solid fa-cart-shopping"></i><span>Alquilar $<%=movie.price %>
@@ -34,7 +34,7 @@
                                    <button type="submit" name="rent" class="translucent-btn"><i
                                              class="fa-solid fa-plus"></i><span>Mi lista</span></button>
                               </div>
-                              <% } %>
+
                                    <p>
                                         <%=movie.description %>
                                    </p>

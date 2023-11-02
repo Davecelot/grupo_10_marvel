@@ -135,6 +135,10 @@ form {
     width: 100%;
 }
 
+.form-to-pay a {
+    text-decoration: none;
+}
+
 /* >>>>> select <<<<< */
 
 select {
