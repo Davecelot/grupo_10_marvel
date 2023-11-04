@@ -27,5 +27,6 @@ router.post(
   usersController.save
 );
 router.post("/login", validationsLogin, usersController.logged);
+router.post("/cerrarSesion", usersController.cerrarSesion)
 
 module.exports = router;

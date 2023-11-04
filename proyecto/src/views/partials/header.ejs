@@ -30,9 +30,9 @@
                               <h1 class="usuario">
                                    Bienvenid@ <%= locals.myUser %>
                               </h1>
-                              <form action="/">
-                                   <button type="submit" class="boton-header" id="cerrar"><a href="/users/login">Cerrar
-                                             sesión</a></button>
+                              <form action="/users/cerrarSesion" method="post">
+                                   <button type="submit" class="boton-header" id="cerrar">Cerrar
+                                             sesión</button>
                               </form>
                               <% } %>
           </div>
