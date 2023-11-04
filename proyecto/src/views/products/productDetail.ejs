@@ -28,9 +28,15 @@
                          </div>
 
                               <div class="container-btns">
+                                   <% if(locals !=undefined && locals.myUser !=undefined) { %>
                                    <a href="/products/productCart/<%= movie.id %>"><button type="submit" name="rent" class="primary-btn"><i
                                              class="fa-solid fa-cart-shopping"></i><span>Alquilar $<%=movie.price %>
                                         </span></button></a>
+                                        <% } else { %>
+                                             <a href="/users/login"><button type="submit" name="rent" class="primary-btn"><i
+                                                  class="fa-solid fa-cart-shopping"></i><span>Alquilar $<%=movie.price %>
+                                             </span></button></a>
+                                   <%}%>
                                    <button type="submit" name="rent" class="translucent-btn"><i
                                              class="fa-solid fa-plus"></i><span>Mi lista</span></button>
                               </div>
