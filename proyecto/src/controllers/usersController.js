@@ -42,7 +42,7 @@ const controller = {
         id: nuevoId,
         name: req.body.nombre,
         mail: req.body.correo,
-        roleId: req.body.cmbRol,
+        roleId: 2,//req.body.cmbRol,
         password: bcryptjs.hashSync(req.body.password, 10),
         image: "/images/user-images/" + req.file.filename,
       };
@@ -90,7 +90,7 @@ const controller = {
         } else {
           res.clearCookie("usuario");
         }
-        if (user.roleId == 1) {
+        if (user[0].roleId == 1) {
           return res.redirect("/admin/index");
         } else {
           return res.redirect("/");
