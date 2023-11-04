@@ -29,7 +29,6 @@ const controller = {
       });
     }
 
-    //const users = mainController.leerJson("users.json");
     db.User.findAll().then((users) => {
       console.log(req.body);
       let nuevoId;
@@ -47,63 +46,63 @@ const controller = {
         password: bcryptjs.hashSync(req.body.password, 10),
         image: "/images/user-images/" + req.file.filename,
       };
-
-      //  res.send(nuevoUsuario);
-
       db.User.create(nuevoUsuario).then(() => res.redirect("/users/login"));
     });
-
-    //     let nuevoUsuario = {
-    //       id: users[users.length - 1].id + 1,
-    //       nombre: req.body.nombre,
-    //       correo: req.body.correo,
-    //       rol: "User",
-    //       contraseña: bcryptjs.hashSync(req.body.password, 10),
-    //       image: "/images/user-images/" + req.file.filename,
-    //     };
-
-    //     users.push(nuevoUsuario);
-    //     let nuevoUsuarioGuardar = JSON.stringify(users, null, 2);
-    //     fs.writeFileSync(
-    //       path.resolve(__dirname, "../data/users.json"),
-    //       nuevoUsuarioGuardar
-    //     );
-
-    //     return res.redirect("/users/login");
   },
 
   logged: (req, res) => {
     const resultValidation = validationResult(req);
     const mailFind = req.body.correo;
     const passFind = req.body.password;
-    const users = mainController.leerJson("users.json");
-    const user = users.find(
-      (user) => user.correo === mailFind && user.contraseña === passFind
-    );
-    if (user === undefined) {
-      const errorCredencial = {
-        type: "field",
-        value: "Sin Importancia",
-        msg: "Credenciales invalidas",
-        path: "credenciales",
-        location: "body",
-      };
-      resultValidation.errors.push(errorCredencial);
-    }
-    if (resultValidation.errors.length === 0) {
-      req.session.Usuario = user.nombre;
-      if (req.body.preservar) {
-        res.cookie("usuario", user.nombre, { maxAge: 3600000 });
+
+    db.User.findAll({
+      where: { mail: mailFind }
+    }).then((user) => {
+      if (user == "") {
+        const errorCredencial = {
+          type: "field",
+          value: "Sin Importancia",
+          msg: "Credenciales invalidas",
+          path: "credenciales",
+          location: "body",
+        };
+        resultValidation.errors.push(errorCredencial);
       } else {
-        res.clearCookie("usuario");
+        console.log(passFind);
+        console.log(user[0].password);
+        let result = bcryptjs.compareSync(passFind, user[0].password)
+        console.log(result)
+        if (result == false) {
+          const errorPassword = {
+            type: "field",
+            value: "Sin Importancia",
+            msg: "Credenciales invalidas",
+            path: "credenciales",
+            location: "body",
+          };
+          resultValidation.errors.push(errorPassword);
+        }
       }
-      return res.redirect("/");
-    } else {
-      return res.render("users/login", {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }
+
+      if (resultValidation.errors.length === 0) {
+        req.session.Usuario = user.nombre;
+        if (req.body.preservar) {
+          res.cookie("usuario", user.nombre, { maxAge: 3600000 });
+        } else {
+          res.clearCookie("usuario");
+        }
+        if (user.roleId == 1) {
+          return res.redirect("/admin/index");
+        } else {
+          return res.redirect("/");
+        }
+      } else {
+        return res.render("users/login", {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+        });
+      }
+    });
   },
 };
 
