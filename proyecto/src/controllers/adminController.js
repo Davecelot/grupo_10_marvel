@@ -3,7 +3,6 @@ const path = require("path");
 const fs = require("fs");
 const mainController = require("./mainController");
 const app = express();
-const archivoJSON = require("../database/archivoJSON");
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
 const bcryptjs = require("bcryptjs");
@@ -14,7 +13,7 @@ app.set("view engine", "ejs");
 const controller = {
   index: function (req, res) {
     const myUser = req.session.Usuario;
-    res.render("admin/index", {myUser});
+    res.render("admin/index", { myUser });
   },
 
   listProducts: (req, res) => {
@@ -207,16 +206,15 @@ const controller = {
           nuevoId = 1;
         }
 
-        console.log("req.file : ", req.file);
+        console.log("req.file : ", req.file.filename);
 
         const nuevoUsuario = {
           id: nuevoId,
           name: req.body.nombre,
           mail: req.body.correo,
           roleId: req.body.cmbRol,
-          password: bcryptjs.hashSync(req.body.password, 10),
-          //image: "/images/user-images/" + req.file.imagen,
-          image: "",
+          password: req.body.password, //bcryptjs.hashSync(req.body.password, 10),
+          image: "/images/user-images/usuario-1691700701547.jpg",
         };
 
         //  res.send(nuevoUsuario);
@@ -248,7 +246,7 @@ const controller = {
     });
   },
 
-  userUpdate: (req, res) => { 
+  userUpdate: (req, res) => {
     const myUser = req.session.Usuario;
     const id = parseInt(req.params.id);
     const resultValidation = validationResult(req);
@@ -275,8 +273,8 @@ const controller = {
         name: req.body.nombre,
         mail: req.body.correo,
         roleId: req.body.cmbRol,
-        //    password: bcryptjs.hashSync(req.body.password, 10),
-        //    image: "/images/user-images/" + req.file.filename,
+        password: req.body.password,//bcryptjs.hashSync(req.body.password, 10),
+        //image: "/images/user-images/" + req.file.filename,
       };
 
       db.User.update(usuario, { where: { id: id } })

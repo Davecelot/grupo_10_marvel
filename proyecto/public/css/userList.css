@@ -309,7 +309,7 @@ input[type="checkbox"] {
     /* >>>>> INPUT AND USER <<<<< */
 
     .avatar {
-        font-size: 32px;
+            max-width: 300px;
     }
 
     .user-and-rol p {

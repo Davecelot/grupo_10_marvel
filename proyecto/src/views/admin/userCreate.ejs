@@ -79,7 +79,7 @@
                                              <label>Imagen:</label>
                                              <input type="file" name="imagen" class="control"
                                                   title="Ingresa una imagen válida" <%=locals.errors && errors.imagen
-                                                  ? 'is-invalid' : null %>">
+                                                  ? 'is-invalid' : null %>>
                                              <% if (locals.errors && errors.imagen) { %>
                                                   <div class="text-danger">
                                                        <%= errors.imagen.msg %>

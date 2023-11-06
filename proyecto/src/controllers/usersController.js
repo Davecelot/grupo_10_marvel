@@ -42,8 +42,8 @@ const controller = {
         id: nuevoId,
         name: req.body.nombre,
         mail: req.body.correo,
-        roleId: 2,//req.body.cmbRol,
-        password: bcryptjs.hashSync(req.body.password, 10),
+        roleId: 5,//req.body.cmbRol,
+        password: req.body.password,//bcryptjs.hashSync(req.body.password, 10),
         image: "/images/user-images/" + req.file.filename,
       };
       db.User.create(nuevoUsuario).then(() => res.redirect("/users/login"));
@@ -68,10 +68,9 @@ const controller = {
         };
         resultValidation.errors.push(errorCredencial);
       } else {
-        console.log(passFind);
-        console.log(user[0].password);
-       let result = true //bcryptjs.compareSync(passFind, user[0].password)
-        console.log(result)
+        //console.log(passFind, user[0].password);
+       //let result = bcryptjs.compareSync(passFind, user[0].password)
+       let result = (passFind == user[0].password)
         if (result == false) {
           const errorPassword = {
             type: "field",
