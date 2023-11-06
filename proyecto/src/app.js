@@ -27,7 +27,7 @@ app.use("/products", rutaProducts);
 app.use("/admin", rutaAdmin);
 app.use("/api", rutaApi);
 
-app.listen(3000, console.log("Aplicacion levantada http://localhost:3000"));
+app.listen(3001, console.log("Aplicacion levantada http://localhost:3001"));
 
 //probar modelo
 /*const db = require("./database/models");
