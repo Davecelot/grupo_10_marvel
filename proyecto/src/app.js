@@ -12,6 +12,7 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const rememberUserMiddleware = require("./middlewares/rememberUserMiddleware");
 const expressValidator = require("express-validator");
+var cors = require('cors');
 
 app.use(session({ secret: "supercalifragilisticoespialidoso" }));
 app.use(cookieParser());
@@ -26,6 +27,8 @@ app.use("/users", rutaUsers);
 app.use("/products", rutaProducts);
 app.use("/admin", rutaAdmin);
 app.use("/api", rutaApi);
+
+app.use(cors());
 
 app.listen(3001, console.log("Aplicacion levantada http://localhost:3001"));
 
