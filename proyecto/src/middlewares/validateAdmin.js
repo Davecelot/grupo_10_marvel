@@ -1,15 +1,16 @@
 const db = require("../database/models");
 
-module.exports = function (req, res, next) {
-    db.User.findAll({ where: { name: req.session.Usuario } }).then((user) => {
-        if (user[0].roleId == 1) {
-            res.locals.user = user; next();
-            console.log("Si tiene permisos de administrador");
-        }
-        else {
-            res.sendStatus(401);
-            res.end('no autorizado'); 
-            console.log("No tiene permisos para acceder");
-        }
-    })
-} 
+module.exports = async function validateAdmin(req, res, next) {
+  if (!Number.isSafeInteger(req.session?.userId) || req.session.userId <= 0) {
+    return res.sendStatus(401);
+  }
+  try {
+    const user = await db.User.findByPk(req.session.userId);
+    if (!user) return res.sendStatus(401);
+    if (Number(user.roleId) !== 1) return res.sendStatus(403);
+    res.locals.user = user;
+    return next();
+  } catch (error) {
+    return next(error);
+  }
+};

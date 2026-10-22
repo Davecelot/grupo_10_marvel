@@ -15,6 +15,7 @@
                               <div class="formulario">
                                    <form action="/admin/userEdit/<%= oldData.id %>?_method=PUT" method="POST"
                                         class="create-form" enctype="multipart/form-data">
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
                                         <div class="control-formulario">
                                              <label>Nombre:</label>
                                              <input type="text" name="nombre" class="control"

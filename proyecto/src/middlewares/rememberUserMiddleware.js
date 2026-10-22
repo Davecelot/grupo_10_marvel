@@ -1,8 +1,6 @@
-function rememberUserMiddleware(req, res, next) {
+// Legacy `usuario` cookies contain an unsigned display name, not authentication.
+// Only express-session and a successful password check may establish identity.
+module.exports = function rememberUserMiddleware(req, res, next) {
+  if (req.cookies?.usuario !== undefined) res.clearCookie('usuario');
   next();
-  if (req.cookies.usuario != undefined && req.session.Usuario == undefined) {
-    req.session.Usuario = req.cookies.usuario;
-  }
-}
-
-module.exports = rememberUserMiddleware;
+};

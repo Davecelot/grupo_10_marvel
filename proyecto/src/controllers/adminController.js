@@ -193,7 +193,7 @@ const controller = {
       db.Rol.findAll().then((roles) =>
         res.render("admin/userCreate", {
           errors: resultValidation.mapped(),
-          oldData: req.body,
+          oldData: { nombre: req.body.nombre, correo: req.body.correo },
           roles,
         })
       );
@@ -206,15 +206,13 @@ const controller = {
           nuevoId = 1;
         }
 
-        console.log("req.file : ", req.file.filename);
 
         const nuevoUsuario = {
-          id: nuevoId,
           name: req.body.nombre,
           mail: req.body.correo,
           roleId: req.body.cmbRol,
-          password: req.body.password, //bcryptjs.hashSync(req.body.password, 10),
-          image: "/images/user-images/usuario-1691700701547.jpg",
+          password: bcryptjs.hashSync(req.body.password, 12),
+          image: "/images/user-images/" + req.file.filename,
         };
 
         //  res.send(nuevoUsuario);
@@ -238,8 +236,6 @@ const controller = {
           rolId: user.roleId,
           roles: user.roles,
         };
-        console.log("oldData : ", oldData);
-        console.log("roles : ", allRoles);
         return res.render("admin/userEdit", { oldData, roles: allRoles, myUser });
         //    res.send(user);
       });
@@ -273,7 +269,7 @@ const controller = {
         name: req.body.nombre,
         mail: req.body.correo,
         roleId: req.body.cmbRol,
-        password: req.body.password,//bcryptjs.hashSync(req.body.password, 10),
+        ...(req.body.password ? { password: bcryptjs.hashSync(req.body.password, 12) } : {}),
         //image: "/images/user-images/" + req.file.filename,
       };
 

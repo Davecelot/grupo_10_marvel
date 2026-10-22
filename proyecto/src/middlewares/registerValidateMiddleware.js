@@ -6,16 +6,16 @@ module.exports = [
 	body('correo')
 		.notEmpty().withMessage('Favor de completar el email').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body('password').notEmpty().withMessage('Favor de completar la contraseña'),
-	body('conpassword').notEmpty().withMessage('Favor de confirmar la contraseña'),
+    body('password').isString().bail().isLength({ min: 12 }).withMessage('La contraseña debe tener al menos 12 caracteres').bail().custom(value => Buffer.byteLength(value, 'utf8') <= 72).withMessage('La contraseña no puede superar 72 bytes'),
+	body('conpassword').custom((value, { req }) => value === req.body.password).withMessage('Las contraseñas deben coincidir'),
     body('imagen').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
 
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
 		} else {
-			let fileExtension = path.extname(file.originalname);
+			let fileExtension = path.extname(file.originalname).toLowerCase();
 			if (!acceptedExtensions.includes(fileExtension)) {
 				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
 			}
