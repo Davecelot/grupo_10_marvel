@@ -13,6 +13,7 @@
                             alt="pelicula <%=Movie.name%>">
                     </figure>
                 <form action="/admin/editProducts/delete/<%= Movie.id %>" method="POST">
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
                     <br>
                     <div class="botones">
                         <button class="boton-formulario" type="submit">Borrar la Película</button>

@@ -4,7 +4,7 @@
           <!-- Inicia la zona de header -->
           <%- include("../partials/header.ejs")%>
                <link rel="stylesheet" href="/css/register.css">
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"></script>
+               <script src="/js/vendor/validator.min.js"></script>
                <script src="/js/validatorRegister.js"></script>
                </head>
 
@@ -17,6 +17,7 @@
                               <div class="formulario">
                                    <form action="/users/register" method="POST" class="create-form"
                                         enctype="multipart/form-data" id="register-form">
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
                                         <div class="control-formulario">
                                              <label>Nombre:</label>
                                              <input type="text" name="nombre" class="control"
@@ -46,7 +47,7 @@
                                              <input type="password" name="password" class="control"
                                                   placeholder="Escribe aquí tu contraseña" minlength="8"
                                                   <%=locals.errors && errors.password ? 'is-invalid' : null %>"
-                                             value="<%= locals.oldData ? oldData.password : null %>">
+                                             >
                                                   <% if (locals.errors && errors.password) { %>
                                                        <div class="text-danger">
                                                             <%= errors.password.msg %>
@@ -58,24 +59,13 @@
                                              <input type="password" name="conpassword" class="control"
                                                   placeholder="Escribe nuevamente tu contraseña" minlength="8"
                                                   <%=locals.errors && errors.conpassword ? 'is-invalid' : null %>"
-                                             value="<%= locals.oldData ? oldData.conpassword : null %>">
+                                             >
                                                   <% if (locals.errors && errors.conpassword) { %>
                                                        <div class="text-danger">
                                                             <%= errors.conpassword.msg %>
                                                        </div>
                                                        <% } %>
                                         </div>
-                                       <!-- <div class="control-formulario">
-                                             <label for="cmbRol">Rol : </label>
-                                             <select name="cmbRol" id="cmbRol">
-                                                  <% for(let i=0; i < roles.length; i++) { %>
-                                                       <option value="<%= roles[i].id %>">
-                                                            <%= roles[i].name %>
-                                                       </option>
-                                                       <% } %>
-                                             </select>
-                                        </div>
-                                        -->
                                         <div class="control-formulario">
                                              <label>Imagen:</label>
                                              <input type="file" name="imagen" class="control"

@@ -1,6 +1,6 @@
 <%- include("../partials/head.ejs")%>
     <link rel="stylesheet" href="/css/createProducts.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"></script>
+    <script src="/js/vendor/validator.min.js"></script>
     <script src="/js/validatorProduct.js"></script>
     </head>
 
@@ -19,6 +19,7 @@
                         <div class="formulario">
                             <form action="/admin/createProducts" method="POST" class="create-form"
                                 enctype="multipart/form-data" id="product-form">
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
                                 <div class="control-formulario">
                                     <label>Titulo:</label>
                                     <input type="text" name="nombre" class="control"

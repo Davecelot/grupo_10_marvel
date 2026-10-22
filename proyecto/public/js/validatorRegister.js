@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Validar contraseña
-        if (!validator.isLength(passwordInput.value, { min: 8 })) {
+        if (!validator.isLength(passwordInput.value, { min: 12 })) {
             const li = document.createElement('li');
-            li.textContent = "La contraseña debe tener al menos 8 caracteres.";
+            li.textContent = "La contraseña debe tener al menos 12 caracteres.";
             errorList.appendChild(li);
             hasErrors = true;
         }

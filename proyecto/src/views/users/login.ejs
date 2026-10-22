@@ -4,7 +4,7 @@
           <!-- Inicia la zona de header -->
           <%- include("../partials/header.ejs")%>
                <link rel="stylesheet" href="/css/register.css">
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"></script>
+               <script src="/js/vendor/validator.min.js"></script>
                <script src="/js/validatorLogin.js"></script>
                </head>
 
@@ -16,6 +16,7 @@
                               <h3 class="titulo-form">Ingresa</h3>
                               <div class="formulario">
                                    <form action="#" method="POST" class="create-form" id="login-form">
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
                                         <% if (locals.errors && errors.credenciales) { %>
                                              <div class="text-danger">
                                                   <%= errors.credenciales.msg %>

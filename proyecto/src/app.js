@@ -1,46 +1,49 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('node:path');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const methodOverride = require('method-override');
+const sessionOptions = require('./security/sessionOptions');
+const { csrfToken } = require('./middlewares/csrf');
 const app = express();
-const methodOverride = require("method-override");
-const publicPath = path.resolve(__dirname, "../public");
-const rutaMain = require("./routes/main");
-const rutaUsers = require("./routes/users");
-const rutaProducts = require("./routes/products");
-const rutaAdmin = require("./routes/admin");
-const rutaApi = require("./routes/api/api");
-const session = require("express-session");
-const cookieParser = require("cookie-parser");
-const rememberUserMiddleware = require("./middlewares/rememberUserMiddleware");
-const expressValidator = require("express-validator");
-var cors = require('cors');
 
-app.use(session({ secret: "supercalifragilisticoespialidoso" }));
+app.disable('x-powered-by');
+if (process.env.TRUST_PROXY) app.set('trust proxy', process.env.TRUST_PROXY.split(',').map(value => value.trim()));
+app.use((req, res, next) => {
+  res.set('X-Content-Type-Options', 'nosniff');
+  res.set('X-Frame-Options', 'DENY');
+  res.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  next();
+});
+app.get('/js/vendor/validator.min.js', (req, res) => res.sendFile(require.resolve('validator/validator.min.js')));
+app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(session(sessionOptions()));
 app.use(cookieParser());
-app.use(rememberUserMiddleware);
-app.use(express.urlencoded({ extended: false }));
-app.set("view engine", "ejs");
-app.set("views", __dirname + "/views");
-app.use(express.static(publicPath));
-app.use(methodOverride("_method"));
-app.use("/", rutaMain);
-app.use("/users", rutaUsers);
-app.use("/products", rutaProducts);
-app.use("/admin", rutaAdmin);
-app.use("/api", rutaApi);
+app.use(require('./middlewares/rememberUserMiddleware'));
+app.use(express.urlencoded({ extended: false, limit: '32kb', parameterLimit: 50 }));
+app.use(methodOverride('_method'));
+app.use(csrfToken);
+app.use((req, res, next) => {
+  res.locals.myUser = req.session.Usuario;
+  next();
+});
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use('/', require('./routes/main'));
+app.use('/users', require('./routes/users'));
+app.use('/products', require('./routes/products'));
+app.use('/admin', require('./routes/admin'));
+app.use('/api', require('./routes/api/api'));
+app.use((error, req, res, next) => {
+  if (res.headersSent) return next(error);
+  const status = error.code === 'LIMIT_FILE_SIZE' ? 413 :
+    error.name === 'MulterError' ? 400 :
+    Number.isInteger(error.status) && error.status >= 400 && error.status < 500 ? error.status : 500;
+  res.status(status).send(status === 500 ? 'Error interno del servidor.' : 'Solicitud inválida.');
+});
 
-app.use(cors());
-
-app.listen(3001, console.log("Aplicacion levantada http://localhost:3001"));
-
-//probar modelo
-/*const db = require("./database/models");
-db.Movie.findAll({
-    include: ["genres","classifications"]
+if (require.main === module) {
+  const port = Number(process.env.PORT || 3001);
+  app.listen(port, () => console.log(`Aplicación levantada en el puerto ${port}`));
 }
-)
-.then((result) => {
-    console.log(JSON.stringify(result,null,2));
-})
-.catch((error) => {
-    console.log(error)
-})*/
+module.exports = app;

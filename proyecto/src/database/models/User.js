@@ -24,7 +24,7 @@ module.exports = () => {
                 foreignKey: true
             },
             password: {
-                type: DataTypes.STRING(50),
+                type: DataTypes.STRING(255),
                 allowNull: false
             },
             image: DataTypes.STRING(50)

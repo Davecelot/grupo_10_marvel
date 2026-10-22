@@ -13,11 +13,11 @@ let validateRegister = [
 	body('genero').notEmpty().withMessage("Debes seleccionar un genero").bail(),
 	body('imagen').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpng'];
+		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
 		} else {
-			let fileExtension = path.extname(file.originalname);
+			let fileExtension = path.extname(file.originalname).toLowerCase();
 			if (!acceptedExtensions.includes(fileExtension)) {
 				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
 			}
